@@ -29,5 +29,5 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://freejbgo.github.io/SpeedCE-Tech/sitemap.xml
-Sitemap: https://raw.githubusercontent.com/freejbgo/SpeedCE-Tech/main/docs/sitemap.xml
+Sitemap: https://freejbgo.github.io/SpeedCE-Helps/sitemap.xml
+Sitemap: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/docs/sitemap.xml

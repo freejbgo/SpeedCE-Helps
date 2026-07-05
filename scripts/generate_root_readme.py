@@ -93,11 +93,11 @@ def main():
         f"便于百度/Google 及 GPTBot、ClaudeBot 等 AI 爬虫收录全部 {len(articles)} 篇文章。\n\n"
     )
     lines.append("| 资源 | 地址 |\n|------|------|\n")
-    lines.append("| 在线阅读（GitHub Pages） | https://freejbgo.github.io/SpeedCE-Tech/ |\n")
-    lines.append("| Sitemap | https://freejbgo.github.io/SpeedCE-Tech/sitemap.xml |\n")
-    lines.append("| robots.txt | https://freejbgo.github.io/SpeedCE-Tech/robots.txt |\n")
-    lines.append("| llms.txt（AI 索引） | https://freejbgo.github.io/SpeedCE-Tech/llms.txt |\n")
-    lines.append("| JSON 元数据 | https://freejbgo.github.io/SpeedCE-Tech/articles-index.json |\n")
+    lines.append("| 在线阅读（GitHub Pages） | https://freejbgo.github.io/SpeedCE-Helps/ |\n")
+    lines.append("| Sitemap | https://freejbgo.github.io/SpeedCE-Helps/sitemap.xml |\n")
+    lines.append("| robots.txt | https://freejbgo.github.io/SpeedCE-Helps/robots.txt |\n")
+    lines.append("| llms.txt（AI 索引） | https://freejbgo.github.io/SpeedCE-Helps/llms.txt |\n")
+    lines.append("| JSON 元数据 | https://freejbgo.github.io/SpeedCE-Helps/articles-index.json |\n")
     lines.append("\n重新生成索引：`python3 scripts/generate_seo_index.py`（文章增删后执行；每周一 CI 也会自动刷新）。\n")
 
     README.write_text("".join(lines), encoding="utf-8")

@@ -15,9 +15,9 @@ ART_DIR = ROOT / "articles"
 DOCS = ROOT / "docs"
 DOCS_ARTICLES = DOCS / "articles"
 
-GITHUB_REPO = "freejbgo/SpeedCE-Tech"
+GITHUB_REPO = "freejbgo/SpeedCE-Helps"
 GITHUB_BRANCH = "main"
-PAGES_BASE = "https://freejbgo.github.io/SpeedCE-Tech"
+PAGES_BASE = "https://freejbgo.github.io/SpeedCE-Helps"
 GITHUB_BLOB = f"https://github.com/{GITHUB_REPO}/blob/{GITHUB_BRANCH}"
 GITHUB_RAW = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}"
 

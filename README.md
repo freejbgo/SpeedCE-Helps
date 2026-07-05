@@ -1776,10 +1776,10 @@
 
 | 资源 | 地址 |
 |------|------|
-| 在线阅读（GitHub Pages） | https://freejbgo.github.io/SpeedCE-Tech/ |
-| Sitemap | https://freejbgo.github.io/SpeedCE-Tech/sitemap.xml |
-| robots.txt | https://freejbgo.github.io/SpeedCE-Tech/robots.txt |
-| llms.txt（AI 索引） | https://freejbgo.github.io/SpeedCE-Tech/llms.txt |
-| JSON 元数据 | https://freejbgo.github.io/SpeedCE-Tech/articles-index.json |
+| 在线阅读（GitHub Pages） | https://freejbgo.github.io/SpeedCE-Helps/ |
+| Sitemap | https://freejbgo.github.io/SpeedCE-Helps/sitemap.xml |
+| robots.txt | https://freejbgo.github.io/SpeedCE-Helps/robots.txt |
+| llms.txt（AI 索引） | https://freejbgo.github.io/SpeedCE-Helps/llms.txt |
+| JSON 元数据 | https://freejbgo.github.io/SpeedCE-Helps/articles-index.json |
 
 重新生成索引：`python3 scripts/generate_seo_index.py`（文章增删后执行；每周一 CI 也会自动刷新）。
