@@ -1,6 +1,7 @@
 # 免费 CDN 够用吗：用全国地图数据做个人站决策
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

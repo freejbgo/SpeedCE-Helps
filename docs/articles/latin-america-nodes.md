@@ -9,7 +9,8 @@ permalink: articles/latin-america-nodes.html
 
 # 拉美节点验收：巴西、墨西哥重点市场地图标准
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

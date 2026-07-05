@@ -9,7 +9,8 @@ permalink: articles/ssl-certificate-troubleshooting.html
 
 # SSL 证书过期与配置错误：用户报「连接不安全」时 10 分钟定位手册
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

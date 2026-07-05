@@ -1,6 +1,7 @@
 # 双站点 .cn 与 .com 策略：分域名测速与合规分工
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

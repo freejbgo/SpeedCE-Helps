@@ -9,7 +9,8 @@ permalink: articles/acquisition-due-diligence.html
 
 # 收购技术尽调：目标站点全国可达性快速评估
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

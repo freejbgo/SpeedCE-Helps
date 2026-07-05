@@ -9,7 +9,8 @@ permalink: articles/load-balancer-health-check.html
 
 # 负载均衡与健康检查：一半节点绿一半红的架构问题
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

@@ -9,7 +9,8 @@ permalink: articles/middle-east-africa-nodes.html
 
 # 中东与非洲节点验收：新兴市场的地图达标策略
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

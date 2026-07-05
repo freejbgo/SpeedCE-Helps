@@ -9,7 +9,8 @@ permalink: articles/ops-tool-fabric-远程执行.html
 
 # Linux Fabric 远程执行 命令实战：运维场景与故障排查
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---
@@ -807,30 +808,4 @@ SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在
 ### 模板 3：变更窗口期
 
 > 您好，我们正在进行变更，部分地区可能存在 DNS 缓存延迟。测速显示异常节点随时间减少属正常。若 2 小时后仍无法访问，请告知省份运营商。
-
-## 附录 D：术语深度学习——Linux Fabric 远程执行 命令实战
-
-**cron**（定时任务）
-
-错配可能导致定时把 CPU 打满。
-
-**ulimit**（进程资源限制）
-
-文件描述符不够会导致 too many open files。
-
-**iptables/nftables**（内核防火墙）
-
-与安全组独立，都要查。
-
-**logrotate**（日志轮转）
-
-配置失败会导致磁盘满。
-
-**ss / netstat**（查看端口监听）
-
-`ss -tlnp` 看 TCP 监听端口和进程。
-
-**journalctl**（systemd 日志）
-
-`journalctl -u nginx -f` 实时跟踪。
 

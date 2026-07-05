@@ -9,7 +9,8 @@ permalink: articles/korea-vps-guide.html
 
 # 韩国 VPS 线路测评：离中国近不等于三网都好
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

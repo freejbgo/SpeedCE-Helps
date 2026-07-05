@@ -9,7 +9,8 @@ permalink: articles/cn2-gt-vs-gia.html
 
 # CN2 GT 与 CN2 GIA 完全对比：商家话术背后的测速验证法
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

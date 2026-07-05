@@ -9,7 +9,8 @@ permalink: articles/mobile-app-api-domain.html
 
 # App 接口域名监控：iOS/Android 反馈不一致的网络层排查
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

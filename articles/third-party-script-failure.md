@@ -1,6 +1,7 @@
 # 第三方脚本拖垮页面：主域绿、功能仍异常的边界
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

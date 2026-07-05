@@ -9,7 +9,8 @@ permalink: articles/ops-tool-circleci-云构建.html
 
 # Linux CircleCI 云构建 命令实战：运维场景与故障排查
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---
@@ -807,30 +808,4 @@ SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在
 ### 模板 3：变更窗口期
 
 > 您好，我们正在进行变更，部分地区可能存在 DNS 缓存延迟。测速显示异常节点随时间减少属正常。若 2 小时后仍无法访问，请告知省份运营商。
-
-## 附录 D：术语深度学习——Linux CircleCI 云构建 命令实战
-
-**iptables/nftables**（内核防火墙）
-
-与安全组独立，都要查。
-
-**load average**（系统负载）
-
-高负载时响应变慢，可能表现为超时。
-
-**OOM Killer**（内存不足杀进程）
-
-内存耗尽时内核杀进程，服务突然挂。
-
-**ulimit**（进程资源限制）
-
-文件描述符不够会导致 too many open files。
-
-**logrotate**（日志轮转）
-
-配置失败会导致磁盘满。
-
-**journalctl**（systemd 日志）
-
-`journalctl -u nginx -f` 实时跟踪。
 

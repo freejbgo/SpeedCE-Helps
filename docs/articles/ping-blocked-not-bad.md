@@ -9,7 +9,8 @@ permalink: articles/ping-blocked-not-bad.html
 
 # 禁 Ping 不等于线路差：PING 红 HTTPS 绿的正确解读
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

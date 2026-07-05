@@ -1,6 +1,7 @@
 # 香港 VPS 线路选购与验收：个人站、电商、API 场景怎么选
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

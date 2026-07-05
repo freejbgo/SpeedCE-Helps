@@ -9,7 +9,8 @@ permalink: articles/laravel-nginx-deploy.html
 
 # Laravel + Nginx + PHP-FPM 部署验收：从 composer 到全国可达
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

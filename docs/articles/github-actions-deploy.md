@@ -9,7 +9,8 @@ permalink: articles/github-actions-deploy.html
 
 # GitHub Actions 自动部署：从 push 到全国可达的完整流程
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

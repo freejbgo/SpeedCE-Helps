@@ -9,7 +9,8 @@ permalink: articles/ultimate-toolbar-2026.html
 
 # 2026 站长浏览器工具栏终极配置：测速/监控/性能 12 链接
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

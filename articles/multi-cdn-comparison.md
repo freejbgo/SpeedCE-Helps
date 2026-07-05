@@ -1,6 +1,7 @@
 # 多家 CDN 试用期地图对比选型：同域不同商的科学方法
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

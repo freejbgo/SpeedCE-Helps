@@ -9,7 +9,8 @@ permalink: articles/home-broadband-vs-datacenter.html
 
 # 家宽测速 vs 全国节点：为什么你 Ping 快不代表用户快
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

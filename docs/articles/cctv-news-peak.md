@@ -9,7 +9,8 @@ permalink: articles/cctv-news-peak.html
 
 # 新闻发布与热点峰值：突发流量前的 30 分钟点检
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

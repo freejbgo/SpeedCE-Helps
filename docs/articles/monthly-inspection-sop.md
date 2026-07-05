@@ -9,7 +9,8 @@ permalink: articles/monthly-inspection-sop.html
 
 # 月度网站巡检 SOP：个人站 15 分钟、企业站 1 小时版
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

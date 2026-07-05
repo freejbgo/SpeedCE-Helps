@@ -9,7 +9,8 @@ permalink: articles/datacenter-failover-verify.html
 
 # 机房故障换机后应急验证：24 小时 SpeedCE 点检 SOP
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

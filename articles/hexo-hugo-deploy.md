@@ -1,6 +1,7 @@
 # Hexo/Hugo 静态博客部署：生成、推送与全国可达验收
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

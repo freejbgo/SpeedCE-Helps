@@ -9,7 +9,8 @@ permalink: articles/penetration-test-prep.html
 
 # 渗透测试前网络暴露面：对外域名测速清单
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

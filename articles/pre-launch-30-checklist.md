@@ -1,6 +1,7 @@
 # 网站上线前 30 项检查清单：含 8 项多节点测速必做项
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

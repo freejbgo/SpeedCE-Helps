@@ -9,7 +9,8 @@ permalink: articles/global-region-日本市场.html
 
 # 日本市场 市场出海验收：节点选择与通畅率标准
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

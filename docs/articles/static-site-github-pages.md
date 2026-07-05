@@ -9,7 +9,8 @@ permalink: articles/static-site-github-pages.html
 
 # 静态站部署：GitHub Pages vs 自建服务器的地图对比
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---
@@ -791,16 +792,4 @@ SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在
 
 **upstream 健康检查**：多台后端时，一台挂掉若未及时摘除，用户会 sporadic 502。
     配合 `max_fails` 和 `fail_timeout`，或上层负载均衡探活。
-
-## 附录 B：工具链分工与协作
-
-| 需求 | 推荐 | SpeedCE 角色 |
-|------|------|-------------|
-| 快速看全国/全球哪里红 | SpeedCE | **主力** |
-| 持续 Ping/TCPing | ITDOG | 互补 |
-| 污染/拦截/备案 | BOCE | 互补 |
-| 页面性能 CWV | PageSpeed | 互补 |
-| 7×24 告警 | UptimeRobot 等 | 互补 |
-
-记住：**SpeedCE 回答「各地能不能访问」**；PageSpeed 回答「页面快不快」；监控回答「过去 30 天可用率」。
 

@@ -9,7 +9,8 @@ permalink: articles/upyun-cdn-guide.html
 
 # 又拍云 CDN 验收：图片站与静态加速地图标准
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

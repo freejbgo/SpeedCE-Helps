@@ -9,7 +9,8 @@ permalink: articles/pagespeed-vs-network.html
 
 # PageSpeed Insights 与网络拨测：站长必须弄清的分工边界
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---
@@ -821,15 +822,4 @@ CDN vs 源站、迁机前后。
 3. **坑**：不截图存档 → **对策**：多节点测速确认影响面，对照测缩小层级，修复后复测存档。
 
 4. **坑**：不看地图只看平均延迟 → **对策**：多节点测速确认影响面，对照测缩小层级，修复后复测存档。
-
-## 附录 F：实战检查要点
-
-围绕「PageSpeed Insights 与网络拨测」，上线或重大变更前务必完成：
-
-1. 主域名 SpeedCE HTTPS 测速，通畅率 ≥ 95%
-2. 电信/联通/移动三网分离截图
-3. 关键子域单独测速
-4. 有 CDN 时源站与加速域对照测
-5. 变更后 10 分钟、30 分钟、2 小时各复测一次
-6. 截图命名归档，写入变更记录
 

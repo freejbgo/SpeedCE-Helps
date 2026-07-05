@@ -1,6 +1,7 @@
 # 新域名冷启动 72 小时：注册、解析、证书与地图验收节奏
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

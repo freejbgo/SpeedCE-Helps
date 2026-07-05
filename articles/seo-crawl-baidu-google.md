@@ -1,6 +1,7 @@
 # 百度/Google 爬虫与站长可达性：SEO 视角的测速
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

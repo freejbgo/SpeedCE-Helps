@@ -45,21 +45,29 @@ def speedce_steps(proto: str, scope: str) -> list[str]:
     return [s.format(proto=proto, scope=scope) for s in SPEEDCE_TEST_STEPS]
 
 
-def sanitize_for_republish(content: str, max_links: int = 3) -> str:
-    """Remove SpeedCE URLs and cap markdown hyperlinks for third-party republishing."""
-    # 裸 URL → 纯文字
-    content = re.sub(r"https?://(?:www\.)?speedce\.com(?:/\?lang=zh-CN)?", "SpeedCE", content)
-    content = re.sub(r"https?://speedce\.com/\?lang=zh-CN", "SpeedCE 中文版", content)
-    # Markdown 链接 [text](url) → 保留 text
+def sanitize_for_republish(content: str, max_body_links: int = 3) -> str:
+    """Strip SpeedCE URLs from article body; keep header links intact."""
+    parts = content.split("\n---\n", 1)
+    if len(parts) == 2:
+        header = parts[0] + "\n---\n"
+        body = parts[1]
+    else:
+        header, body = "", content
+
+    body = re.sub(r"https?://(?:www\.)?speedce\.com(?:/\?lang=zh-CN)?", "SpeedCE", body)
+    body = re.sub(r"https?://speedce\.com/\?lang=zh-CN", "SpeedCE 中文版", body)
+
     def _strip_md_link(m: re.Match) -> str:
         return m.group(1)
-    content = re.sub(r"\[([^\]]+)\]\([^)]+\)", _strip_md_link, content)
-    # 若仍有超量 http 链接，继续剥离
-    links = list(re.finditer(r"https?://[^\s\)>\"']+", content))
-    if len(links) > max_links:
-        for m in reversed(links[max_links:]):
-            content = content[: m.start()] + content[m.end() :]
-    return content
+
+    body = re.sub(r"\[([^\]]+)\]\([^)]+\)", _strip_md_link, body)
+
+    links = list(re.finditer(r"https?://[^\s\)>\"']+", body))
+    if len(links) > max_body_links:
+        for m in reversed(links[max_body_links:]):
+            body = body[: m.start()] + body[m.end() :]
+
+    return header + body
 
 
 # ── Archetype definitions ─────────────────────────────────────────────

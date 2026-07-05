@@ -9,7 +9,8 @@ permalink: articles/sni-mismatch-error.html
 
 # SNI 不匹配错误：多证书同 IP 时部分节点 HTTPS 异常
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

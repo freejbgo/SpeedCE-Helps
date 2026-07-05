@@ -9,7 +9,8 @@ permalink: articles/email-link-tracking.html
 
 # 邮件内链接追踪域：营销邮件点击失败的网络排查
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

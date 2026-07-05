@@ -9,7 +9,8 @@ permalink: articles/status-page-setup.html
 
 # Status Page 搭建：测速数据如何支撑公开状态页
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

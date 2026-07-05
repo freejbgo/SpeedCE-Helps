@@ -9,7 +9,8 @@ permalink: articles/geodns-verification.html
 
 # GeoDNS 智能解析验证：各地解析到不同 IP 的测速方法
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

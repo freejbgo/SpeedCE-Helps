@@ -9,7 +9,8 @@ permalink: articles/sec-topic-安全-headers.html
 
 # 安全 Headers 安全加固实战：配置、检测与影响评估
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

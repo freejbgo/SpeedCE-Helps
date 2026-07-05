@@ -9,7 +9,8 @@ permalink: articles/japan-vps-guide.html
 
 # 日本 VPS 适合什么业务：东京大阪机房与三网回国实测
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

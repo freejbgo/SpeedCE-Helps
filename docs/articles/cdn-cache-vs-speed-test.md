@@ -9,7 +9,8 @@ permalink: articles/cdn-cache-vs-speed-test.html
 
 # CDN 缓存与拨测的关系：为什么第一次慢、刷新后又快
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

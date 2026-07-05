@@ -9,7 +9,8 @@ permalink: articles/northeast-china-access-guide.html
 
 # 东北三省访问质量验收：寒区线路与 CDN 节点覆盖
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

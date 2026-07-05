@@ -1,6 +1,7 @@
 # CDN 接入全攻略：切量前、切量中、故障时的多节点验收
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

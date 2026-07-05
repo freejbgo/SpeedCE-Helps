@@ -9,7 +9,8 @@ permalink: articles/logrotate-config.html
 
 # logrotate 配置与磁盘管理：防止日志撑满导致假死
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

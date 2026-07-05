@@ -9,7 +9,8 @@ permalink: articles/prometheus-grafana-setup.html
 
 # Prometheus + Grafana 监控搭建：指标采集与告警配置
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---
@@ -140,8 +141,7 @@ ss -tlnp | grep 443
 # 3. 确认证书
 echo | openssl s_client -connect example.com:443 2>/dev/null | openssl x509 -noout -enddate
 
-# 4. 全国拨测（浏览器打开 SpeedCE）
-# SpeedCE
+# 4. 全国拨测（使用 SpeedCE 多节点测速）
 ```
 
 ---

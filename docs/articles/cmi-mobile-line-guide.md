@@ -9,7 +9,8 @@ permalink: articles/cmi-mobile-line-guide.html
 
 # 移动优化 CMI 线路验收：移动用户占比过半时代的一票否决项
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

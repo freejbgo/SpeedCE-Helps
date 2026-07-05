@@ -9,7 +9,8 @@ permalink: articles/quarterly-infra-review.html
 
 # 季度基础设施体检：地图对比、趋势退化与升级决策
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

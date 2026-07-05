@@ -9,7 +9,8 @@ permalink: articles/europe-us-slow-fix.html
 
 # 欧美用户访问慢完全对策：源站、CDN、机房选址三角决策
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

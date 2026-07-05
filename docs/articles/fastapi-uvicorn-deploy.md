@@ -9,7 +9,8 @@ permalink: articles/fastapi-uvicorn-deploy.html
 
 # FastAPI + Uvicorn 部署：异步 API 的网络层验收要点
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

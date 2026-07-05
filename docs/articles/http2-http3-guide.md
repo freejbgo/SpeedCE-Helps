@@ -9,7 +9,8 @@ permalink: articles/http2-http3-guide.html
 
 # HTTP/2 与 HTTP/3 配置：Nginx 启用与兼容性检查
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---
@@ -788,30 +789,4 @@ SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在
 ---
 
 **关键词**：HTTP2,HTTP3,Nginx,SpeedCE
-
-
-
-## 附录 A：HTTP/2 与 HTTP/3 配置 相关技术补充
-
-### A.1 原理延伸
-
-**Nginx** 是高性能 Web 服务器和反向代理。事件驱动（epoll/kqueue）架构使其能用极少内存
-    处理数万并发连接。作为反向代理时，Nginx 接收客户端请求，转发给后端（PHP-FPM、Node、Java），
-    再把响应返回客户端——用户看到的是 Nginx 的 IP 和证书，后端可以藏在内部网络。
-
-### A.2 原理延伸
-
-**server_name** 决定哪个 server 块处理请求。请求头里的 `Host` 与 `server_name` 匹配。
-    若 `api.example.com` 没有对应 server 块，会落入 default_server——可能用错证书或返回 404。
-    每个对外子域都应有独立 server 块。
-
-### A.3 原理延伸
-
-**proxy_pass 末尾斜杠陷阱**：`proxy_pass  location 前缀；
-    `proxy_pass  URI。配错导致 404 或路径重复。
-
-### A.4 原理延伸
-
-**upstream 健康检查**：多台后端时，一台挂掉若未及时摘除，用户会 sporadic 502。
-    配合 `max_fails` 和 `fail_timeout`，或上层负载均衡探活。
 

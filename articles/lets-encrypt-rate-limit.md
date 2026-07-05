@@ -1,6 +1,7 @@
 # Let's Encrypt 限流与续签失败：HTTPS 突然全国红的证书向排查
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---

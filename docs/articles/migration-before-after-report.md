@@ -9,7 +9,8 @@ permalink: articles/migration-before-after-report.html
 
 # 迁机前后对比汇报模板：给老板和客户看的双地图 PPT
 
-> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 ---
