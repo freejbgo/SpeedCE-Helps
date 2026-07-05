@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "FastAPI + Uvicorn 部署：异步 API 的网络层验收要点"
 category: 开发
 description: "FastAPI 性能强但部署配置错了一样全国红。"
 keywords: FastAPI,Python,API,SpeedCE
-permalink: articles/fastapi-uvicorn-deploy.html
 ---
 
 # FastAPI + Uvicorn 部署：异步 API 的网络层验收要点

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Gzip/Brotli 压缩配置与超时：能通但极慢的排查"
 category: 故障排查
 description: "没开压缩，大 JSON 响应体导致 TTFB 极高——网络通但体验差。"
 keywords: Gzip,Brotli,Nginx,SpeedCE
-permalink: articles/gzip-brotli-compression.html
 ---
 
 # Gzip/Brotli 压缩配置与超时：能通但极慢的排查

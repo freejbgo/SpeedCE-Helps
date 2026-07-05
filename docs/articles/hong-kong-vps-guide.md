@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "香港 VPS 线路选购与验收：个人站、电商、API 场景怎么选"
 category: VPS线路
 description: "香港机房 CN2、CMI、BGP 混杂，全国三网地图是唯一靠谱验货方式。"
 keywords: 香港VPS,CN2,线路测速,SpeedCE
-permalink: articles/hong-kong-vps-guide.html
 ---
 
 # 香港 VPS 线路选购与验收：个人站、电商、API 场景怎么选

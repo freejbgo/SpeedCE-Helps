@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "游戏联机服务器社群运营：用全国 PING 地图建立信任"
 category: 行业
 description: "游戏玩家对延迟敏感，全国 PING 地图是社群信任基础。"
 keywords: 游戏服务器,联机,SpeedCE
-permalink: articles/game-private-server-ping.html
 ---
 
 # 游戏联机服务器社群运营：用全国 PING 地图建立信任

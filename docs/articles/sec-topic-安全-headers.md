@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "安全 Headers 安全加固实战：配置、检测与影响评估"
 category: 安全
 description: "围绕「安全 Headers」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 安全,安全,SpeedCE
-permalink: articles/sec-topic-安全-headers.html
 ---
 
 # 安全 Headers 安全加固实战：配置、检测与影响评估

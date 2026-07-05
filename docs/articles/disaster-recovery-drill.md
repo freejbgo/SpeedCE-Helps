@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "灾备演练：切换 DR 站点后的全国 SpeedCE 点检"
 category: 运维
 description: "灾备切换后 5 分钟全国点检，比宣布恢复更重要。"
 keywords: 灾备,演练,DR,SpeedCE
-permalink: articles/disaster-recovery-drill.html
 ---
 
 # 灾备演练：切换 DR 站点后的全国 SpeedCE 点检

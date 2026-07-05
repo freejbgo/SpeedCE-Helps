@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "子域清单巡检法：多节点测速方法论与实操指南"
 category: 方法论
 description: "围绕「子域清单巡检法」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 子域清单巡检法,方法论,SpeedCE
-permalink: articles/method-topic-子域清单巡检法.html
 ---
 
 # 子域清单巡检法：多节点测速方法论与实操指南

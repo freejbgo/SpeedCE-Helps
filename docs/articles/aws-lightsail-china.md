@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "AWS Lightsail 对国内访问：全球绿、中国慢的常见形态"
 category: VPS线路
 description: "本文围绕「AWS Lightsail 对国内访问」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: AWS,Lightsail,云服务器,SpeedCE
-permalink: articles/aws-lightsail-china.html
 ---
 
 # AWS Lightsail 对国内访问：全球绿、中国慢的常见形态

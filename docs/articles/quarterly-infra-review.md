@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "季度基础设施体检：地图对比、趋势退化与升级决策"
 category: 方法论
 description: "本文围绕「季度基础设施体检」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 季度体检,基础设施,SpeedCE
-permalink: articles/quarterly-infra-review.html
 ---
 
 # 季度基础设施体检：地图对比、趋势退化与升级决策

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "日本 VPS 适合什么业务：东京大阪机房与三网回国实测"
 category: VPS线路
 description: "日本机便宜带宽足，但回国线路质量参差，移动地图是一票否决项。"
 keywords: 日本VPS,东京,线路,SpeedCE
-permalink: articles/japan-vps-guide.html
 ---
 
 # 日本 VPS 适合什么业务：东京大阪机房与三网回国实测

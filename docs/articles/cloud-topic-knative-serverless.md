@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Knative Serverless 云原生实战：部署架构与网络验收"
 category: 云原生
 description: "围绕「Knative Serverless」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Knative,云原生,SpeedCE
-permalink: articles/cloud-topic-knative-serverless.html
 ---
 
 # Knative Serverless 云原生实战：部署架构与网络验收

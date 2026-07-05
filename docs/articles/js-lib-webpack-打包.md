@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Python Webpack 打包 实战：安装、配置与生产部署验收"
 category: 开发
 description: "围绕「Webpack 打包」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Python,Webpack,开发,SpeedCE
-permalink: articles/js-lib-webpack-打包.html
 ---
 
 # Python Webpack 打包 实战：安装、配置与生产部署验收

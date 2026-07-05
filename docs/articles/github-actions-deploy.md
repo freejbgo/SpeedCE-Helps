@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "GitHub Actions 自动部署：从 push 到全国可达的完整流程"
 category: 运维
 description: "Actions 部署成功后加一步 SpeedCE 验收。"
 keywords: GitHub Actions,CI/CD,部署,SpeedCE
-permalink: articles/github-actions-deploy.html
 ---
 
 # GitHub Actions 自动部署：从 push 到全国可达的完整流程

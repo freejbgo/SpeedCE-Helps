@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Kubernetes Ingress 故障：集群内正常、公网域名红的排查"
 category: 故障排查
 description: "kubectl get pods 全 Running，但公网域名红——Ingress 层断了。"
 keywords: Kubernetes,Ingress,K8s,SpeedCE
-permalink: articles/k8s-ingress-troubleshoot.html
 ---
 
 # Kubernetes Ingress 故障：集群内正常、公网域名红的排查

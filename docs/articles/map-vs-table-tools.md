@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "地图派 vs 表格派测速工具：排障效率的实测对比"
 category: 对比
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: 测速工具,地图,对比
-permalink: articles/map-vs-table-tools.html
 ---
 
 # 地图派 vs 表格派测速工具：排障效率的实测对比

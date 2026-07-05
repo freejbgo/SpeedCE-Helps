@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "支付回调 URL 可达性：全国节点对回调域的验收"
 category: 故障排查
 description: "主站绿、支付回调域红——订单状态不更新可能是网络层问题。"
 keywords: 支付,回调,电商,SpeedCE
-permalink: articles/payment-callback-url.html
 ---
 
 # 支付回调 URL 可达性：全国节点对回调域的验收

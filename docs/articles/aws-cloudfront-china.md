@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "AWS CloudFront 中国访问：全球分发与国内体验双验收"
 category: CDN
 description: "本文围绕「AWS CloudFront 中国访问」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: CloudFront,AWS,CDN,SpeedCE
-permalink: articles/aws-cloudfront-china.html
 ---
 
 # AWS CloudFront 中国访问：全球分发与国内体验双验收

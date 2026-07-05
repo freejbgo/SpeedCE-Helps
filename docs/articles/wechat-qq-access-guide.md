@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "微信/QQ 打不开先测什么：网络层与合规层的标准分工"
 category: 故障排查
 description: "本文围绕「微信/QQ 打不开先测什么」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 微信拦截,QQ,网站合规,SpeedCE
-permalink: articles/wechat-qq-access-guide.html
 ---
 
 # 微信/QQ 打不开先测什么：网络层与合规层的标准分工

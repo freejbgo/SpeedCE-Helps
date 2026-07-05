@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "出海 SaaS 全球上线验收：目标市场通畅率达标手册"
 category: 出海
 description: "SaaS 出海看目标国通畅率，不是看团队能不能访问。"
 keywords: 出海SaaS,全球测速,SpeedCE
-permalink: articles/saas-global-launch.html
 ---
 
 # 出海 SaaS 全球上线验收：目标市场通畅率达标手册

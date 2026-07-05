@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "法兰克福 VPS 线路验收：机房选择与三网实测"
 category: VPS线路
 description: "围绕「法兰克福」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 法兰克福,VPS,线路,SpeedCE
-permalink: articles/vps-dc-法兰克福.html
 ---
 
 # 法兰克福 VPS 线路验收：机房选择与三网实测

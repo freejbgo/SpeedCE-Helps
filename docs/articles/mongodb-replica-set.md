@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "MongoDB 副本集部署：选举、读写分离与验收"
 category: 数据库
 description: "副本集选举期间短暂不可用，外部表现为 sporadic 红。"
 keywords: MongoDB,数据库,副本集,SpeedCE
-permalink: articles/mongodb-replica-set.html
 ---
 
 # MongoDB 副本集部署：选举、读写分离与验收

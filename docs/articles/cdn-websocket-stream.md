@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CDN 加速 WebSocket/直播流的可达性验收边界"
 category: CDN
 description: "本文围绕「CDN 加速 WebSocket/直播流的可达性验收边界」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: WebSocket,直播,CDN,SpeedCE
-permalink: articles/cdn-websocket-stream.html
 ---
 
 # CDN 加速 WebSocket/直播流的可达性验收边界

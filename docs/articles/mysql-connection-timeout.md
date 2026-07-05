@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "数据库连接超时与网站超时：网络绿、页面仍慢的分层排查"
 category: 故障排查
 description: "SpeedCE 全绿但页面超时——查 MySQL 连接池和慢查询。"
 keywords: MySQL,数据库,超时,SpeedCE
-permalink: articles/mysql-connection-timeout.html
 ---
 
 # 数据库连接超时与网站超时：网络绿、页面仍慢的分层排查

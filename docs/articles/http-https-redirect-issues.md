@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "HTTP 与 HTTPS 跳转故障：循环重定向与混合内容排查"
 category: 故障排查
 description: "301 配成循环、http 和 https 指向不同机器——对照测快速缩小范围。"
 keywords: HTTPS,301跳转,混合内容,SpeedCE
-permalink: articles/http-https-redirect-issues.html
 ---
 
 # HTTP 与 HTTPS 跳转故障：循环重定向与混合内容排查

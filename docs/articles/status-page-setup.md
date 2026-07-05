@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Status Page 搭建：测速数据如何支撑公开状态页"
 category: 进阶
 description: "公开状态页需要真实数据支撑，SpeedCE 截图是素材。"
 keywords: Status Page,监控,SpeedCE
-permalink: articles/status-page-setup.html
 ---
 
 # Status Page 搭建：测速数据如何支撑公开状态页

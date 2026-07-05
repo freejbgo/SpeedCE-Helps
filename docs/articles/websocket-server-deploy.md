@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "WebSocket 服务部署：长连接、代理配置与验收边界"
 category: 开发
 description: "WebSocket 需要 Nginx proxy_read_timeout 等特殊配置。"
 keywords: WebSocket,部署,实时,SpeedCE
-permalink: articles/websocket-server-deploy.html
 ---
 
 # WebSocket 服务部署：长连接、代理配置与验收边界

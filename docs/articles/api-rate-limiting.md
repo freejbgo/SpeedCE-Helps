@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "API 限流配置：防滥用与正常用户的平衡"
 category: 安全
 description: "限流太严正常用户 sporadic 红，太松被刷爆。"
 keywords: API,限流,安全,SpeedCE
-permalink: articles/api-rate-limiting.html
 ---
 
 # API 限流配置：防滥用与正常用户的平衡

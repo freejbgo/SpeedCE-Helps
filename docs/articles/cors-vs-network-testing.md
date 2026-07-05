@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CORS 报错与网络不通：开发者必分的两层问题"
 category: 故障排查
 description: "地图全绿 + 浏览器报 CORS——恭喜，网络通了，是 Header 没配。"
 keywords: CORS,跨域,API,SpeedCE
-permalink: articles/cors-vs-network-testing.html
 ---
 
 # CORS 报错与网络不通：开发者必分的两层问题

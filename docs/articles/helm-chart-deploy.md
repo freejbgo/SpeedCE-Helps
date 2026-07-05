@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Helm Chart 部署：模板、版本管理与回滚验收"
 category: 云原生
 description: "Helm rollback 后必须全国复测确认回退成功。"
 keywords: Helm,Kubernetes,部署,SpeedCE
-permalink: articles/helm-chart-deploy.html
 ---
 
 # Helm Chart 部署：模板、版本管理与回滚验收

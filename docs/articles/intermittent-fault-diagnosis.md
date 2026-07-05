@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "间歇性网站故障排查：「有时慢有时好」的科学点检方法"
 category: 故障排查
 description: "间歇故障是运维噩梦：你测的时候永远正常，用户投诉的时候你不在。"
 keywords: 间歇故障,网站不稳定,SpeedCE
-permalink: articles/intermittent-fault-diagnosis.html
 ---
 
 # 间歇性网站故障排查：「有时慢有时好」的科学点检方法

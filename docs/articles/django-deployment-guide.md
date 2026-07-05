@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Django 生产部署：Gunicorn、Nginx 与静态文件的三层验收"
 category: 开发
 description: "Django 部署三层：WSGI 进程、Nginx 反代、静态文件 CDN。"
 keywords: Django,Python,部署,SpeedCE
-permalink: articles/django-deployment-guide.html
 ---
 
 # Django 生产部署：Gunicorn、Nginx 与静态文件的三层验收

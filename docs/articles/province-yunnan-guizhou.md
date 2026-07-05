@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "云贵地区访问：西南边陲地图与移动网络"
 category: 进阶
 description: "本文围绕「云贵地区访问」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 云南,贵州,西南,SpeedCE
-permalink: articles/province-yunnan-guizhou.html
 ---
 
 # 云贵地区访问：西南边陲地图与移动网络

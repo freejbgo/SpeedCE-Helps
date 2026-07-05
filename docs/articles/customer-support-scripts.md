@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "客服工单测速话术大全：20+ 专业回复「打不开」模板"
 category: 方法论
 description: "本文围绕「客服工单测速话术大全」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 客服话术,工单,SpeedCE
-permalink: articles/customer-support-scripts.html
 ---
 
 # 客服工单测速话术大全：20+ 专业回复「打不开」模板

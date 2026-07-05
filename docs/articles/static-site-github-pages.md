@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "静态站部署：GitHub Pages vs 自建服务器的地图对比"
 category: 开发
 description: "GitHub Pages 国内访问慢是已知问题——用地图量化。"
 keywords: 静态站,GitHub Pages,部署,SpeedCE
-permalink: articles/static-site-github-pages.html
 ---
 
 # 静态站部署：GitHub Pages vs 自建服务器的地图对比

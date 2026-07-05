@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "日历提醒巡检：把测速写进 Google Calendar / 飞书"
 category: 方法论
 description: "本文围绕「日历提醒巡检」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 日历,提醒,巡检,SpeedCE
-permalink: articles/calendar-reminder-inspect.html
 ---
 
 # 日历提醒巡检：把测速写进 Google Calendar / 飞书

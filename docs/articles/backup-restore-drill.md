@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "备份恢复演练：RTO/RPO 目标与恢复后全国验收"
 category: 运维
 description: "备份了但没演练过等于没备份——恢复后必须全国复测。"
 keywords: 备份,恢复,灾备,SpeedCE
-permalink: articles/backup-restore-drill.html
 ---
 
 # 备份恢复演练：RTO/RPO 目标与恢复后全国验收

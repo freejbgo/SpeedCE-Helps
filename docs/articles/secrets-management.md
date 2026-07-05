@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "密钥管理最佳实践：环境变量、Vault 与轮换策略"
 category: 安全
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: 密钥,安全,运维,SpeedCE
-permalink: articles/secrets-management.html
 ---
 
 # 密钥管理最佳实践：环境变量、Vault 与轮换策略

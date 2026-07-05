@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Laravel + Nginx + PHP-FPM 部署验收：从 composer 到全国可达"
 category: 开发
 description: "Laravel 部署坑多：权限、.env、PHP-FPM 池大小。"
 keywords: Laravel,PHP,部署,SpeedCE
-permalink: articles/laravel-nginx-deploy.html
 ---
 
 # Laravel + Nginx + PHP-FPM 部署验收：从 composer 到全国可达

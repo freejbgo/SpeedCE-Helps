@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "多语言站点全球分发：hreflang 与各地可达性验收"
 category: 出海
 description: "本文围绕「多语言站点全球分发」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 多语言,出海,SEO,SpeedCE
-permalink: articles/multilingual-site-delivery.html
 ---
 
 # 多语言站点全球分发：hreflang 与各地可达性验收

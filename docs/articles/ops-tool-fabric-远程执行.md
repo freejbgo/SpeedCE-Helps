@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Linux Fabric 远程执行 命令实战：运维场景与故障排查"
 category: 运维
 description: "围绕「Fabric 远程执行」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Linux,Fabric,运维,SpeedCE
-permalink: articles/ops-tool-fabric-远程执行.html
 ---
 
 # Linux Fabric 远程执行 命令实战：运维场景与故障排查

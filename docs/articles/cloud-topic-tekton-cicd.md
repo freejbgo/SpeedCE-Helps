@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Tekton CI/CD 云原生实战：部署架构与网络验收"
 category: 云原生
 description: "围绕「Tekton CI/CD」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Tekton,云原生,SpeedCE
-permalink: articles/cloud-topic-tekton-cicd.html
 ---
 
 # Tekton CI/CD 云原生实战：部署架构与网络验收

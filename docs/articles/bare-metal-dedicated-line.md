@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "物理机专线接入：企业专线用户的地图验收"
 category: VPS线路
 description: "本文围绕「物理机专线接入」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 专线,物理机,企业,SpeedCE
-permalink: articles/bare-metal-dedicated-line.html
 ---
 
 # 物理机专线接入：企业专线用户的地图验收

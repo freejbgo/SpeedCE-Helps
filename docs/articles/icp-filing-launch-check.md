@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "ICP 备案通过后全国可达性验收：解析、证书与合规"
 category: 进阶
 description: "备案通过不等于全国能访问——还要验收解析和证书。"
 keywords: ICP备案,上线,SpeedCE
-permalink: articles/icp-filing-launch-check.html
 ---
 
 # ICP 备案通过后全国可达性验收：解析、证书与合规

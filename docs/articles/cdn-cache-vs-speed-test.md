@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CDN 缓存与拨测的关系：为什么第一次慢、刷新后又快"
 category: CDN
 description: "本文围绕「CDN 缓存与拨测的关系」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: CDN缓存,测速,SpeedCE
-permalink: articles/cdn-cache-vs-speed-test.html
 ---
 
 # CDN 缓存与拨测的关系：为什么第一次慢、刷新后又快

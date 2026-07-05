@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "JVM GC 停顿 故障排查手册：现象、定位与修复"
 category: 故障排查
 description: "围绕「JVM GC 停顿」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: JVM,故障排查,SpeedCE
-permalink: articles/fix-more-jvm-gc-停顿.html
 ---
 
 # JVM GC 停顿 故障排查手册：现象、定位与修复

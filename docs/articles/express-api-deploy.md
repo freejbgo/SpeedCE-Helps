@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Express API 部署验收：中间件、CORS 与全国可达性"
 category: 开发
 description: "Express 本地 localhost:3000 通，外网访问要查 bind 地址。"
 keywords: Express,Node.js,API,SpeedCE
-permalink: articles/express-api-deploy.html
 ---
 
 # Express API 部署验收：中间件、CORS 与全国可达性

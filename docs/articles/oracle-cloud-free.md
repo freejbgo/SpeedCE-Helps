@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "甲骨文云免费 tier 验收：零成本机器的地图标准"
 category: VPS线路
 description: "免费机也要验收：被墙 IP 和超售邻居是常见坑。"
 keywords: Oracle Cloud,免费VPS,SpeedCE
-permalink: articles/oracle-cloud-free.html
 ---
 
 # 甲骨文云免费 tier 验收：零成本机器的地图标准

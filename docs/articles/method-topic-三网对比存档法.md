@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "三网对比存档法：多节点测速方法论与实操指南"
 category: 方法论
 description: "围绕「三网对比存档法」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 三网对比存档法,方法论,SpeedCE
-permalink: articles/method-topic-三网对比存档法.html
 ---
 
 # 三网对比存档法：多节点测速方法论与实操指南

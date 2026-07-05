@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Python PHP Symfony 框架 实战：安装、配置与生产部署验收"
 category: 开发
 description: "围绕「PHP Symfony 框架」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Python,PHP,开发,SpeedCE
-permalink: articles/dev-framework-php-symfony-框架.html
 ---
 
 # Python PHP Symfony 框架 实战：安装、配置与生产部署验收

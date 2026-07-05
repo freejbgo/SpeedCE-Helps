@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Typecho/Emlog 轻量博客：小站也要做的全国验收"
 category: 开发
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: Typecho,Emlog,博客,SpeedCE
-permalink: articles/typecho-emlog-setup.html
 ---
 
 # Typecho/Emlog 轻量博客：小站也要做的全国验收

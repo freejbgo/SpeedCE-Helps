@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "gRPC 网关部署：REST 可达与 gRPC 故障的分工排查"
 category: 开发
 description: "SpeedCE 测 REST/HTTP 可达，gRPC 需要专项工具。"
 keywords: gRPC,API,网关,SpeedCE
-permalink: articles/grpc-gateway-setup.html
 ---
 
 # gRPC 网关部署：REST 可达与 gRPC 故障的分工排查

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "新闻发布与热点峰值：突发流量前的 30 分钟点检"
 category: 进阶
 description: "本文围绕「新闻发布与热点峰值」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 新闻,峰值,流量,SpeedCE
-permalink: articles/cctv-news-peak.html
 ---
 
 # 新闻发布与热点峰值：突发流量前的 30 分钟点检

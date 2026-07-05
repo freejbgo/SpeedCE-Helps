@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "On-Call Runbook 中的测速章节：告警后 5 分钟 SOP"
 category: 运维
 description: "收到告警前 30 秒打开 SpeedCE，比翻文档快。"
 keywords: OnCall,Runbook,应急,SpeedCE
-permalink: articles/oncall-runbook-speedtest.html
 ---
 
 # On-Call Runbook 中的测速章节：告警后 5 分钟 SOP

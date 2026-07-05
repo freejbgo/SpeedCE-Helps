@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "GCP / Azure 回国访问：企业云对国内团队的地图评估"
 category: VPS线路
 description: "本文围绕「GCP / Azure 回国访问」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: GCP,Azure,云,SpeedCE
-permalink: articles/gcp-azure-china-access.html
 ---
 
 # GCP / Azure 回国访问：企业云对国内团队的地图评估

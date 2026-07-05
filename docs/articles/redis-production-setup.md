@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Redis 生产环境配置：持久化、内存与集群部署"
 category: 数据库
 description: "Redis maxmemory 满了会拒绝写入，页面功能异常。"
 keywords: Redis,缓存,部署,SpeedCE
-permalink: articles/redis-production-setup.html
 ---
 
 # Redis 生产环境配置：持久化、内存与集群部署

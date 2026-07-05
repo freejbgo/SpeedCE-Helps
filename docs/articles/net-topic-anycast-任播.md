@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Anycast 任播 网络协议深入：原理、配置与排障"
 category: 网络
 description: "围绕「Anycast 任播」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Anycast,网络,SpeedCE
-permalink: articles/net-topic-anycast-任播.html
 ---
 
 # Anycast 任播 网络协议深入：原理、配置与排障

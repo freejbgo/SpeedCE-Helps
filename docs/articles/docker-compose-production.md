@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Docker Compose 生产部署：网络、卷、健康检查完整配置"
 category: 运维
 description: "docker-compose up -d 后必须外部访问验收，不是 docker ps 看状态。"
 keywords: Docker Compose,容器,部署,SpeedCE
-permalink: articles/docker-compose-production.html
 ---
 
 # Docker Compose 生产部署：网络、卷、健康检查完整配置

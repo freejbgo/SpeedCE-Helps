@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "新加坡 VPS 验收指南：东南亚枢纽与回国双视角测速"
 category: VPS线路
 description: "本文围绕「新加坡 VPS 验收指南」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 新加坡VPS,东南亚,SpeedCE
-permalink: articles/singapore-vps-guide.html
 ---
 
 # 新加坡 VPS 验收指南：东南亚枢纽与回国双视角测速

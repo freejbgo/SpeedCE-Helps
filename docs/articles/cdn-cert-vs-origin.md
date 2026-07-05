@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CDN 证书与源站证书：两边都要绿的完整验收流程"
 category: CDN
 description: "CDN 证书和源站证书是两套独立配置，分别验收。"
 keywords: CDN证书,SSL,SpeedCE
-permalink: articles/cdn-cert-vs-origin.html
 ---
 
 # CDN 证书与源站证书：两边都要绿的完整验收流程

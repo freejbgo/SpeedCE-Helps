@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "DNS 记录类型详解：A、AAAA、CNAME、MX、TXT 各干什么"
 category: 网络
 description: "改错一条 DNS 记录，全国地图大面积红。"
 keywords: DNS,记录类型,域名,SpeedCE
-permalink: articles/dns-records-explained.html
 ---
 
 # DNS 记录类型详解：A、AAAA、CNAME、MX、TXT 各干什么

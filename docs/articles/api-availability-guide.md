@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "API 接口可达性检测：Postman 能通、全国用户不通的真相"
 category: 故障排查
 description: "API 故障往往最后才发现：前端缓存还在，App 打接口立刻挂。"
 keywords: API,接口监控,HTTPS,SpeedCE
-permalink: articles/api-availability-guide.html
 ---
 
 # API 接口可达性检测：Postman 能通、全国用户不通的真相

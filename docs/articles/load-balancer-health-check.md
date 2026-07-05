@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "负载均衡与健康检查：一半节点绿一半红的架构问题"
 category: 故障排查
 description: "多台后端一台挂，用户感受是「有时能开有时不能」。"
 keywords: 负载均衡,健康检查,高可用,SpeedCE
-permalink: articles/load-balancer-health-check.html
 ---
 
 # 负载均衡与健康检查：一半节点绿一半红的架构问题

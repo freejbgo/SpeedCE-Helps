@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "systemd 服务管理：开机自启、日志查看与故障恢复"
 category: 运维
 description: "systemctl status 显示 active 但端口未监听——服务假活。"
 keywords: systemd,Linux,运维,SpeedCE
-permalink: articles/linux-systemd-service.html
 ---
 
 # systemd 服务管理：开机自启、日志查看与故障恢复

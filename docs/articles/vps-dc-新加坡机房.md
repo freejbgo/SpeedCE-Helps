@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "新加坡机房 VPS 线路验收：机房选择与三网实测"
 category: VPS线路
 description: "围绕「新加坡机房」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 新加坡机房,VPS,线路,SpeedCE
-permalink: articles/vps-dc-新加坡机房.html
 ---
 
 # 新加坡机房 VPS 线路验收：机房选择与三网实测

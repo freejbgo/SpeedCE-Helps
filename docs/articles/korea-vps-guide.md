@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "韩国 VPS 线路测评：离中国近不等于三网都好"
 category: VPS线路
 description: "本文围绕「韩国 VPS 线路测评」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 韩国VPS,线路,SpeedCE
-permalink: articles/korea-vps-guide.html
 ---
 
 # 韩国 VPS 线路测评：离中国近不等于三网都好

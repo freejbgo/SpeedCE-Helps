@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "logrotate 配置与磁盘管理：防止日志撑满导致假死"
 category: 运维
 description: "磁盘 100% 时服务假死，SpeedCE 表现为 sporadic 红。"
 keywords: logrotate,日志,磁盘,SpeedCE
-permalink: articles/logrotate-config.html
 ---
 
 # logrotate 配置与磁盘管理：防止日志撑满导致假死

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "东北三省访问质量验收：寒区线路与 CDN 节点覆盖"
 category: 进阶
 description: "本文围绕「东北三省访问质量验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 东北,区域,SpeedCE
-permalink: articles/northeast-china-access-guide.html
 ---
 
 # 东北三省访问质量验收：寒区线路与 CDN 节点覆盖

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CDN 接入全攻略：切量前、切量中、故障时的多节点验收"
 category: CDN
 description: "上了 CDN 反而有人打不开？对照测速是 CDN 运维的黄金法则。"
 keywords: CDN测速,CDN验收,回源,SpeedCE
-permalink: articles/cdn-deployment-speed-test-guide.html
 ---
 
 # CDN 接入全攻略：切量前、切量中、故障时的多节点验收

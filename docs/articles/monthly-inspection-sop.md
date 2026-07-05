@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "月度网站巡检 SOP：个人站 15 分钟、企业站 1 小时版"
 category: 运维
 description: "每月固定一天三网截图存档，对比上月发现退化。"
 keywords: 月度巡检,SOP,SpeedCE
-permalink: articles/monthly-inspection-sop.html
 ---
 
 # 月度网站巡检 SOP：个人站 15 分钟、企业站 1 小时版

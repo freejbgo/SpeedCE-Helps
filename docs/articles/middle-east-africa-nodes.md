@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "中东与非洲节点验收：新兴市场的地图达标策略"
 category: 出海
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: 中东,非洲,出海,SpeedCE
-permalink: articles/middle-east-africa-nodes.html
 ---
 
 # 中东与非洲节点验收：新兴市场的地图达标策略

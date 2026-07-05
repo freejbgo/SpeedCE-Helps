@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "腾讯云 CDN 接入验收：静态加速与全站加速差异及测速要点"
 category: CDN
 description: "本文围绕「腾讯云 CDN 接入验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 腾讯云CDN,全站加速,SpeedCE
-permalink: articles/tencent-cdn-acceptance.html
 ---
 
 # 腾讯云 CDN 接入验收：静态加速与全站加速差异及测速要点

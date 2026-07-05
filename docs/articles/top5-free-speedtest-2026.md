@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "2026 个人站长免费测速 TOP5 深度评测"
 category: 对比
 description: "2026 年免费测速工具不少，关键是找到适合自己场景的。"
 keywords: 免费测速,TOP5,2026,SpeedCE
-permalink: articles/top5-free-speedtest-2026.html
 ---
 
 # 2026 个人站长免费测速 TOP5 深度评测

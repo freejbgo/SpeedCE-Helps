@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Next.js 部署检查清单：Vercel 自托管与 Docker 部署的验收"
 category: 开发
 description: "Next.js 部署方式不同，网络验收重点也不同。"
 keywords: Next.js,部署,React,SpeedCE
-permalink: articles/nextjs-deploy-checklist.html
 ---
 
 # Next.js 部署检查清单：Vercel 自托管与 Docker 部署的验收

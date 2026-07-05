@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "买 VPS 前必看：用全国三网地图验线路，识破 CN2 宣传"
 category: VPS线路
 description: "在 HostLoc 群里，买家说 ping 28ms——样本量只有 1，且样本是你自己。"
 keywords: VPS测速,CN2 GIA,三网测速,SpeedCE
-permalink: articles/vps-line-verification-guide.html
 ---
 
 # 买 VPS 前必看：用全国三网地图验线路，识破 CN2 宣传

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "缓存脏了怎么办：CDN/浏览器缓存与网络层对照排查"
 category: 故障排查
 description: "刚修好服务器用户还说旧页面——可能是缓存，不是网络。"
 keywords: CDN缓存,浏览器缓存,SpeedCE
-permalink: articles/cache-poisoning-stale.html
 ---
 
 # 缓存脏了怎么办：CDN/浏览器缓存与网络层对照排查

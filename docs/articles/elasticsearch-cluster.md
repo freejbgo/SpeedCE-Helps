@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Elasticsearch 集群部署：分片、副本与搜索服务验收"
 category: 数据库
 description: "ES 集群黄灯时搜索变慢，网络层仍可能全绿。"
 keywords: Elasticsearch,搜索,集群,SpeedCE
-permalink: articles/elasticsearch-cluster.html
 ---
 
 # Elasticsearch 集群部署：分片、副本与搜索服务验收

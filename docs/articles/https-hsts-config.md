@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "HSTS 配置与安全加固：强制 HTTPS 的利弊与影响评估"
 category: 安全
 description: "开启 HSTS 后 HTTP 跳转失败会导致用户完全无法访问。"
 keywords: HSTS,HTTPS,安全,SpeedCE
-permalink: articles/https-hsts-config.html
 ---
 
 # HSTS 配置与安全加固：强制 HTTPS 的利弊与影响评估

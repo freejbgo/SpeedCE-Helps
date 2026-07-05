@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "多活架构切换 进阶实战：变更管理与测速门禁"
 category: 进阶
 description: "围绕「多活架构切换」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 多活架构切换,进阶,SpeedCE
-permalink: articles/adv-topic-多活架构切换.html
 ---
 
 # 多活架构切换 进阶实战：变更管理与测速门禁

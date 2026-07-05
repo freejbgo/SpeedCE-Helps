@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "医院预约系统网络基线：高峰与移动用户验收"
 category: 行业
 description: "医院预约系统移动用户占比高，移动地图必看。"
 keywords: 医疗,预约,移动,SpeedCE
-permalink: articles/hospital-appointment-system.html
 ---
 
 # 医院预约系统网络基线：高峰与移动用户验收

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Certbot 自动续签：配置、告警与续签失败处理"
 category: 运维
 description: "自动续签失败静默三个月，某天 HTTPS 全国红。"
 keywords: Certbot,SSL,证书,SpeedCE
-permalink: articles/ssl-certbot-auto.html
 ---
 
 # Certbot 自动续签：配置、告警与续签失败处理

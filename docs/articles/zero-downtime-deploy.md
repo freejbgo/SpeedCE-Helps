@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "零停机发布：蓝绿/金丝雀发布中的地图对照"
 category: 运维
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: 蓝绿,金丝雀,发布,SpeedCE
-permalink: articles/zero-downtime-deploy.html
 ---
 
 # 零停机发布：蓝绿/金丝雀发布中的地图对照

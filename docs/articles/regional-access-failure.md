@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "仅部分地区打不开？用地图精确定位省份与运营商"
 category: 故障排查
 description: "「就新疆不行」「就移动不行」——地图才是区域故障的语言。"
 keywords: 区域故障,省份,地图测速,SpeedCE
-permalink: articles/regional-access-failure.html
 ---
 
 # 仅部分地区打不开？用地图精确定位省份与运营商

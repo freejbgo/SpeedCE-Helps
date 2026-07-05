@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "PostgreSQL 调优：连接池、VACUUM 与查询优化"
 category: 数据库
 description: "PgBouncer 连接池配错，高峰期 sporadic 502。"
 keywords: PostgreSQL,数据库,调优,SpeedCE
-permalink: articles/postgresql-tuning.html
 ---
 
 # PostgreSQL 调优：连接池、VACUUM 与查询优化

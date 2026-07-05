@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "TCP 与 UDP 基础：建站场景下该关心什么"
 category: 网络
 description: "建站主要关心 TCP 443，UDP 是 DNS 和游戏场景。"
 keywords: TCP,UDP,网络,SpeedCE
-permalink: articles/tcp-udp-basics.html
 ---
 
 # TCP 与 UDP 基础：建站场景下该关心什么

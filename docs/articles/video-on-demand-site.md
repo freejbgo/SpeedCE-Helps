@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "点播视频站验收：播放域、CDN 与 API 三域测速"
 category: 行业
 description: "本文围绕「点播视频站验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 视频,点播,CDN,SpeedCE
-permalink: articles/video-on-demand-site.html
 ---
 
 # 点播视频站验收：播放域、CDN 与 API 三域测速

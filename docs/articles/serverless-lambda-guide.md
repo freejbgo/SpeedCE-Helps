@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Serverless/Lambda 部署：冷启动、超时与 API 验收"
 category: 云原生
 description: "冷启动导致首请求超时，表现为 sporadic 红。"
 keywords: Serverless,Lambda,云,SpeedCE
-permalink: articles/serverless-lambda-guide.html
 ---
 
 # Serverless/Lambda 部署：冷启动、超时与 API 验收

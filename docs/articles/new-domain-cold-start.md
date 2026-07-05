@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "新域名冷启动 72 小时：注册、解析、证书与地图验收节奏"
 category: 进阶
 description: "本文围绕「新域名冷启动 72 小时」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 新域名,DNS,SpeedCE
-permalink: articles/new-domain-cold-start.html
 ---
 
 # 新域名冷启动 72 小时：注册、解析、证书与地图验收节奏

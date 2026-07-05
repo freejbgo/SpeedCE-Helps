@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "WordPress 性能优化与部署：插件、缓存与全国验收"
 category: 开发
 description: "WordPress 插件越多越慢——优化后全国复测确认。"
 keywords: WordPress,博客,优化,SpeedCE
-permalink: articles/wordpress-optimization.html
 ---
 
 # WordPress 性能优化与部署：插件、缓存与全国验收

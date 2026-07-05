@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Nginx 访问日志分析：从日志到全国地图的故障定位"
 category: 运维
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: Nginx,日志,运维,SpeedCE
-permalink: articles/nginx-log-analysis.html
 ---
 
 # Nginx 访问日志分析：从日志到全国地图的故障定位

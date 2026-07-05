@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Node.js PM2 集群部署：多进程、负载均衡与验收"
 category: 开发
 description: "PM2 cluster 模式端口监听和 Nginx upstream 要配对。"
 keywords: Node.js,PM2,部署,SpeedCE
-permalink: articles/nodejs-pm2-cluster.html
 ---
 
 # Node.js PM2 集群部署：多进程、负载均衡与验收

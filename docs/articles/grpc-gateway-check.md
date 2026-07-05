@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "gRPC / HTTP2 网关：REST 可达与 gRPC 故障分工"
 category: 故障排查
 description: "本文围绕「gRPC / HTTP2 网关」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: gRPC,HTTP2,API,SpeedCE
-permalink: articles/grpc-gateway-check.html
 ---
 
 # gRPC / HTTP2 网关：REST 可达与 gRPC 故障分工

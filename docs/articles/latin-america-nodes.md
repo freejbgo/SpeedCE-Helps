@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "拉美节点验收：巴西、墨西哥重点市场地图标准"
 category: 出海
 description: "拉美网络基础设施参差，巴西和墨西哥要分开测。"
 keywords: 拉美,巴西,出海,SpeedCE
-permalink: articles/latin-america-nodes.html
 ---
 
 # 拉美节点验收：巴西、墨西哥重点市场地图标准

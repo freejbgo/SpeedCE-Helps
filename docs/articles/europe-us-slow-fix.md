@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "欧美用户访问慢完全对策：源站、CDN、机房选址三角决策"
 category: 出海
 description: "本文围绕「欧美用户访问慢完全对策」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 欧美,出海,CDN,SpeedCE
-permalink: articles/europe-us-slow-fix.html
 ---
 
 # 欧美用户访问慢完全对策：源站、CDN、机房选址三角决策

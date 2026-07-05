@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "A/B 对照测速法：CDN vs 源站、迁机前后的系统方法"
 category: 方法论
 description: "对照测是排障第一原则——没有对照就没有结论。"
 keywords: 对照测速,方法论,SpeedCE
-permalink: articles/ab-comparison-method.html
 ---
 
 # A/B 对照测速法：CDN vs 源站、迁机前后的系统方法

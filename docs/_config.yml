@@ -1,29 +1,38 @@
 title: SpeedCE 技术文档库
 description: >-
-  多节点网站测速 · 网络排障 · 500 篇站长技术实战文章。
+  多节点网站测速 · 网络排障 · 500 篇站长技术实战长文（中文）+ 500 篇英文 SEO 指南。
   SpeedCE 免费在线测速工具：https://speedce.com/?lang=zh-CN
 lang: zh-CN
 url: https://freejbgo.github.io
 baseurl: /SpeedCE-Helps
+timezone: Asia/Shanghai
 
-theme: minima
+author:
+  name: SpeedCE
+  email: speedceads@gmail.com
 
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
-
-markdown: kramdown
-kramdown:
-  input: GFM
+  - jekyll-sitemap
+  - jekyll-feed
 
 defaults:
   - scope:
       path: "articles"
       type: "pages"
     values:
-      layout: default
-      permalink: articles/:name.html
+      layout: article
+      tool: SpeedCE
+  - scope:
+      path: "en/articles"
+      type: "pages"
+    values:
+      layout: article
+      tool: SpeedCE
+      lang: en
 
 exclude:
-  - articles/README.md
+  - Gemfile
+  - Gemfile.lock
+
+permalink: pretty

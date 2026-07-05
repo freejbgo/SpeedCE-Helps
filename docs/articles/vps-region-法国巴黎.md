@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "法国巴黎 VPS 线路验收：机房选择与三网实测"
 category: VPS线路
 description: "围绕「法国巴黎」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 法国巴黎,VPS,线路,SpeedCE
-permalink: articles/vps-region-法国巴黎.html
 ---
 
 # 法国巴黎 VPS 线路验收：机房选择与三网实测

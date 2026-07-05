@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "搬瓦工 CN2/GIA 套餐验机：经典商家地图验收法"
 category: VPS线路
 description: "搬瓦工经典套餐也要地图验收——不同机房线路差异明显。"
 keywords: 搬瓦工,BandwagonHost,CN2,SpeedCE
-permalink: articles/bandwagonhost-guide.html
 ---
 
 # 搬瓦工 CN2/GIA 套餐验机：经典商家地图验收法

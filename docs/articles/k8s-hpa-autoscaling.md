@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Kubernetes HPA 自动扩缩容：指标、阈值与外部验收"
 category: 云原生
 description: "HPA 扩容不及时，外部表现为 sporadic 超时。"
 keywords: Kubernetes,HPA,扩缩容,SpeedCE
-permalink: articles/k8s-hpa-autoscaling.html
 ---
 
 # Kubernetes HPA 自动扩缩容：指标、阈值与外部验收

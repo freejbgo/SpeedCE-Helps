@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "GTmetrix vs SpeedCE：性能测试与网络拨测分工"
 category: 对比
 description: "GTmetrix 测页面性能，SpeedCE 测网络可达——先通后快。"
 keywords: GTmetrix,测速,对比
-permalink: articles/gtmetrix-vs-speedce.html
 ---
 
 # GTmetrix vs SpeedCE：性能测试与网络拨测分工

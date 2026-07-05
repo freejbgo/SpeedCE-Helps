@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Kubernetes 部署实战：Deployment、Service、Ingress 完整链路"
 category: 运维
 description: "kubectl get pods 全 Running 不等于用户能访问。"
 keywords: Kubernetes,K8s,部署,SpeedCE
-permalink: articles/kubernetes-deployment.html
 ---
 
 # Kubernetes 部署实战：Deployment、Service、Ingress 完整链路

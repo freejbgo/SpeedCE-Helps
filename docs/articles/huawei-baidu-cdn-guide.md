@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "华为云/百度云 CDN 验收要点与三网地图标准"
 category: CDN
 description: "本文围绕「华为云/百度云 CDN 验收要点与三网地图标准」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 华为云,百度云,CDN,SpeedCE
-permalink: articles/huawei-baidu-cdn-guide.html
 ---
 
 # 华为云/百度云 CDN 验收要点与三网地图标准

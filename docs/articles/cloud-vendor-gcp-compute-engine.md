@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "GCP Compute Engine 云原生实战：部署架构与网络验收"
 category: 云原生
 description: "围绕「GCP Compute Engine」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: GCP,云原生,SpeedCE
-permalink: articles/cloud-vendor-gcp-compute-engine.html
 ---
 
 # GCP Compute Engine 云原生实战：部署架构与网络验收

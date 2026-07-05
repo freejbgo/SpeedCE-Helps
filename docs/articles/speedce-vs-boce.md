@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "SpeedCE vs BOCE 完全对比：轻量地图与全能运维的边界"
 category: 方法论
 description: "SpeedCE 看地图，BOCE 查合规——分工明确。"
 keywords: SpeedCE,BOCE,对比
-permalink: articles/speedce-vs-boce.html
 ---
 
 # SpeedCE vs BOCE 完全对比：轻量地图与全能运维的边界

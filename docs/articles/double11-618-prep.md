@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "双11/618 大促测速时间表：T-7 到 T+0 的完整节奏"
 category: 进阶
 description: "大促测速不是测一次，是 T-7 到 T+0 的持续节奏。"
 keywords: 双11,618,大促,SpeedCE
-permalink: articles/double11-618-prep.html
 ---
 
 # 双11/618 大促测速时间表：T-7 到 T+0 的完整节奏

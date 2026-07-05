@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "MySQL 主从断裂 故障排查手册：现象、定位与修复"
 category: 故障排查
 description: "围绕「MySQL 主从断裂」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: MySQL,故障排查,SpeedCE
-permalink: articles/fix-more-mysql-主从断裂.html
 ---
 
 # MySQL 主从断裂 故障排查手册：现象、定位与修复

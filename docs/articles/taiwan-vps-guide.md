@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "台湾 VPS 验收要点：延迟优势与线路宣传核实"
 category: VPS线路
 description: "本文围绕「台湾 VPS 验收要点」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 台湾VPS,线路,SpeedCE
-permalink: articles/taiwan-vps-guide.html
 ---
 
 # 台湾 VPS 验收要点：延迟优势与线路宣传核实

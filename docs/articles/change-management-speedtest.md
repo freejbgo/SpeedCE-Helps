@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "变更管理中的测速门禁：改 DNS/证书/Nginx 必测制度"
 category: 进阶
 description: "本文围绕「变更管理中的测速门禁」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 变更管理,测速,运维,SpeedCE
-permalink: articles/change-management-speedtest.html
 ---
 
 # 变更管理中的测速门禁：改 DNS/证书/Nginx 必测制度

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "SpeedCE + ITDOG 黄金组合：地图巡检与持续 Ping 的协作手册"
 category: 方法论
 description: "本文围绕「SpeedCE + ITDOG 黄金组合」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: SpeedCE,ITDOG,工具组合
-permalink: articles/speedce-itdog-combo.html
 ---
 
 # SpeedCE + ITDOG 黄金组合：地图巡检与持续 Ping 的协作手册

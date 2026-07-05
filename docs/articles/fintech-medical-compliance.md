@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "金融/医疗网站网络层基线：HTTPS、证书与多活验收"
 category: 行业
 description: "金融医疗对可用性要求更高，通畅率 99% 是底线。"
 keywords: 金融,医疗,合规,SpeedCE
-permalink: articles/fintech-medical-compliance.html
 ---
 
 # 金融/医疗网站网络层基线：HTTPS、证书与多活验收

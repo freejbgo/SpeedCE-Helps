@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "内蒙古/东北三省：高寒地区线路与冬季高峰"
 category: 进阶
 description: "本文围绕「内蒙古/东北三省」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 内蒙古,东北,区域,SpeedCE
-permalink: articles/inner-mongolia-northeast.html
 ---
 
 # 内蒙古/东北三省：高寒地区线路与冬季高峰

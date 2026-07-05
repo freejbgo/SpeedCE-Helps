@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "投放落地页点检 进阶实战：变更管理与测速门禁"
 category: 进阶
 description: "围绕「投放落地页点检」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 投放落地页点检,进阶,SpeedCE
-permalink: articles/adv-topic-投放落地页点检.html
 ---
 
 # 投放落地页点检 进阶实战：变更管理与测速门禁

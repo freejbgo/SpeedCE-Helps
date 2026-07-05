@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "日本市场 市场出海验收：节点选择与通畅率标准"
 category: 出海
 description: "围绕「日本市场」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 日本市场,出海,SpeedCE
-permalink: articles/global-region-日本市场.html
 ---
 
 # 日本市场 市场出海验收：节点选择与通畅率标准

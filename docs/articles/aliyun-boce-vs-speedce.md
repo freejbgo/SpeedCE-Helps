@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "阿里云云拨测 vs SpeedCE：同云用户如何搭配"
 category: 对比
 description: "本文围绕「阿里云云拨测 vs SpeedCE」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 阿里云,拨测,SpeedCE
-permalink: articles/aliyun-boce-vs-speedce.html
 ---
 
 # 阿里云云拨测 vs SpeedCE：同云用户如何搭配

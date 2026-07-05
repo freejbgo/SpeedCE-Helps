@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "App 接口域名监控：iOS/Android 反馈不一致的网络层排查"
 category: 行业
 description: "本文围绕「App 接口域名监控」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: App,API,移动,SpeedCE
-permalink: articles/mobile-app-api-domain.html
 ---
 
 # App 接口域名监控：iOS/Android 反馈不一致的网络层排查

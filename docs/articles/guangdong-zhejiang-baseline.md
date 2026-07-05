@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "粤浙沪京基准延迟：经济发达省份的地图达标参考线"
 category: 进阶
 description: "本文围绕「粤浙沪京基准延迟」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 广东,浙江,延迟,SpeedCE
-permalink: articles/guangdong-zhejiang-baseline.html
 ---
 
 # 粤浙沪京基准延迟：经济发达省份的地图达标参考线

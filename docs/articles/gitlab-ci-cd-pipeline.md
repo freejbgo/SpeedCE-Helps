@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "GitLab CI/CD 流水线：构建、测试、部署与上线验收"
 category: 运维
 description: "CI 绿灯是代码质量，拨测绿灯是用户可达。"
 keywords: GitLab,CI/CD,DevOps,SpeedCE
-permalink: articles/gitlab-ci-cd-pipeline.html
 ---
 
 # GitLab CI/CD 流水线：构建、测试、部署与上线验收

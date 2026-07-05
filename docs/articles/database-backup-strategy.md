@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "数据库备份策略：全量、增量与恢复演练"
 category: 数据库
 description: "备份策略要有恢复演练，恢复后验收应用可达。"
 keywords: 数据库备份,恢复,SpeedCE
-permalink: articles/database-backup-strategy.html
 ---
 
 # 数据库备份策略：全量、增量与恢复演练

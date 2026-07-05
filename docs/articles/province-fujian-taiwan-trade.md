@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "闽粤台贸相关站点：东南沿海地图验收要点"
 category: 进阶
 description: "本文围绕「闽粤台贸相关站点」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 福建,广东,东南,SpeedCE
-permalink: articles/province-fujian-taiwan-trade.html
 ---
 
 # 闽粤台贸相关站点：东南沿海地图验收要点

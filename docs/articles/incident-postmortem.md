@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "事故复盘中的测速证据：时间线与地图如何写进 Postmortem"
 category: 运维
 description: "无责复盘要有数据：SpeedCE 截图 + 时间线。"
 keywords: Postmortem,复盘,运维,SpeedCE
-permalink: articles/incident-postmortem.html
 ---
 
 # 事故复盘中的测速证据：时间线与地图如何写进 Postmortem

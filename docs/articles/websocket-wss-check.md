@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "WebSocket / WSS 长连接：HTTPS 可达与实时业务的分工边界"
 category: 故障排查
 description: "SpeedCE 测 HTTPS 可达，WebSocket 握手失败是另一层问题。"
 keywords: WebSocket,WSS,实时,SpeedCE
-permalink: articles/websocket-wss-check.html
 ---
 
 # WebSocket / WSS 长连接：HTTPS 可达与实时业务的分工边界

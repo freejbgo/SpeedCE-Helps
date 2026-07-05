@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Scaleway 云 云原生实战：部署架构与网络验收"
 category: 云原生
 description: "围绕「Scaleway 云」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Scaleway,云原生,SpeedCE
-permalink: articles/cloud-vendor-scaleway-云.html
 ---
 
 # Scaleway 云 云原生实战：部署架构与网络验收

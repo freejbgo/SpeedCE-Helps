@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "二手 IP 段购买前避雷：被墙、被标记 IP 的全国地图特征"
 category: VPS线路
 description: "本文围绕「二手 IP 段购买前避雷」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: IP被墙,二手IP,VPS,SpeedCE
-permalink: articles/used-ip-segment-check.html
 ---
 
 # 二手 IP 段购买前避雷：被墙、被标记 IP 的全国地图特征

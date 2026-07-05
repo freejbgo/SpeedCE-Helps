@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Hexo/Hugo 静态博客部署：生成、推送与全国可达验收"
 category: 开发
 description: "静态博客部署简单，但 CDN 和域名配置不能马虎。"
 keywords: Hexo,Hugo,博客,SpeedCE
-permalink: articles/hexo-hugo-deploy.html
 ---
 
 # Hexo/Hugo 静态博客部署：生成、推送与全国可达验收

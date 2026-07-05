@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Vue/Nuxt 项目上线：SSR 与静态生成的网络层验收差异"
 category: 开发
 description: "SSR 站点要测 Node 服务可达性，静态站测 CDN 分发。"
 keywords: Vue,Nuxt,SSR,SpeedCE
-permalink: articles/vue-nuxt-deploy-guide.html
 ---
 
 # Vue/Nuxt 项目上线：SSR 与静态生成的网络层验收差异

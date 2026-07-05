@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Python TypeScript 类型系统 实战：安装、配置与生产部署验收"
 category: 开发
 description: "围绕「TypeScript 类型系统」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Python,TypeScript,开发,SpeedCE
-permalink: articles/js-lib-typescript-类型系统.html
 ---
 
 # Python TypeScript 类型系统 实战：安装、配置与生产部署验收

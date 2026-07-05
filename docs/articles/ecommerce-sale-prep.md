@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "电商 618/双11 大促前多节点测速备战手册"
 category: 行业
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: 电商,双11,618,SpeedCE
-permalink: articles/ecommerce-sale-prep.html
 ---
 
 # 电商 618/双11 大促前多节点测速备战手册

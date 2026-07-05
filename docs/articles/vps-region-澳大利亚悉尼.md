@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "澳大利亚悉尼 VPS 线路验收：机房选择与三网实测"
 category: VPS线路
 description: "围绕「澳大利亚悉尼」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 澳大利亚悉尼,VPS,线路,SpeedCE
-permalink: articles/vps-region-澳大利亚悉尼.html
 ---
 
 # 澳大利亚悉尼 VPS 线路验收：机房选择与三网实测

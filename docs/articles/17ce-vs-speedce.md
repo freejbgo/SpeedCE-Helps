@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "17CE vs SpeedCE：老牌表格派与新锐地图派实战对比"
 category: 对比
 description: "17CE 表格精确，SpeedCE 地图直观——看场景选。"
 keywords: 17CE,SpeedCE,对比
-permalink: articles/17ce-vs-speedce.html
 ---
 
 # 17CE vs SpeedCE：老牌表格派与新锐地图派实战对比

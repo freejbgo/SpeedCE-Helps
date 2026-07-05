@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Python Rollup 打包 实战：安装、配置与生产部署验收"
 category: 开发
 description: "围绕「Rollup 打包」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Python,Rollup,开发,SpeedCE
-permalink: articles/js-lib-rollup-打包.html
 ---
 
 # Python Rollup 打包 实战：安装、配置与生产部署验收

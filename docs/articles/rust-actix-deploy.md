@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Rust Actix-web 部署：高性能 API 的网络层验收"
 category: 开发
 description: "Rust 性能顶级，部署后验收流程和其他语言一样。"
 keywords: Rust,Actix,部署,SpeedCE
-permalink: articles/rust-actix-deploy.html
 ---
 
 # Rust Actix-web 部署：高性能 API 的网络层验收

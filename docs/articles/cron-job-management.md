@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Cron 定时任务管理：错峰执行与性能影响评估"
 category: 运维
 description: "每天固定时段变慢？查 cron 是否把 CPU 打满。"
 keywords: cron,定时任务,运维,SpeedCE
-permalink: articles/cron-job-management.html
 ---
 
 # Cron 定时任务管理：错峰执行与性能影响评估

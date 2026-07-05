@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "子域名故障排查：主站能开、接口挂了的 8 种独立原因"
 category: 故障排查
 description: "www 和 api 在 DNS、证书、Nginx 上是四份独立配置。"
 keywords: 子域名,API,DNS,SpeedCE
-permalink: articles/subdomain-troubleshooting.html
 ---
 
 # 子域名故障排查：主站能开、接口挂了的 8 种独立原因

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "退款期证据收集法：多节点测速方法论与实操指南"
 category: 方法论
 description: "围绕「退款期证据收集法」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 退款期证据收集法,方法论,SpeedCE
-permalink: articles/method-topic-退款期证据收集法.html
 ---
 
 # 退款期证据收集法：多节点测速方法论与实操指南

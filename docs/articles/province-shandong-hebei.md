@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "京津冀鲁访问基线：华北片区地图达标参考"
 category: 进阶
 description: "本文围绕「京津冀鲁访问基线」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 山东,河北,华北,SpeedCE
-permalink: articles/province-shandong-hebei.html
 ---
 
 # 京津冀鲁访问基线：华北片区地图达标参考
