@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "UFW 与 iptables 防火墙：云服务器双层防火墙配置"
 category: 运维
 description: "云安全组 + 系统防火墙 = 双层，两层都要放行 443。"
 keywords: 防火墙,iptables,安全,SpeedCE
-permalink: articles/ufw-iptables-guide.html
 ---
 
 # UFW 与 iptables 防火墙：云服务器双层防火墙配置

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "GraphQL API 部署验收：单一端点与 REST 的分层检查"
 category: 开发
 description: "GraphQL 单一 /graphql 端点，证书和 CORS 更要仔细。"
 keywords: GraphQL,API,部署,SpeedCE
-permalink: articles/graphql-api-deploy.html
 ---
 
 # GraphQL API 部署验收：单一端点与 REST 的分层检查

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Ansible 自动化运维：Playbook 编写与批量部署验收"
 category: 运维
 description: "Ansible 批量部署后，抽几个节点用 SpeedCE 验收。"
 keywords: Ansible,自动化,运维,SpeedCE
-permalink: articles/ansible-automation.html
 ---
 
 # Ansible 自动化运维：Playbook 编写与批量部署验收

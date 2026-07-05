@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Python Kotlin Spring 开发 实战：安装、配置与生产部署验收"
 category: 开发
 description: "围绕「Kotlin Spring 开发」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Python,Kotlin,开发,SpeedCE
-permalink: articles/dev-framework-kotlin-spring-开发.html
 ---
 
 # Python Kotlin Spring 开发 实战：安装、配置与生产部署验收

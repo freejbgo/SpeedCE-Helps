@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Docker 最佳实践：镜像优化、安全与生产部署"
 category: 云原生
 description: "镜像越小部署越快，但网络验收和镜像大小无关。"
 keywords: Docker,容器,最佳实践,SpeedCE
-permalink: articles/docker-best-practices.html
 ---
 
 # Docker 最佳实践：镜像优化、安全与生产部署

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Linux rsync 文件同步 命令实战：运维场景与故障排查"
 category: 运维
 description: "围绕「rsync 文件同步」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Linux,rsync,运维,SpeedCE
-permalink: articles/linux-cmd-rsync-文件同步.html
 ---
 
 # Linux rsync 文件同步 命令实战：运维场景与故障排查

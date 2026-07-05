@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "东南亚市场节点验收：新马泰印尼菲逐国达标线"
 category: 出海
 description: "东南亚各国网络质量差异大，逐国验收不能偷懒。"
 keywords: 东南亚,出海,节点,SpeedCE
-permalink: articles/southeast-asia-nodes.html
 ---
 
 # 东南亚市场节点验收：新马泰印尼菲逐国达标线

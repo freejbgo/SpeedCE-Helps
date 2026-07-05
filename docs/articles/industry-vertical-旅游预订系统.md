@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "旅游预订系统 行业网站验收：可用性标准与点检清单"
 category: 行业
 description: "围绕「旅游预订系统」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 旅游预订系统,行业,SpeedCE
-permalink: articles/industry-vertical-旅游预订系统.html
 ---
 
 # 旅游预订系统 行业网站验收：可用性标准与点检清单

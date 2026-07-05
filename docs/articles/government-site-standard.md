@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "政府/事业单位网站：全国通畅与 IPv6 双栈验收标准"
 category: 行业
 description: "本文围绕「政府/事业单位网站」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 政府网站,IPv6,SpeedCE
-permalink: articles/government-site-standard.html
 ---
 
 # 政府/事业单位网站：全国通畅与 IPv6 双栈验收标准

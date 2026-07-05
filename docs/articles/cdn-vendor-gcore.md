@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Gcore CDN 接入验收：配置要点与三网地图标准"
 category: CDN
 description: "围绕「Gcore」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Gcore,CDN,SpeedCE
-permalink: articles/cdn-vendor-gcore.html
 ---
 
 # Gcore CDN 接入验收：配置要点与三网地图标准

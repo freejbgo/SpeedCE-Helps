@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Neo4j 图数据库 数据库实战：部署、调优与验收"
 category: 数据库
 description: "围绕「Neo4j 图数据库」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Neo4j,数据库,SpeedCE
-permalink: articles/db-topic-neo4j-图数据库.html
 ---
 
 # Neo4j 图数据库 数据库实战：部署、调优与验收

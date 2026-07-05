@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "新闻媒体流量峰值：突发报道前的全国点检 SOP"
 category: 行业
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: 媒体,流量,峰值,SpeedCE
-permalink: articles/news-media-peak-traffic.html
 ---
 
 # 新闻媒体流量峰值：突发报道前的全国点检 SOP

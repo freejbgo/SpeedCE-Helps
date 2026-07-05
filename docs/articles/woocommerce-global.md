@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "WooCommerce 出海验收：插件、支付网关与主域地图清单"
 category: 出海
 description: "本文围绕「WooCommerce 出海验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: WooCommerce,WordPress,出海,SpeedCE
-permalink: articles/woocommerce-global.html
 ---
 
 # WooCommerce 出海验收：插件、支付网关与主域地图清单

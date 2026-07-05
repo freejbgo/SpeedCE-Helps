@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "网站迁机完整手册：DNS、源站、CDN 切换的 72 小时测速验收节奏"
 category: 故障排查
 description: "迁机最紧张的是 DNS 全球生效时间——多节点测速是迁机验收的客观公证人。"
 keywords: 网站迁机,DNS,迁移,SpeedCE
-permalink: articles/website-migration-guide.html
 ---
 
 # 网站迁机完整手册：DNS、源站、CDN 切换的 72 小时测速验收节奏

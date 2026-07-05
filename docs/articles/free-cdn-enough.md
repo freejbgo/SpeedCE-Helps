@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "免费 CDN 够用吗：用全国地图数据做个人站决策"
 category: CDN
 description: "本文围绕「免费 CDN 够用吗」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 免费CDN,Cloudflare,SpeedCE
-permalink: articles/free-cdn-enough.html
 ---
 
 # 免费 CDN 够用吗：用全国地图数据做个人站决策

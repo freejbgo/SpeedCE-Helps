@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "英国 市场出海验收：节点选择与通畅率标准"
 category: 出海
 description: "围绕「英国」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 英国,出海,SpeedCE
-permalink: articles/global-region-英国.html
 ---
 
 # 英国 市场出海验收：节点选择与通畅率标准

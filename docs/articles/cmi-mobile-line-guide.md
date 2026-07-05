@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "移动优化 CMI 线路验收：移动用户占比过半时代的一票否决项"
 category: VPS线路
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: CMI,移动线路,VPS,SpeedCE
-permalink: articles/cmi-mobile-line-guide.html
 ---
 
 # 移动优化 CMI 线路验收：移动用户占比过半时代的一票否决项

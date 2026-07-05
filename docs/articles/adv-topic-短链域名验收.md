@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "短链域名验收 进阶实战：变更管理与测速门禁"
 category: 进阶
 description: "围绕「短链域名验收」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 短链域名验收,进阶,SpeedCE
-permalink: articles/adv-topic-短链域名验收.html
 ---
 
 # 短链域名验收 进阶实战：变更管理与测速门禁

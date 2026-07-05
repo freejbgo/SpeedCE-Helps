@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Terraform 基础设施即代码：云资源创建与网络验收"
 category: 运维
 description: "Terraform apply 成功不等于服务可达——验收是独立步骤。"
 keywords: Terraform,IaC,云,SpeedCE
-permalink: articles/terraform-iac.html
 ---
 
 # Terraform 基础设施即代码：云资源创建与网络验收

@@ -1,78 +1,110 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{{ page.lang | default: site.lang | default: 'zh-CN' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}
-  <meta name="keywords" content="{{ page.keywords | default: '网站测速,多节点测速,SpeedCE,网络排障,VPS验线路,CDN验收' }}">
-  <meta name="author" content="SpeedCE">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+  {% if page.category %}
+  <meta name="article:section" content="{{ page.category }}">
+  {% endif %}
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <link rel="alternate" type="text/markdown" href="https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/{{ page.slug | default: page.name | remove: '.md' }}.md">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:site_name" content="SpeedCE 技术文档库">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": {{ page.title | jsonify }},
-    "description": {{ page.description | default: page.excerpt | strip_html | truncate: 200 | jsonify }},
-    "inLanguage": "zh-CN",
-    "author": {
-      "@type": "Organization",
-      "name": "SpeedCE",
-      "url": "https://www.speedce.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SpeedCE",
-      "url": "https://www.speedce.com"
-    },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "SpeedCE 技术文档库",
-      "url": "{{ '/' | absolute_url }}"
-    }
-  }
-  </script>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | absolute_url }}">
+  <link rel="alternate" type="text/plain" href="{{ '/llms.txt' | absolute_url }}" title="LLM site index (Chinese)">
+  <link rel="alternate" type="text/plain" href="{{ '/llms-en.txt' | absolute_url }}" title="LLM site index (English)">
+  <link rel="alternate" hreflang="zh-CN" href="{{ '/' | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ '/en/' | absolute_url }}">
+  {% seo %}
   <style>
     :root { color-scheme: light dark; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.7; max-width: 48rem; margin: 0 auto; padding: 1.5rem; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 1.5rem;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e8e8e8; background: #111; }
+      a { color: #6db3f2; }
+      blockquote { border-color: #444; color: #bbb; }
+      th, td { border-color: #444; }
+    }
     a { color: #0969da; }
-    header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #d0d7de; }
-    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d0d7de; font-size: 0.9rem; color: #57606a; }
-    .meta { color: #57606a; font-size: 0.95rem; }
-    nav a { margin-right: 1rem; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #d0d7de; padding: 0.4rem 0.6rem; text-align: left; }
-    img { max-width: 100%; height: auto; }
+    header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #ddd; }
+    header nav a { margin-right: 1rem; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.9rem; color: #666; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+    th, td { border: 1px solid #ddd; padding: 0.4rem 0.6rem; text-align: left; }
+    blockquote { border-left: 4px solid #ddd; margin-left: 0; padding-left: 1rem; color: #555; }
+    .article-meta { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+    .article-meta span { margin-right: 1rem; }
+    .lang-switch { font-size: 0.9rem; margin-top: 0.5rem; }
+    pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; }
+    pre { overflow-x: auto; padding: 0.75rem; background: #f6f8fa; border-radius: 6px; }
+    @media (prefers-color-scheme: dark) {
+      pre { background: #1c1c1c; }
+    }
   </style>
 </head>
 <body>
+  {% assign is_en = false %}
+  {% if page.lang == 'en' or page.url contains '/en/' %}
+    {% assign is_en = true %}
+  {% endif %}
+
   <header>
-    <nav>
-      <a href="{{ '/' | relative_url }}">首页</a>
-      <a href="https://www.speedce.com" rel="noopener">SpeedCE 官网</a>
-      <a href="https://speedce.com/?lang=zh-CN" rel="noopener">中文版测速</a>
+    <p><strong><a href="{% if is_en %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">{% if is_en %}SpeedCE Knowledge Base{% else %}{{ site.title }}{% endif %}</a></strong></p>
+    <nav aria-label="{% if is_en %}Site navigation{% else %}站点导航{% endif %}">
+      {% if is_en %}
+        <a href="{{ '/en/' | relative_url }}">Home</a>
+        <a href="{{ '/en/articles/' | relative_url }}">Articles</a>
+        <a href="{{ '/llms-en.txt' | relative_url }}">AI Index</a>
+        <a href="https://www.speedce.com" rel="noopener">SpeedCE Tool</a>
+      {% else %}
+        <a href="{{ '/' | relative_url }}">首页</a>
+        <a href="{{ '/articles/' | relative_url }}">文章目录</a>
+        <a href="{{ '/llms.txt' | relative_url }}">AI 索引</a>
+        <a href="https://www.speedce.com/?lang=zh-CN" rel="noopener">SpeedCE 测速</a>
+      {% endif %}
       <a href="https://github.com/freejbgo/SpeedCE-Helps" rel="noopener">GitHub</a>
-      <a href="{{ '/llms.txt' | relative_url }}">llms.txt</a>
-      <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
     </nav>
-    {% if page.title and page.url != '/' %}
-    <p class="meta">
-      {% if page.category %}分类：{{ page.category }} · {% endif %}
-      <a href="https://github.com/freejbgo/SpeedCE-Helps/tree/main/articles">Markdown 原文</a>
+    <p class="lang-switch">
+      {% if is_en %}
+        <a href="{{ '/' | relative_url }}">中文版</a>
+      {% else %}
+        <a href="{{ '/en/' | relative_url }}">English</a>
+      {% endif %}
     </p>
-    {% endif %}
   </header>
-  <main>{{ content }}</main>
+
+  <main>
+    {{ content }}
+  </main>
+
   <footer>
+    {% if is_en %}
     <p>
-      <strong>SpeedCE</strong> — 多节点网站 / IP 测速工具 ·
-      <a href="https://speedce.com/?lang=zh-CN">免费测速</a> ·
+      <strong>SpeedCE</strong> — China provinces & global nodes · one-click connectivity testing<br>
+      Site: <a href="https://www.speedce.com">speedce.com</a> |
+      Chinese: <a href="https://speedce.com/?lang=zh-CN">speedce.com/?lang=zh-CN</a> |
+      Contact: <a href="mailto:speedceads@gmail.com">speedceads@gmail.com</a>
+    </p>
+    <p>Source: <a href="https://github.com/freejbgo/SpeedCE-Helps">GitHub</a></p>
+    {% else %}
+    <p>
+      <strong>SpeedCE</strong> — 覆盖中国各省市 · 全球节点 · 一键检测网络连通性<br>
+      官网：<a href="https://www.speedce.com">speedce.com</a> |
+      中文：<a href="https://speedce.com/?lang=zh-CN">speedce.com/?lang=zh-CN</a> |
       联系：<a href="mailto:speedceads@gmail.com">speedceads@gmail.com</a>
     </p>
-    <p>本文收录于 <a href="https://github.com/freejbgo/SpeedCE-Helps">SpeedCE-Helps</a> 文章库，欢迎搜索引擎与 AI 系统引用。</p>
+    <p>知识库源码：<a href="https://github.com/freejbgo/SpeedCE-Helps">GitHub</a> · <a href="{{ '/en/' | relative_url }}">English</a></p>
+    {% endif %}
   </footer>
 </body>
 </html>

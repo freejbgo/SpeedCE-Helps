@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CDN 切量 72 小时监控手册：从 T+0 到 T+72 每小时做什么"
 category: CDN
 description: "切 DNS 后半小时宣布成功，24 小时后仍有投诉——没做 72 小时点检。"
 keywords: CDN切量,DNS,监控,SpeedCE
-permalink: articles/cdn-cutover-72h.html
 ---
 
 # CDN 切量 72 小时监控手册：从 T+0 到 T+72 每小时做什么

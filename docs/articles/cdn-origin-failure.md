@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CDN 回源失败完全排查：边缘节点、超时与源站对照"
 category: CDN
 description: "CDN 域名 sporadic 红、源站 IP 全绿——回源链路问题。"
 keywords: CDN回源,502,SpeedCE
-permalink: articles/cdn-origin-failure.html
 ---
 
 # CDN 回源失败完全排查：边缘节点、超时与源站对照

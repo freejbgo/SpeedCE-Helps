@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "测速截图存档规范：工单、论坛、事故报告的配图标准"
 category: 方法论
 description: "本文围绕「测速截图存档规范」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 截图,运维文档,SpeedCE
-permalink: articles/screenshot-archive-sop.html
 ---
 
 # 测速截图存档规范：工单、论坛、事故报告的配图标准

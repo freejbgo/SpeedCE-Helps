@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Cloudflare 橙云开启后国内访问完整验收手册"
 category: CDN
 description: "Cloudflare 免费版对国内访问有争议——用地图数据说话。"
 keywords: Cloudflare,CDN,国内,SpeedCE
-permalink: articles/cloudflare-china-access.html
 ---
 
 # Cloudflare 橙云开启后国内访问完整验收手册

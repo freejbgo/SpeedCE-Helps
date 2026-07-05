@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Etcd 集群故障 故障排查手册：现象、定位与修复"
 category: 故障排查
 description: "围绕「Etcd 集群故障」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Etcd,故障排查,SpeedCE
-permalink: articles/fix-topic-etcd-集群故障.html
 ---
 
 # Etcd 集群故障 故障排查手册：现象、定位与修复

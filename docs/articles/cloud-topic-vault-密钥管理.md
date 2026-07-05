@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Vault 密钥管理 云原生实战：部署架构与网络验收"
 category: 云原生
 description: "围绕「Vault 密钥管理」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Vault,云原生,SpeedCE
-permalink: articles/cloud-topic-vault-密钥管理.html
 ---
 
 # Vault 密钥管理 云原生实战：部署架构与网络验收

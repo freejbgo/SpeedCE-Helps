@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CDN 成本优化 进阶实战：变更管理与测速门禁"
 category: 进阶
 description: "围绕「CDN 成本优化」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: CDN,进阶,SpeedCE
-permalink: articles/adv-topic-cdn-成本优化.html
 ---
 
 # CDN 成本优化 进阶实战：变更管理与测速门禁

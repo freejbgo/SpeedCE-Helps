@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "VSPING vs SpeedCE：污染检测与网络可达性的配合"
 category: 对比
 description: "本文围绕「VSPING vs SpeedCE」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: VSPING,SpeedCE,对比
-permalink: articles/vsping-vs-speedce.html
 ---
 
 # VSPING vs SpeedCE：污染检测与网络可达性的配合

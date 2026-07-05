@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Node.js 事件循环阻塞 故障排查手册：现象、定位与修复"
 category: 故障排查
 description: "围绕「Node.js 事件循环阻塞」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Node.js,故障排查,SpeedCE
-permalink: articles/fix-more-nodejs-事件循环阻塞.html
 ---
 
 # Node.js 事件循环阻塞 故障排查手册：现象、定位与修复

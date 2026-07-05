@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "IPv6 双栈站点验收：AAAA 记录、防火墙与 CDN 完整检查"
 category: 故障排查
 description: "IPv4 全绿不代表 IPv6 正常，双栈站点应分别验证。"
 keywords: IPv6,双栈,AAAA,SpeedCE
-permalink: articles/ipv6-troubleshooting.html
 ---
 
 # IPv6 双栈站点验收：AAAA 记录、防火墙与 CDN 完整检查

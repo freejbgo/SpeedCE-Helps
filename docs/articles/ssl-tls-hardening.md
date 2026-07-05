@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "SSL/TLS 安全加固：版本、密码套件与兼容性权衡"
 category: 安全
 description: "禁用 TLS 1.0 后老客户端 HTTPS 失败——评估影响面。"
 keywords: TLS,SSL,安全,SpeedCE
-permalink: articles/ssl-tls-hardening.html
 ---
 
 # SSL/TLS 安全加固：版本、密码套件与兼容性权衡

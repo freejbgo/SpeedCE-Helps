@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "百度/Google 爬虫与站长可达性：SEO 视角的测速"
 category: 进阶
 description: "爬虫爬不到等于没收录——站长可达性是 SEO 基础。"
 keywords: SEO,爬虫,收录,SpeedCE
-permalink: articles/seo-crawl-baidu-google.html
 ---
 
 # 百度/Google 爬虫与站长可达性：SEO 视角的测速

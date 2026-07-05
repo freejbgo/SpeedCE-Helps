@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "WireGuard VPN 部署：组网、路由与内网服务暴露"
 category: 网络
 description: "VPN 组网后内网服务暴露到公网要单独验收。"
 keywords: WireGuard,VPN,网络,SpeedCE
-permalink: articles/vpn-wireguard-setup.html
 ---
 
 # WireGuard VPN 部署：组网、路由与内网服务暴露

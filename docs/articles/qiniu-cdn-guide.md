@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "七牛云 CDN 接入：国内站长常用方案的测速验收"
 category: CDN
 description: "七牛云适合图片和静态资源，接入后三网地图验收。"
 keywords: 七牛云,CDN,SpeedCE
-permalink: articles/qiniu-cdn-guide.html
 ---
 
 # 七牛云 CDN 接入：国内站长常用方案的测速验收

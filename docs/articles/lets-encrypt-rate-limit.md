@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Let's Encrypt 限流与续签失败：HTTPS 突然全国红的证书向排查"
 category: 故障排查
 description: "certbot renew 静默失败三个月，某天 HTTPS 突然全国红。"
 keywords: Let's Encrypt,证书,HTTPS,SpeedCE
-permalink: articles/lets-encrypt-rate-limit.html
 ---
 
 # Let's Encrypt 限流与续签失败：HTTPS 突然全国红的证书向排查

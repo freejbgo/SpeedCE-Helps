@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "HTTP/2 与 HTTP/3 配置：Nginx 启用与兼容性检查"
 category: 网络
 description: "HTTP/3 需要 UDP 443 放行，安全组别漏了。"
 keywords: HTTP2,HTTP3,Nginx,SpeedCE
-permalink: articles/http2-http3-guide.html
 ---
 
 # HTTP/2 与 HTTP/3 配置：Nginx 启用与兼容性检查

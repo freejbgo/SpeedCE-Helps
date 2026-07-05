@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "VXLAN 覆盖网络 网络协议深入：原理、配置与排障"
 category: 网络
 description: "围绕「VXLAN 覆盖网络」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: VXLAN,网络,SpeedCE
-permalink: articles/net-topic-vxlan-覆盖网络.html
 ---
 
 # VXLAN 覆盖网络 网络协议深入：原理、配置与排障

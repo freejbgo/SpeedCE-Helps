@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "晚高峰复测标准：多节点测速方法论与实操指南"
 category: 方法论
 description: "围绕「晚高峰复测标准」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 晚高峰复测标准,方法论,SpeedCE
-permalink: articles/method-topic-晚高峰复测标准.html
 ---
 
 # 晚高峰复测标准：多节点测速方法论与实操指南

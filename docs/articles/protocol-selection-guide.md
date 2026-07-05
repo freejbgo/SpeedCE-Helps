@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "PING / HTTP / HTTPS 协议选择完全指南"
 category: 方法论
 description: "协议选错，结论就错——建站用 HTTPS，验机可 PING+HTTPS。"
 keywords: PING,HTTPS,协议,SpeedCE
-permalink: articles/protocol-selection-guide.html
 ---
 
 # PING / HTTP / HTTPS 协议选择完全指南

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "下载站可达性与带宽：拨测与下载测速的分工"
 category: 行业
 description: "本文围绕「下载站可达性与带宽」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 下载站,带宽,SpeedCE
-permalink: articles/download-site-bandwidth.html
 ---
 
 # 下载站可达性与带宽：拨测与下载测速的分工

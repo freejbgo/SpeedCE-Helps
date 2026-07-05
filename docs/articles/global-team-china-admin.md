@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "全球团队访问国内后台：双地图协作与加速方案选型"
 category: 出海
 description: "本文围绕「全球团队访问国内后台」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 全球团队,国内后台,SpeedCE
-permalink: articles/global-team-china-admin.html
 ---
 
 # 全球团队访问国内后台：双地图协作与加速方案选型

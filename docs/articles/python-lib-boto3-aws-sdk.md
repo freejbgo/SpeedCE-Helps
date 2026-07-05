@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Python Boto3 AWS SDK 实战：安装、配置与生产部署验收"
 category: 开发
 description: "围绕「Boto3 AWS SDK」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Python,Boto3,开发,SpeedCE
-permalink: articles/python-lib-boto3-aws-sdk.html
 ---
 
 # Python Boto3 AWS SDK 实战：安装、配置与生产部署验收

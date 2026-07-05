@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "海南自贸相关站点：岛屿地理与访问特征验收"
 category: 进阶
 description: "本文围绕「海南自贸相关站点」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 海南,区域,SpeedCE
-permalink: articles/hainan-special-zone.html
 ---
 
 # 海南自贸相关站点：岛屿地理与访问特征验收

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Zookeeper 选举 故障排查手册：现象、定位与修复"
 category: 故障排查
 description: "围绕「Zookeeper 选举」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Zookeeper,故障排查,SpeedCE
-permalink: articles/fix-topic-zookeeper-选举.html
 ---
 
 # Zookeeper 选举 故障排查手册：现象、定位与修复

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Fail2ban 配置：防暴力破解与误拦拨测节点的平衡"
 category: 运维
 description: "Fail2ban 太激进会误拦拨测 IP，地图 sporadic 红。"
 keywords: Fail2ban,安全,运维,SpeedCE
-permalink: articles/fail2ban-setup.html
 ---
 
 # Fail2ban 配置：防暴力破解与误拦拨测节点的平衡

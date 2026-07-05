@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Ping.pe 完全使用手册：与 SpeedCE 的全球/中国互补策略"
 category: 对比
 description: "本文围绕「Ping.pe 完全使用手册」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: Ping.pe,全球Ping,SpeedCE
-permalink: articles/ping-pe-use-cases.html
 ---
 
 # Ping.pe 完全使用手册：与 SpeedCE 的全球/中国互补策略

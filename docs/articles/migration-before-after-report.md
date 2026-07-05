@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "迁机前后对比汇报模板：给老板和客户看的双地图 PPT"
 category: 进阶
 description: "本文围绕「迁机前后对比汇报模板」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 迁机,汇报,SpeedCE
-permalink: articles/migration-before-after-report.html
 ---
 
 # 迁机前后对比汇报模板：给老板和客户看的双地图 PPT

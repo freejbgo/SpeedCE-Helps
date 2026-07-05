@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Linux Capistrano 部署 命令实战：运维场景与故障排查"
 category: 运维
 description: "围绕「Capistrano 部署」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Linux,Capistrano,运维,SpeedCE
-permalink: articles/ops-tool-capistrano-部署.html
 ---
 
 # Linux Capistrano 部署 命令实战：运维场景与故障排查

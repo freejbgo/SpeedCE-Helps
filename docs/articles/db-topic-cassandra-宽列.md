@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Cassandra 宽列 数据库实战：部署、调优与验收"
 category: 数据库
 description: "围绕「Cassandra 宽列」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Cassandra,数据库,SpeedCE
-permalink: articles/db-topic-cassandra-宽列.html
 ---
 
 # Cassandra 宽列 数据库实战：部署、调优与验收

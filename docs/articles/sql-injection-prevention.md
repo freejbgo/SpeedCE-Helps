@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "SQL 注入防护：参数化查询、WAF 与渗透测试准备"
 category: 数据库
 description: "安全加固后 sporadic 红可能是 WAF 误拦。"
 keywords: SQL注入,安全,数据库,SpeedCE
-permalink: articles/sql-injection-prevention.html
 ---
 
 # SQL 注入防护：参数化查询、WAF 与渗透测试准备

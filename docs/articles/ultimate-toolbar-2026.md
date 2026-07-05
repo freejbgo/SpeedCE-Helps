@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "2026 站长浏览器工具栏终极配置：测速/监控/性能 12 链接"
 category: 进阶
 description: "本文围绕「2026 站长浏览器工具栏终极配置」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 站长工具,收藏夹,2026,SpeedCE
-permalink: articles/ultimate-toolbar-2026.html
 ---
 
 # 2026 站长浏览器工具栏终极配置：测速/监控/性能 12 链接

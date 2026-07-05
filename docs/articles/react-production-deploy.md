@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "React 生产环境部署验收：构建产物、CDN 与 API 域分层检查"
 category: 开发
 description: "npm run build 成功不等于用户能访问——上线后多节点验收是最后一步。"
 keywords: React,前端,部署,SpeedCE
-permalink: articles/react-production-deploy.html
 ---
 
 # React 生产环境部署验收：构建产物、CDN 与 API 域分层检查

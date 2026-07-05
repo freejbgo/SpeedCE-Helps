@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "小程序后端 API 部署：合法域、备案与移动网络验收"
 category: 开发
 description: "小程序要求 HTTPS + 备案，后端 API 域要单独测。"
 keywords: 小程序,微信,API,SpeedCE
-permalink: articles/miniprogram-backend.html
 ---
 
 # 小程序后端 API 部署：合法域、备案与移动网络验收

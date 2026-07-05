@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "DDoS 防护实战：清洗、限速与恢复后验收"
 category: 安全
 description: "攻击期间全国延迟飙升，清洗后 SpeedCE 复测确认恢复。"
 keywords: DDoS,防护,安全,SpeedCE
-permalink: articles/ddos-mitigation-guide.html
 ---
 
 # DDoS 防护实战：清洗、限速与恢复后验收

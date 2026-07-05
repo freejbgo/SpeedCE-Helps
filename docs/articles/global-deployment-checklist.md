@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "网站出海测速验收：从中国节点到全球节点的完整检查"
 category: 出海
 description: "你在上海打开 .com 秒开，德国客户说转圈——测速视角错了。"
 keywords: 网站出海,全球测速,SpeedCE
-permalink: articles/global-deployment-checklist.html
 ---
 
 # 网站出海测速验收：从中国节点到全球节点的完整检查

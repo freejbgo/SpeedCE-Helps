@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "事故报告中的测速数据：运维复盘的专业写法"
 category: 方法论
 description: "事故报告没数据就是甩锅，有地图截图才是专业。"
 keywords: 事故报告,复盘,SpeedCE
-permalink: articles/incident-report-speed-data.html
 ---
 
 # 事故报告中的测速数据：运维复盘的专业写法

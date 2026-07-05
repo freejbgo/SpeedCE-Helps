@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Spring Boot 生产部署：JVM 调优、健康检查与全国 API 验收"
 category: 开发
 description: "Spring Boot Actuator /health 也要能被外部访问。"
 keywords: Spring Boot,Java,部署,SpeedCE
-permalink: articles/spring-boot-production.html
 ---
 
 # Spring Boot 生产部署：JVM 调优、健康检查与全国 API 验收

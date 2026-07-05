@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Redis 连接失败对网站的影响：何时该先测网络再查缓存"
 category: 故障排查
 description: "Redis 挂了页面可能还能打开但功能异常——先网络后缓存。"
 keywords: Redis,缓存,故障,SpeedCE
-permalink: articles/redis-connection-issues.html
 ---
 
 # Redis 连接失败对网站的影响：何时该先测网络再查缓存

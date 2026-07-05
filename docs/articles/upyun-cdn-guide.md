@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "又拍云 CDN 验收：图片站与静态加速地图标准"
 category: CDN
 description: "本文围绕「又拍云 CDN 验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 又拍云,CDN,SpeedCE
-permalink: articles/upyun-cdn-guide.html
 ---
 
 # 又拍云 CDN 验收：图片站与静态加速地图标准

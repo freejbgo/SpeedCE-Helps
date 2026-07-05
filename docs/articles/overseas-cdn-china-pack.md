@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "海外 CDN 中国加速包验收：全球绿、国内慢时怎么办"
 category: CDN
 description: "本文围绕「海外 CDN 中国加速包验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 海外CDN,中国加速,SpeedCE
-permalink: articles/overseas-cdn-china-pack.html
 ---
 
 # 海外 CDN 中国加速包验收：全球绿、国内慢时怎么办

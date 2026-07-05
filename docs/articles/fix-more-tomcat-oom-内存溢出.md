@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Tomcat OOM 内存溢出 故障排查手册：现象、定位与修复"
 category: 故障排查
 description: "围绕「Tomcat OOM 内存溢出」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Tomcat,故障排查,SpeedCE
-permalink: articles/fix-more-tomcat-oom-内存溢出.html
 ---
 
 # Tomcat OOM 内存溢出 故障排查手册：现象、定位与修复

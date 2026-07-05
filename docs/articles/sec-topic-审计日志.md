@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "审计日志 安全加固实战：配置、检测与影响评估"
 category: 安全
 description: "围绕「审计日志」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 审计日志,安全,SpeedCE
-permalink: articles/sec-topic-审计日志.html
 ---
 
 # 审计日志 安全加固实战：配置、检测与影响评估

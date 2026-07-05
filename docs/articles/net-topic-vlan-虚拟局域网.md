@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "VLAN 虚拟局域网 网络协议深入：原理、配置与排障"
 category: 网络
 description: "围绕「VLAN 虚拟局域网」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: VLAN,网络,SpeedCE
-permalink: articles/net-topic-vlan-虚拟局域网.html
 ---
 
 # VLAN 虚拟局域网 网络协议深入：原理、配置与排障

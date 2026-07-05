@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "托管机房 vs 公有云：同一业务选型后的地图验收差异"
 category: VPS线路
 description: "托管和云的核心差异在运维责任，但网络验收方法相同。"
 keywords: 托管,公有云,选型,SpeedCE
-permalink: articles/colocation-vs-cloud.html
 ---
 
 # 托管机房 vs 公有云：同一业务选型后的地图验收差异

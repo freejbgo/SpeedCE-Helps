@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Linux strace 系统调用 命令实战：运维场景与故障排查"
 category: 运维
 description: "围绕「strace 系统调用」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Linux,strace,运维,SpeedCE
-permalink: articles/linux-cmd-strace-系统调用.html
 ---
 
 # Linux strace 系统调用 命令实战：运维场景与故障排查

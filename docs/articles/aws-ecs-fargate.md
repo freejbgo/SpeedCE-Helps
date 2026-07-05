@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "AWS ECS Fargate 部署：任务定义、服务发现与验收"
 category: 云原生
 description: "Fargate 无服务器容器，安全组和 ALB 配置是关键。"
 keywords: AWS,ECS,Fargate,SpeedCE
-permalink: articles/aws-ecs-fargate.html
 ---
 
 # AWS ECS Fargate 部署：任务定义、服务发现与验收

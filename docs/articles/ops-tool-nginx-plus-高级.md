@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Linux Nginx Plus 高级 命令实战：运维场景与故障排查"
 category: 运维
 description: "围绕「Nginx Plus 高级」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Linux,Nginx,运维,SpeedCE
-permalink: articles/ops-tool-nginx-plus-高级.html
 ---
 
 # Linux Nginx Plus 高级 命令实战：运维场景与故障排查

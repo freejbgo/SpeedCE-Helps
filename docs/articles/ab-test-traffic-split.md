@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "A/B 测试分流域：实验组域名的独立地图验收"
 category: 进阶
 description: "本文围绕「A/B 测试分流域」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: AB测试,分流,SpeedCE
-permalink: articles/ab-test-traffic-split.html
 ---
 
 # A/B 测试分流域：实验组域名的独立地图验收

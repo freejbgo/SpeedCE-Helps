@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Shopify 店铺全球可达性：主题、支付与应用域分层测速"
 category: 出海
 description: "Shopify 主域由平台管，但自定义域和 App 域要自测。"
 keywords: Shopify,外贸,独立站,SpeedCE
-permalink: articles/shopify-speedtest.html
 ---
 
 # Shopify 店铺全球可达性：主题、支付与应用域分层测速

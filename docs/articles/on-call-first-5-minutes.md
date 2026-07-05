@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "On-Call 前 5 分钟：收到告警后 SpeedCE 怎么测"
 category: 方法论
 description: "本文围绕「On-Call 前 5 分钟」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: OnCall,告警,应急,SpeedCE
-permalink: articles/on-call-first-5-minutes.html
 ---
 
 # On-Call 前 5 分钟：收到告警后 SpeedCE 怎么测

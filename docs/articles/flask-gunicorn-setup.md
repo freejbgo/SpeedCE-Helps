@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Flask + Gunicorn 生产配置：从开发到上线的完整流程"
 category: 开发
 description: "Flask debug 模式能跑，Gunicorn 生产配置才是正经事。"
 keywords: Flask,Python,Gunicorn,SpeedCE
-permalink: articles/flask-gunicorn-setup.html
 ---
 
 # Flask + Gunicorn 生产配置：从开发到上线的完整流程

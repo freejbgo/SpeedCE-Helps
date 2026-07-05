@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "SSL 证书过期与配置错误：用户报「连接不安全」时 10 分钟定位手册"
 category: 故障排查
 description: "证书问题最折磨人：你浏览器能开，用户大面积报「您的连接不是私密连接」。"
 keywords: SSL,HTTPS,证书过期,SpeedCE
-permalink: articles/ssl-certificate-troubleshooting.html
 ---
 
 # SSL 证书过期与配置错误：用户报「连接不安全」时 10 分钟定位手册

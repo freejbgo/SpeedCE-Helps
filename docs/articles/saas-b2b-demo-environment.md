@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "B2B SaaS 演示环境：潜在客户地域的地图验收"
 category: 行业
 description: "本文围绕「B2B SaaS 演示环境」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: B2B,SaaS,演示,SpeedCE
-permalink: articles/saas-b2b-demo-environment.html
 ---
 
 # B2B SaaS 演示环境：潜在客户地域的地图验收

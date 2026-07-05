@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "家宽测速 vs 全国节点：为什么你 Ping 快不代表用户快"
 category: VPS线路
 description: "本文围绕「家宽测速 vs 全国节点」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 测速偏见,家宽,VPS,SpeedCE
-permalink: articles/home-broadband-vs-datacenter.html
 ---
 
 # 家宽测速 vs 全国节点：为什么你 Ping 快不代表用户快

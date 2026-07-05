@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "企业官网可用性 SLA：用通畅率数据向管理层汇报"
 category: 行业
 description: "老板问「网站稳不稳」，一张三网地图比口头保证有用。"
 keywords: 企业官网,SLA,SpeedCE
-permalink: articles/corporate-website-sla.html
 ---
 
 # 企业官网可用性 SLA：用通畅率数据向管理层汇报

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "月度 SLA 报告模板：用通畅率数据汇报老板"
 category: 方法论
 description: "本文围绕「月度 SLA 报告模板」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: SLA,报告,运维,SpeedCE
-permalink: articles/sla-report-monthly.html
 ---
 
 # 月度 SLA 报告模板：用通畅率数据汇报老板

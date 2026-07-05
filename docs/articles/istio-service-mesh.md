@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Istio 服务网格入门：流量管理、安全与可观测性"
 category: 云原生
 description: "服务网格增加了复杂度，外部可达性验收更重要。"
 keywords: Istio,服务网格,Kubernetes,SpeedCE
-permalink: articles/istio-service-mesh.html
 ---
 
 # Istio 服务网格入门：流量管理、安全与可观测性

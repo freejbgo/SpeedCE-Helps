@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "静态资源 CDN 分离验收：js/css 域与主站的独立测速清单"
 category: CDN
 description: "主站绿不代表静态资源域绿——每个 CDN 域单独测。"
 keywords: 静态CDN,前端,SpeedCE
-permalink: articles/static-cdn-split.html
 ---
 
 # 静态资源 CDN 分离验收：js/css 域与主站的独立测速清单

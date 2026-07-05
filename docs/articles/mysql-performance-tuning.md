@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "MySQL 性能调优：慢查询、索引与连接池优化"
 category: 数据库
 description: "慢查询拖垮全站时 SpeedCE 全绿但 TTFB 极高。"
 keywords: MySQL,性能,数据库,SpeedCE
-permalink: articles/mysql-performance-tuning.html
 ---
 
 # MySQL 性能调优：慢查询、索引与连接池优化

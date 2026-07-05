@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Docker 端口映射错误：容器内正常、全国用户打不开的验收"
 category: 故障排查
 description: "docker exec 里 curl 通过，外部访问超时——端口映射或安全组问题。"
 keywords: Docker,端口,容器,SpeedCE
-permalink: articles/docker-port-mapping.html
 ---
 
 # Docker 端口映射错误：容器内正常、全国用户打不开的验收

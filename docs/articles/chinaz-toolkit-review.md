@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "站长之家工具生态 vs SpeedCE：Ping/测速/Whois 分工"
 category: 对比
 description: "本文围绕「站长之家工具生态 vs SpeedCE」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 站长之家,工具,SpeedCE
-permalink: articles/chinaz-toolkit-review.html
 ---
 
 # 站长之家工具生态 vs SpeedCE：Ping/测速/Whois 分工

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "磁盘 inode 耗尽 故障排查手册：现象、定位与修复"
 category: 故障排查
 description: "围绕「磁盘 inode 耗尽」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 磁盘,故障排查,SpeedCE
-permalink: articles/fix-more-磁盘-inode-耗尽.html
 ---
 
 # 磁盘 inode 耗尽 故障排查手册：现象、定位与修复

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "物流追踪系统 行业网站验收：可用性标准与点检清单"
 category: 行业
 description: "围绕「物流追踪系统」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 物流追踪系统,行业,SpeedCE
-permalink: articles/industry-vertical-物流追踪系统.html
 ---
 
 # 物流追踪系统 行业网站验收：可用性标准与点检清单

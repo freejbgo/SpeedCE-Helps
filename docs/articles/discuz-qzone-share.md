@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Discuz 论坛分享链：主站与分享域的分层测速"
 category: 行业
 description: "本文围绕「Discuz 论坛分享链」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: Discuz,论坛,分享,SpeedCE
-permalink: articles/discuz-qzone-share.html
 ---
 
 # Discuz 论坛分享链：主站与分享域的分层测速

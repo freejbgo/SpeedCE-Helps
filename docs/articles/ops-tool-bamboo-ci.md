@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Linux Bamboo CI 命令实战：运维场景与故障排查"
 category: 运维
 description: "围绕「Bamboo CI」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Linux,Bamboo,运维,SpeedCE
-permalink: articles/ops-tool-bamboo-ci.html
 ---
 
 # Linux Bamboo CI 命令实战：运维场景与故障排查

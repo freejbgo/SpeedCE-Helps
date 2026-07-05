@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Prometheus + Grafana 监控搭建：指标采集与告警配置"
 category: 运维
 description: "Prometheus 告诉你 CPU 90%，SpeedCE 告诉你哪里访问不了。"
 keywords: Prometheus,Grafana,监控,SpeedCE
-permalink: articles/prometheus-grafana-setup.html
 ---
 
 # Prometheus + Grafana 监控搭建：指标采集与告警配置

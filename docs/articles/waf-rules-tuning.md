@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "WAF 规则调优：防攻击与减少误拦的平衡"
 category: 安全
 description: "WAF 太严 sporadic 红，太松被攻击全国红。"
 keywords: WAF,安全,防火墙,SpeedCE
-permalink: articles/waf-rules-tuning.html
 ---
 
 # WAF 规则调优：防攻击与减少误拦的平衡

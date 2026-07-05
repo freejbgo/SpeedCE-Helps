@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Vultr 各机房线路验收：按业务选东京/新加坡/洛杉矶"
 category: VPS线路
 description: "Vultr 机房多但线路质量差异大，按目标用户选机房。"
 keywords: Vultr,VPS,线路,SpeedCE
-permalink: articles/vultr-line-guide.html
 ---
 
 # Vultr 各机房线路验收：按业务选东京/新加坡/洛杉矶

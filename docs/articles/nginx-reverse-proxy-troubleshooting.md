@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Nginx 反向代理故障排查：主站绿、API 红的 8 种典型配置错误"
 category: 故障排查
 description: "一行 server_name 写错，表现就是「首页能开、接口全挂」。"
 keywords: Nginx,反向代理,502,SpeedCE
-permalink: articles/nginx-reverse-proxy-troubleshooting.html
 ---
 
 # Nginx 反向代理故障排查：主站绿、API 红的 8 种典型配置错误

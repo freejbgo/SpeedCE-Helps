@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "被攻击期间如何用多节点测速辅助判断影响面"
 category: 故障排查
 description: "全国节点同时变红、延迟飙升——配合流量图确认攻击。"
 keywords: DDoS,攻击,故障排查,SpeedCE
-permalink: articles/ddos-attack-detection.html
 ---
 
 # 被攻击期间如何用多节点测速辅助判断影响面

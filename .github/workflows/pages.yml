@@ -1,0 +1,78 @@
+# Deploy SpeedCE-Helps to GitHub Pages (Jekyll from ./docs)
+# One-time setup: Settings → Pages → Build and deployment → GitHub Actions
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "articles/**"
+      - "scripts/generate_seo_index.py"
+      - "scripts/generate_en_articles.py"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate English articles
+        run: python3 scripts/generate_en_articles.py
+
+      - name: Generate SEO files
+        run: python3 scripts/generate_seo_index.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  notify-search-engines:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping search engine sitemaps
+        run: |
+          SITEMAP="https://freejbgo.github.io/SpeedCE-Helps/sitemap.xml"
+          echo "Notifying search engines about $SITEMAP"
+          curl -fsS -o /dev/null -w "Google ping: %{http_code}\n" \
+            "https://www.google.com/ping?sitemap=${SITEMAP}" || true
+          curl -fsS -o /dev/null -w "Bing ping: %{http_code}\n" \
+            "https://www.bing.com/ping?sitemap=${SITEMAP}" || true
+          curl -fsS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "{\"host\":\"freejbgo.github.io\",\"key\":\"speedce-helps-index\",\"keyLocation\":\"https://freejbgo.github.io/SpeedCE-Helps/speedce-helps-index.txt\",\"urlList\":[\"https://freejbgo.github.io/SpeedCE-Helps/\",\"https://freejbgo.github.io/SpeedCE-Helps/en/\",\"${SITEMAP}\"]}" \
+            || true

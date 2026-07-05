@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "图片 CDN 与 WebP/AVIF：静态域全国验收"
 category: CDN
 description: "本文围绕「图片 CDN 与 WebP/AVIF」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 图片CDN,WebP,前端,SpeedCE
-permalink: articles/image-cdn-webp-avif.html
 ---
 
 # 图片 CDN 与 WebP/AVIF：静态域全国验收

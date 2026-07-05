@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "游戏出海服务器选址：玩家分布与全球 PING 地图对照"
 category: 出海
 description: "本文围绕「游戏出海服务器选址」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 游戏出海,服务器,SpeedCE
-permalink: articles/game-server-global.html
 ---
 
 # 游戏出海服务器选址：玩家分布与全球 PING 地图对照

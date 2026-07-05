@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "移动网络用户访问异常专项：为什么移动投诉往往最多"
 category: 故障排查
 description: "移动用户占比超 50%，不单独测移动地图等于忽略一半用户。"
 keywords: 移动网络,三网测速,SpeedCE
-permalink: articles/mobile-network-issues.html
 ---
 
 # 移动网络用户访问异常专项：为什么移动投诉往往最多

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "PageSpeed Insights 与网络拨测：站长必须弄清的分工边界"
 category: 对比
 description: "本文围绕「PageSpeed Insights 与网络拨测」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: PageSpeed,网络测速
-permalink: articles/pagespeed-vs-network.html
 ---
 
 # PageSpeed Insights 与网络拨测：站长必须弄清的分工边界

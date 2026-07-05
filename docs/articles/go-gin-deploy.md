@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Go Gin 框架部署：编译、systemd 与反向代理验收"
 category: 开发
 description: "Go 编译成单二进制部署简单，但 Nginx 反代配置不能省。"
 keywords: Go,Gin,部署,SpeedCE
-permalink: articles/go-gin-deploy.html
 ---
 
 # Go Gin 框架部署：编译、systemd 与反向代理验收

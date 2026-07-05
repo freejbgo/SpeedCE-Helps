@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "个人博客上线完全验收：Hexo/Hugo/WordPress 通用测速清单"
 category: 行业
 description: "本文围绕「个人博客上线完全验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 个人博客,上线,SpeedCE
-permalink: articles/personal-blog-launch.html
 ---
 
 # 个人博客上线完全验收：Hexo/Hugo/WordPress 通用测速清单

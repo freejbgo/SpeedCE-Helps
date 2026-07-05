@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Bunny CDN 性价比线路：全球节点地图验收"
 category: CDN
 description: "Bunny CDN 便宜但国内节点覆盖有限——用地图确认。"
 keywords: BunnyCDN,CDN,SpeedCE
-permalink: articles/bunny-cdn-guide.html
 ---
 
 # Bunny CDN 性价比线路：全球节点地图验收

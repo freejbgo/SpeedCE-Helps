@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "新疆/西藏/西北片区访问优化：地图验收与 CDN 策略"
 category: 进阶
 description: "西北片区是测速地图的照妖镜——很多线路在这里暴露。"
 keywords: 新疆,西北,区域优化,SpeedCE
-permalink: articles/xinjiang-tibet-access-guide.html
 ---
 
 # 新疆/西藏/西北片区访问优化：地图验收与 CDN 策略

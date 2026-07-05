@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "竞品站点对标测速：同赛道地图对比说服管理层升级"
 category: 进阶
 description: "本文围绕「竞品站点对标测速」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 竞品,对标,SpeedCE
-permalink: articles/competitor-benchmark.html
 ---
 
 # 竞品站点对标测速：同赛道地图对比说服管理层升级

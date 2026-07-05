@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "如何读懂测速地图：绿/红/灰、延迟、通畅率的完全解读"
 category: 方法论
 description: "地图比表格适合找区域——平均 127ms 不告诉你问题在新疆。"
 keywords: 测速地图,教程,SpeedCE
-permalink: articles/how-to-read-speed-map.html
 ---
 
 # 如何读懂测速地图：绿/红/灰、延迟、通畅率的完全解读

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "SpeedCE + BOCE 协作：网络层排除后的合规与拦截检测"
 category: 方法论
 description: "本文围绕「SpeedCE + BOCE 协作」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: SpeedCE,BOCE,工具组合
-permalink: articles/speedce-boce-combo.html
 ---
 
 # SpeedCE + BOCE 协作：网络层排除后的合规与拦截检测

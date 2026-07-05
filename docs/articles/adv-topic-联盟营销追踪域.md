@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "联盟营销追踪域 进阶实战：变更管理与测速门禁"
 category: 进阶
 description: "围绕「联盟营销追踪域」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: 联盟营销追踪域,进阶,SpeedCE
-permalink: articles/adv-topic-联盟营销追踪域.html
 ---
 
 # 联盟营销追踪域 进阶实战：变更管理与测速门禁

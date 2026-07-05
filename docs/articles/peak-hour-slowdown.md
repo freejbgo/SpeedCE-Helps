@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "晚高峰网站变慢：下午测正常、晚上变红的复测策略"
 category: 故障排查
 description: "晚高峰才是照妖镜——商家挑下午给你看测试 IP。"
 keywords: 晚高峰,网站变慢,线路拥堵,SpeedCE
-permalink: articles/peak-hour-slowdown.html
 ---
 
 # 晚高峰网站变慢：下午测正常、晚上变红的复测策略

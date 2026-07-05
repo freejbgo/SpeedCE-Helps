@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{% assign is_en = false %}
+{% if page.lang == 'en' or page.url contains '/en/' %}
+  {% assign is_en = true %}
+{% endif %}
+
+<article itemscope itemtype="https://schema.org/Article">
+  <div class="article-meta">
+    {% if page.category %}
+      <span>{% if is_en %}Category{% else %}分类{% endif %}：{{ page.category }}</span>
+    {% endif %}
+    {% if page.id %}
+      <span>{% if is_en %}ID{% else %}编号{% endif %}：{{ page.id }}</span>
+    {% endif %}
+    {% if page.keywords %}
+      <span>{% if is_en %}Keywords{% else %}关键词{% endif %}：{{ page.keywords }}</span>
+    {% endif %}
+  </div>
+
+  {{ content }}
+
+  <p style="margin-top: 2rem;">
+  {% if is_en %}
+    <a href="{{ '/en/' | relative_url }}">← Back to knowledge base home</a>
+  {% else %}
+    <a href="{{ '/' | relative_url }}">← 返回知识库首页</a>
+  {% endif %}
+  </p>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "inLanguage": {% if is_en %}"en"{% else %}"zh-CN"{% endif %},
+  "author": {
+    "@type": "Organization",
+    "name": "SpeedCE",
+    "url": "https://www.speedce.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SpeedCE",
+    "url": "https://www.speedce.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page.url | absolute_url | jsonify }}
+  }{% if page.keywords %},
+  "keywords": {{ page.keywords | jsonify }}{% endif %}{% if page.category %},
+  "articleSection": {{ page.category | jsonify }}{% endif %}
+}
+</script>

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "数据库迁移实战： mysqldump、逻辑复制与切换验收"
 category: 数据库
 description: "库迁移完成不等于应用正常——切换后全国复测。"
 keywords: 数据库迁移,MySQL,SpeedCE
-permalink: articles/database-migration-guide.html
 ---
 
 # 数据库迁移实战： mysqldump、逻辑复制与切换验收

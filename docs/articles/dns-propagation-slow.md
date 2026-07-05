@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "域名解析生效慢怎么判断：TTL、运营商缓存与区域差异"
 category: 故障排查
 description: "改 DNS 不是全世界同时变，隔 10 分钟复测看异常点变化。"
 keywords: DNS缓存,TTL,解析生效,SpeedCE
-permalink: articles/dns-propagation-slow.html
 ---
 
 # 域名解析生效慢怎么判断：TTL、运营商缓存与区域差异

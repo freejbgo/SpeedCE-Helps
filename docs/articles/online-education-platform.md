@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "在线教育平台开课前三网验收：视频域、直播与 API"
 category: 行业
 description: "开课铃响了你才发现视频域移动红——太晚了。"
 keywords: 在线教育,直播,SpeedCE
-permalink: articles/online-education-platform.html
 ---
 
 # 在线教育平台开课前三网验收：视频域、直播与 API

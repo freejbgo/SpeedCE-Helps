@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Linux Memcached 分布式缓存 命令实战：运维场景与故障排查"
 category: 运维
 description: "围绕「Memcached 分布式缓存」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Linux,Memcached,运维,SpeedCE
-permalink: articles/ops-tool-memcached-分布式缓存.html
 ---
 
 # Linux Memcached 分布式缓存 命令实战：运维场景与故障排查

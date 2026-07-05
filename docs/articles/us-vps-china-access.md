@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "美国 VPS 三网回国测评：西海岸机房怎么验、移动用户怎么办"
 category: VPS线路
 description: "不要信「洛杉矶 150ms」——那是你本地 ping，不是全国地图。"
 keywords: 美国VPS,回国线路,三网,SpeedCE
-permalink: articles/us-vps-china-access.html
 ---
 
 # 美国 VPS 三网回国测评：西海岸机房怎么验、移动用户怎么办

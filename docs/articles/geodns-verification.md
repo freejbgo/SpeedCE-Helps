@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "GeoDNS 智能解析验证：各地解析到不同 IP 的测速方法"
 category: 出海
 description: "本地 dig 不能代表德国用户看到的解析结果。"
 keywords: GeoDNS,智能解析,SpeedCE
-permalink: articles/geodns-verification.html
 ---
 
 # GeoDNS 智能解析验证：各地解析到不同 IP 的测速方法

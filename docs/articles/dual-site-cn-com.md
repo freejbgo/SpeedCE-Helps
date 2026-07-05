@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "双站点 .cn 与 .com 策略：分域名测速与合规分工"
 category: 出海
 description: "本文围绕「双站点 .cn 与 .com 策略」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。"
 keywords: 双站点,域名,备案,SpeedCE
-permalink: articles/dual-site-cn-com.html
 ---
 
 # 双站点 .cn 与 .com 策略：分域名测速与合规分工

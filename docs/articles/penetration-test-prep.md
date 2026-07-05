@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "渗透测试前网络暴露面：对外域名测速清单"
 category: 安全
 description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
 keywords: 渗透测试,安全,域名,SpeedCE
-permalink: articles/penetration-test-prep.html
 ---
 
 # 渗透测试前网络暴露面：对外域名测速清单

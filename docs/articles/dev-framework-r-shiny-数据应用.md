@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "Python R Shiny 数据应用 实战：安装、配置与生产部署验收"
 category: 开发
 description: "围绕「R Shiny 数据应用」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: Python,R,开发,SpeedCE
-permalink: articles/dev-framework-r-shiny-数据应用.html
 ---
 
 # Python R Shiny 数据应用 实战：安装、配置与生产部署验收

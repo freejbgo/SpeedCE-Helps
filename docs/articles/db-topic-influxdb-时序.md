@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "InfluxDB 时序 数据库实战：部署、调优与验收"
 category: 数据库
 description: "围绕「InfluxDB 时序」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
 keywords: InfluxDB,数据库,SpeedCE
-permalink: articles/db-topic-influxdb-时序.html
 ---
 
 # InfluxDB 时序 数据库实战：部署、调优与验收

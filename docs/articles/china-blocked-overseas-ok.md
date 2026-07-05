@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "全球绿、中国红：被墙/合规问题的标准判断流程"
 category: 出海
 description: "全球绿中国红在出海场景可能是正常现象，先明确用户在哪。"
 keywords: 被墙,出海,合规,SpeedCE
-permalink: articles/china-blocked-overseas-ok.html
 ---
 
 # 全球绿、中国红：被墙/合规问题的标准判断流程

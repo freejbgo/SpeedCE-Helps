@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "CDN CNAME 链解析：从域名到边缘节点的完整链路"
 category: 网络
 description: "CNAME 链任何一环断了，CDN 域名就红。"
 keywords: CDN,CNAME,DNS,SpeedCE
-permalink: articles/cdn-dns-cname-chain.html
 ---
 
 # CDN CNAME 链解析：从域名到边缘节点的完整链路

@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: article
 title: "阿里云 CDN 接入验收：回源、证书、预热与三网"
 category: CDN
 description: "国内 CDN 厂商验收重点：三网均衡和回源配置。"
 keywords: 阿里云CDN,验收,SpeedCE
-permalink: articles/aliyun-cdn-acceptance.html
 ---
 
 # 阿里云 CDN 接入验收：回源、证书、预热与三网
