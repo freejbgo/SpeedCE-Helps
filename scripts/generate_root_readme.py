@@ -82,7 +82,8 @@ def main():
 
     lines.append("\n## 工具与脚本\n\n")
     lines.append("| 脚本 | 用途 |\n|------|------|\n")
-    lines.append("| `scripts/diverse_article_generator.py` | 生成 500 篇差异化技术文章 |\n")
+    lines.append("| `scripts/longform_article_generator.py` | 生成 500 篇 1.5–2 万字差异化长文 |\n")
+    lines.append("| `scripts/diverse_article_generator.py` | 短文版生成器（已弃用，请用 longform） |\n")
     lines.append("| `scripts/generate_article_images.py` | 生成封面与示意图 |\n")
     lines.append("| `scripts/generate_root_readme.py` | 更新本 README |\n")
     lines.append("| `scripts/generate_seo_index.py` | 生成 SEO / AI 收录索引与 GitHub Pages 页面 |\n")

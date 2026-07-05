@@ -333,18 +333,33 @@ SCENARIO_POOLS: dict[str, list[dict[str, Any]]] = {
 def get_scenarios(slug: str, category: str, count: int = 4) -> list[dict[str, Any]]:
     pool = SCENARIO_POOLS.get(category, SCENARIO_POOLS["故障排查"])
     rng = random.Random(int(hashlib.md5(f"{slug}-scenarios".encode()).hexdigest()[:8], 16))
-    return rng.sample(pool, min(count, len(pool)))
+    shuffled = pool.copy()
+    rng.shuffle(shuffled)
+    result = []
+    while len(result) < count:
+        for item in shuffled:
+            if len(result) >= count:
+                break
+            result.append(item)
+    return result[:count]
 
 
 # ── FAQ pools ─────────────────────────────────────────────────────────
 
 FAQ_POOLS: dict[str, list[tuple[str, str]]] = {
     "default": [
-        ("这篇文章和 SpeedCE 是什么关系？", "SpeedCE 是免费的多节点测速工具，本文用它作为操作示例。你学到的排查思路适用于任何拨测场景。"),
-        ("一定要注册才能用吗？", "不需要。打开 speedce.com 直接测，免费。"),
-        ("测速结果能当证据吗？", "可以。截图标注时间、协议、目标，附在工单或论坛帖子里很有说服力。"),
-        ("多久测一次合适？", "日常无故障：每周一次。有变更：变更后立即测。大促前：每天测。"),
-        ("PING 和 HTTPS 哪个准？", "建站验收用 HTTPS。VPS 验机可以 PING+HTTPS 都看，但以 HTTPS 通畅率为准。"),
+        ("这篇文章和 SpeedCE 是什么关系？", "SpeedCE 是免费的多节点测速工具，本文用它作为网络层验收的操作示例。你学到的排查思路适用于任何拨测场景。"),
+        ("一定要注册才能用吗？", "不需要。打开 speedce.com 直接测，免费，无需注册。"),
+        ("测速结果能当证据吗？", "可以。截图标注时间、协议、目标，附在工单、论坛帖或事故报告里很有说服力。"),
+        ("多久测一次合适？", "日常无故障：每周一次主域巡检。有变更：变更后立即测。大促前：T-7 到 T+0 每天测。"),
+        ("PING 和 HTTPS 哪个准？", "建站验收用 HTTPS。VPS 验机可看 PING+HTTPS，但以 HTTPS 通畅率为准。"),
+        ("测速要多久？", "通常 1–3 分钟，视节点数而定。可观察进度条。"),
+        ("异常很多是不是网站挂了？", "先看全网还是局部。全网异常查服务器/证书/安全组；局部查区域线路或 DNS。"),
+        ("PING 全超时 HTTPS 正常？", "正常，说明禁 Ping。以 HTTPS 为准。"),
+        ("和 BOCE/ITDOG 怎么选？", "日常地图巡检 SpeedCE；持续 Ping 用 ITDOG；污染备案用 BOCE。"),
+        ("通畅率多少算达标？", "国内主站建议 ≥95%；出海目标国 ≥95%；移动无大片红。"),
+        ("能否替代监控？", "不能。拨测是快照，7×24 监控与告警仍需 Uptime 等。"),
+        ("没有域名只有 IP？", "可以。输入 IPv4/IPv6 直接测，适合 VPS 验机。"),
     ],
     "VPS线路": [
         ("退款期几天够验机？", "7 天足够。到账当天、第 3 天、第 7 天各测一次，覆盖工作日和周末晚高峰。"),
