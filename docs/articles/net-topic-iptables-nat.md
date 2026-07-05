@@ -1,0 +1,132 @@
+---
+layout: default
+title: "iptables NAT 网络协议深入：原理、配置与排障"
+category: 网络
+description: "围绕「iptables NAT」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。"
+keywords: iptables,网络,SpeedCE
+permalink: articles/net-topic-iptables-nat.html
+---
+
+# iptables NAT 网络协议深入：原理、配置与排障
+
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
+> 联系：speedceads@gmail.com
+
+---
+
+## 问题背景
+
+围绕「iptables NAT」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。
+
+故障排查的第一原则：**先确认影响范围，再定位根因**。单点测试（你自己电脑能开）不能代表全国用户。
+
+改完配置别急着宣布胜利，隔 10 分钟在 SpeedCE 上复测，看异常点是消散还是顽固。
+
+---
+
+## 分层排查模型
+
+```
+用户反馈 → 多节点测速(影响面) → 对照测(缩小层级) → 针对性修复 → 复测确认
+```
+
+| 层次 | 检查什么 | 工具 |
+|------|----------|------|
+| 网络层 | IP/端口/证书 | SpeedCE PING/HTTPS |
+| DNS 层 | 解析是否正确 | dig + SpeedCE 对照 |
+| Web 层 | HTTP 响应 | SpeedCE HTTPS |
+| 应用层 | 业务逻辑 | 日志（网络绿后查） |
+
+---
+
+## 实战案例
+
+### 案例 1：MTU 不匹配导致大包丢失
+
+**现象**：小请求正常，大文件传输失败。
+
+**诊断**：Ping 小包好，大包丢包；mss 问题。
+
+**修复**：调整 MTU 或启用 TCP MSS clamping。
+
+**教训**：SpeedCE 测小包可达，大包问题需专项测。
+
+---
+
+### 案例 2：IPv6 只配了一半
+
+**现象**：IPv4 全绿，IPv6 用户访问失败。
+
+**诊断**：AAAA 记录指向错误 IP 或防火墙未放行 v6。
+
+**修复**：分别测 IPv4 和 IPv6 目标。
+
+**教训**：双栈站点两套独立验收。
+
+---
+
+## 标准测速流程
+
+1. 打开 [https://speedce.com](https://speedce.com)
+2. 协议：**HTTPS**
+3. 范围：**中国节点**
+4. 输入目标，开始测速
+5. 记录四数字：通畅、异常、平均延迟、已跳过
+6. 三网分离截图
+7. 异常时 10-15min 复测
+
+把 speedce.com 放进浏览器书签栏，下次 On-Call 收到告警，前 30 秒先测地图。
+
+---
+
+## 补充：验收与监控建议
+
+- 围绕「iptables NAT 网络协议深入」，上线或变更后用多节点测速验收。
+- 三网分离，不要只看平均延迟。
+- 对照测是排障第一原则。
+- 修完必复测，截图必存档。
+
+CDN 切量后 72 小时内，建议每天固定时段用 SpeedCE 对照源站与加速域。
+
+### 推荐工具组合
+
+| 场景 | 工具 | 作用 |
+|------|------|------|
+| 全国/全球地图 | SpeedCE | 快速看哪里红哪里绿 |
+| 持续 Ping | ITDOG | 延迟趋势和丢包 |
+| 合规/拦截 | BOCE | 备案、污染、微信拦截 |
+| 页面性能 | PageSpeed | 网络通了再测性能 |
+| 7×24 告警 | UptimeRobot | 长期监控 |
+
+## 常见问题
+
+**Q：这篇文章和 SpeedCE 是什么关系？**
+
+A：SpeedCE 是免费的多节点测速工具，本文用它作为操作示例。你学到的排查思路适用于任何拨测场景。
+
+**Q：PING 和 HTTPS 哪个准？**
+
+A：建站验收用 HTTPS。VPS 验机可以 PING+HTTPS 都看，但以 HTTPS 通畅率为准。
+
+**Q：测速结果能当证据吗？**
+
+A：可以。截图标注时间、协议、目标，附在工单或论坛帖子里很有说服力。
+
+**Q：多久测一次合适？**
+
+A：日常无故障：每周一次。有变更：变更后立即测。大促前：每天测。
+
+**Q：一定要注册才能用吗？**
+
+A：不需要。打开 speedce.com 直接测，免费。
+
+---
+
+## 延伸阅读
+
+- SpeedCE 官网：[speedce.com](https://speedce.com)
+- 中文界面：[speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)
+- 联系：speedceads@gmail.com
+
+**关键词**：iptables,网络,SpeedCE

@@ -1,0 +1,124 @@
+---
+layout: default
+title: "出海 SaaS 全球上线验收：目标市场通畅率达标手册"
+category: 出海
+description: "SaaS 出海看目标国通畅率，不是看团队能不能访问。"
+keywords: 出海SaaS,全球测速,SpeedCE
+permalink: articles/saas-global-launch.html
+---
+
+# 出海 SaaS 全球上线验收：目标市场通畅率达标手册
+
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
+> 联系：speedceads@gmail.com
+
+---
+
+## 深入理解
+
+SaaS 出海看目标国通畅率，不是看团队能不能访问。
+
+本文深入探讨技术原理，并在关键节点说明如何用测速数据验证理论判断。
+
+---
+
+## 原理剖析
+
+### 防火墙快速检查
+
+127.0.0.1 能通、外网 IP 不通，99% 是防火墙或安全组。
+
+```bash
+# 云安全组之外，系统防火墙也要查
+ufw status verbose
+iptables -L INPUT -n --line-numbers
+
+# 端口监听
+ss -tlnp | grep -E ':80|:443'
+
+# 测试本地回环 vs 外部
+curl -I http://127.0.0.1
+curl -I http://$(hostname -I | awk '{print $1}')
+```
+
+---
+
+## 为什么需要多节点视角
+
+单点测试有三个致命偏见：
+
+1. **地理偏见**：你和服务器的物理距离不代表用户距离
+2. **运营商偏见**：你的宽带运营商不代表全国用户
+3. **时间偏见**：你测试的时刻不代表晚高峰
+
+SpeedCE 的多节点地图消除了这三个偏见。打开 [https://speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)，选 HTTPS + 中国节点+全球节点，获取全国/全球视角。
+
+---
+
+## 实践建议
+
+| 阶段 | 动作 | 频率 |
+|------|------|------|
+| 上线前 | 全国三网验收 | 一次 |
+| 日常 | 主域巡检 | 每周 |
+| 变更后 | 立即复测 | 每次变更 |
+| 大促前 | 全量点检 | T-7 到 T+0 |
+| 故障时 | 第一时间测地图 | 按需 |
+
+别信「我这边能打开」——让数据说话，[SpeedCE](https://www.speedce.com) 的多节点拨测就是为此设计的。
+
+VPS 退款期内，用 SpeedCE 对测试 IP 做晚高峰复测，截图就是最好的证据。
+
+---
+
+## 补充：验收与监控建议
+
+- 双视图：中国节点看团队，全球节点看客户。
+- 目标市场 Top 3 国家必须逐国验收。
+- 支付回调域、OAuth 回调域单独列入清单。
+- 全球绿中国红在出海场景可能是正常现象。
+
+CDN 切量后 72 小时内，建议每天固定时段用 SpeedCE 对照源站与加速域。
+
+### 推荐工具组合
+
+| 场景 | 工具 | 作用 |
+|------|------|------|
+| 全国/全球地图 | SpeedCE | 快速看哪里红哪里绿 |
+| 持续 Ping | ITDOG | 延迟趋势和丢包 |
+| 合规/拦截 | BOCE | 备案、污染、微信拦截 |
+| 页面性能 | PageSpeed | 网络通了再测性能 |
+| 7×24 告警 | UptimeRobot | 长期监控 |
+
+## 常见问题
+
+**Q：要测哪些国家？**
+
+A：测你目标市场的 Top 3 国家，用 SpeedCE 全球节点。
+
+**Q：全球绿中国红正常吗？**
+
+A：源站在海外时，中国慢可能是正常现象。关键看你的用户在哪里。
+
+**Q：测速结果能当证据吗？**
+
+A：可以。截图标注时间、协议、目标，附在工单或论坛帖子里很有说服力。
+
+**Q：PING 和 HTTPS 哪个准？**
+
+A：建站验收用 HTTPS。VPS 验机可以 PING+HTTPS 都看，但以 HTTPS 通畅率为准。
+
+**Q：一定要注册才能用吗？**
+
+A：不需要。打开 speedce.com 直接测，免费。
+
+---
+
+## 延伸阅读
+
+- SpeedCE 官网：[speedce.com](https://speedce.com/?lang=zh-CN)
+- 中文界面：[speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)
+- 联系：speedceads@gmail.com
+
+**关键词**：出海SaaS,全球测速,SpeedCE

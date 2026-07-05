@@ -1,0 +1,142 @@
+---
+layout: default
+title: "Laravel + Nginx + PHP-FPM 部署验收：从 composer 到全国可达"
+category: 开发
+description: "Laravel 部署坑多：权限、.env、PHP-FPM 池大小。"
+keywords: Laravel,PHP,部署,SpeedCE
+permalink: articles/laravel-nginx-deploy.html
+---
+
+# Laravel + Nginx + PHP-FPM 部署验收：从 composer 到全国可达
+
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
+> 联系：speedceads@gmail.com
+
+---
+
+## 导读
+
+Laravel 部署坑多：权限、.env、PHP-FPM 池大小。
+
+本文作为技术参考，涵盖核心概念、配置要点和验收方法。
+
+---
+
+## 核心概念
+
+| 概念 | 说明 | 与测速的关系 |
+|------|------|-------------|
+| 多节点拨测 | 从全国各地发起真实访问 | SpeedCE 核心能力 |
+| 通畅率 | 成功探测数 / 总探测数 | ≥95% 为达标 |
+| 三网分离 | 电信/联通/移动独立地图 | 定位运营商问题 |
+| 对照测 | 两目标同时测速对比 | CDN vs 源站等 |
+
+---
+
+## 配置参考
+
+### 反向代理基础配置
+
+每个对外子域名单独 server 块，证书和 upstream 不要混用。
+
+```nginx
+server {
+    listen 443 ssl http2;
+    server_name api.example.com;
+
+    ssl_certificate     /etc/letsencrypt/live/api.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/api.example.com/privkey.pem;
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+### 常见 502 排查
+
+502 多半是 upstream 无响应，先确认后端进程活着。
+
+```bash
+# 检查 upstream 是否存活
+curl -I http://127.0.0.1:3000/health
+
+# 查看 Nginx 错误日志
+tail -f /var/log/nginx/error.log | grep upstream
+
+# 检查 PHP-FPM 池状态
+systemctl status php8.2-fpm
+```
+
+---
+
+## 验收标准
+
+| 指标 | 标准 | 测量方式 |
+|------|------|----------|
+| 主域通畅率 | ≥ 95% | SpeedCE HTTPS + 中国节点 |
+| 三网均衡 | 无大面积单网红 | 三网分离截图 |
+| 延迟 | 结合业务评估 | 静态站 200ms 可接受 |
+| 变更后 | 立即复测达标 | 间隔 10min 复测 |
+
+VPS 退款期内，用 SpeedCE 对测试 IP 做晚高峰复测，截图就是最好的证据。
+
+把 speedce.com 放进浏览器书签栏，下次 On-Call 收到告警，前 30 秒先测地图。
+
+---
+
+## 补充：验收与监控建议
+
+- CI 绿灯 ≠ 用户能访问，上线后必须多节点验收。
+- 本地 localhost 测试通过不代表生产环境可达。
+- 每个对外 API 域、静态资源域单独测。
+- 环境变量配错是部署后 502 的常见原因。
+
+给老板汇报时，一张 SpeedCE 三网地图比十页 PPT 更有说服力。
+
+### 推荐工具组合
+
+| 场景 | 工具 | 作用 |
+|------|------|------|
+| 全国/全球地图 | SpeedCE | 快速看哪里红哪里绿 |
+| 持续 Ping | ITDOG | 延迟趋势和丢包 |
+| 合规/拦截 | BOCE | 备案、污染、微信拦截 |
+| 页面性能 | PageSpeed | 网络通了再测性能 |
+| 7×24 告警 | UptimeRobot | 长期监控 |
+
+## 常见问题
+
+**Q：测速结果能当证据吗？**
+
+A：可以。截图标注时间、协议、目标，附在工单或论坛帖子里很有说服力。
+
+**Q：本地能跑通为什么线上不行？**
+
+A：本地没有网络层问题。上线后必须用多节点验收。
+
+**Q：CI 通过还需要测速吗？**
+
+A：需要。CI 测的是代码，拨测测的是用户能不能访问。
+
+**Q：一定要注册才能用吗？**
+
+A：不需要。打开 speedce.com 直接测，免费。
+
+**Q：PING 和 HTTPS 哪个准？**
+
+A：建站验收用 HTTPS。VPS 验机可以 PING+HTTPS 都看，但以 HTTPS 通畅率为准。
+
+---
+
+## 延伸阅读
+
+- SpeedCE 官网：[speedce.com](https://speedce.com)
+- 中文界面：[speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)
+- 联系：speedceads@gmail.com
+
+**关键词**：Laravel,PHP,部署,SpeedCE

@@ -1,0 +1,34 @@
+name: Regenerate SEO and AI crawler index
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+  push:
+    paths:
+      - "articles/**"
+      - "scripts/generate_seo_index.py"
+
+permissions:
+  contents: write
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate SEO index
+        run: python3 scripts/generate_seo_index.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: refresh SEO and AI crawler index"
+            git push
+          fi

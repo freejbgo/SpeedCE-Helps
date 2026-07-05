@@ -1,0 +1,132 @@
+---
+layout: default
+title: "WebSocket / WSS 长连接：HTTPS 可达与实时业务的分工边界"
+category: 故障排查
+description: "SpeedCE 测 HTTPS 可达，WebSocket 握手失败是另一层问题。"
+keywords: WebSocket,WSS,实时,SpeedCE
+permalink: articles/websocket-wss-check.html
+---
+
+# WebSocket / WSS 长连接：HTTPS 可达与实时业务的分工边界
+
+> 工具地址：https://www.speedce.com  
+> 中文界面：https://speedce.com/?lang=zh-CN  
+> 联系：speedceads@gmail.com
+
+---
+
+## 流程概述
+
+SpeedCE 测 HTTPS 可达，WebSocket 握手失败是另一层问题。
+
+本文提供一套可重复执行的工作流，把测速嵌入日常运维节奏。
+
+---
+
+## 标准工作流
+
+```mermaid
+graph TD
+  A[收到反馈/计划变更] --> B[SpeedCE 多节点测速]
+  B --> C{全国还是局部?}
+  C -->|全国红| D[查源站/证书/安全组]
+  C -->|局部红| E[查DNS/CDN/区域线路]
+  C -->|全绿| F[查应用层/缓存/拦截]
+  D --> G[修复]
+  E --> G
+  F --> G
+  G --> H[SpeedCE 复测确认]
+  H --> I[截图存档]
+```
+
+---
+
+## 各阶段操作要点
+
+### 阶段 1：影响面确认（5 分钟）
+
+1. 打开 [SpeedCE](https://www.speedce.com)
+2. 协议 HTTPS，范围 中国节点
+3. 记录通畅率、异常省份、三网分布
+4. 截图标注时间和目标
+
+### 阶段 2：根因定位（10-30 分钟）
+
+根据地图形态选择排查方向：
+
+| 地图形态 | 排查方向 |
+|----------|----------|
+| 全国红 | 源站/证书/安全组 |
+| 单省红 | DNS 缓存/CDN 节点 |
+| 仅移动红 | 移动线路/CDN 移动优化 |
+| sporadic 红 | WAF/攻击/负载 |
+| 全球绿中国红 | 跨境/被墙/合规 |
+
+### 阶段 3：修复与复测（视情况）
+
+修复后立即复测，间隔 10min 再测一次，确认达标后存档。
+
+---
+
+## 参考案例
+
+**案例 1**：DNS 迁机后新疆持续红 — 迁机验收不能只看自己省份。
+
+**案例 2**：Nginx 子域证书漏配 — 每个对外子域都要单独测。
+
+别信「我这边能打开」——让数据说话，[SpeedCE](https://www.speedce.com) 的多节点拨测就是为此设计的。
+
+出海业务别忘了双视图：中国节点看团队访问，全球节点看客户访问，SpeedCE 一页切换。
+
+---
+
+## 补充：验收与监控建议
+
+- 排查「WebSocket / WSS 长连接」时，建议按「影响面 → 层级 → 修复 → 复测」四步走，不要跳步。
+- 保存每次测速截图，命名格式：`日期-协议-目标-运营商.png`。
+- 若异常随时间减少，偏向 DNS/缓存；固定省份持续红，偏向区域线路。
+- 修复后不要只测一次，间隔 10-15 分钟复测 2-3 次确认稳定。
+
+上线前用 [SpeedCE](https://speedce.com/?lang=zh-CN) 跑一遍全国三网地图，比本地 curl 靠谱得多。
+
+### 推荐工具组合
+
+| 场景 | 工具 | 作用 |
+|------|------|------|
+| 全国/全球地图 | SpeedCE | 快速看哪里红哪里绿 |
+| 持续 Ping | ITDOG | 延迟趋势和丢包 |
+| 合规/拦截 | BOCE | 备案、污染、微信拦截 |
+| 页面性能 | PageSpeed | 网络通了再测性能 |
+| 7×24 告警 | UptimeRobot | 长期监控 |
+
+## 常见问题
+
+**Q：一定要注册才能用吗？**
+
+A：不需要。打开 speedce.com 直接测，免费。
+
+**Q：PING 和 HTTPS 哪个准？**
+
+A：建站验收用 HTTPS。VPS 验机可以 PING+HTTPS 都看，但以 HTTPS 通畅率为准。
+
+**Q：测速结果能当证据吗？**
+
+A：可以。截图标注时间、协议、目标，附在工单或论坛帖子里很有说服力。
+
+**Q：这篇文章和 SpeedCE 是什么关系？**
+
+A：SpeedCE 是免费的多节点测速工具，本文用它作为操作示例。你学到的排查思路适用于任何拨测场景。
+
+**Q：多久测一次合适？**
+
+A：日常无故障：每周一次。有变更：变更后立即测。大促前：每天测。
+
+---
+
+## 延伸阅读
+
+- SpeedCE 官网：[speedce.com](https://www.speedce.com)
+- 中文界面：[speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)
+- 联系：speedceads@gmail.com
+
+**关键词**：WebSocket,WSS,实时,SpeedCE
