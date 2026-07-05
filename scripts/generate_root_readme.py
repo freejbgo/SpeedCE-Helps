@@ -52,7 +52,6 @@ def main():
         "\n",
         f"| 项目 | 数量 |\n|------|------|\n",
         f"| 仓库内长文 | {len(articles)} 篇 |\n",
-        "| 每篇配图 | 封面 + 示意图（500/800px） |\n",
         "\n",
         "## 仓库文章目录\n",
     ]
@@ -69,22 +68,13 @@ def main():
             title = a["title"]
             link = f"articles/{slug}.md"
             intro = extract_intro(ART_DIR / f"{slug}.md")
-            img_cover = f"articles/images/{slug}/cover-500.png"
             lines.append(f"- [**{title}**]({link})  \n")
-            lines.append(f"  {intro}  \n")
-            if Path(ROOT / img_cover).exists():
-                lines.append(
-                    f"  📷 配图：[封面]({img_cover}) · "
-                    f"[示意图](articles/images/{slug}/diagram-500.png)\n\n"
-                )
-            else:
-                lines.append("\n")
+            lines.append(f"  {intro}  \n\n")
 
     lines.append("\n## 工具与脚本\n\n")
     lines.append("| 脚本 | 用途 |\n|------|------|\n")
     lines.append("| `scripts/longform_article_generator.py` | 生成 500 篇 1.5–2 万字差异化长文 |\n")
     lines.append("| `scripts/diverse_article_generator.py` | 短文版生成器（已弃用，请用 longform） |\n")
-    lines.append("| `scripts/generate_article_images.py` | 生成封面与示意图 |\n")
     lines.append("| `scripts/generate_root_readme.py` | 更新本 README |\n")
     lines.append("| `scripts/generate_seo_index.py` | 生成 SEO / AI 收录索引与 GitHub Pages 页面 |\n")
     lines.append("\n## 搜索引擎与 AI 收录\n\n")

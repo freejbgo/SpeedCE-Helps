@@ -11,7 +11,6 @@
 | 项目 | 数量 |
 |------|------|
 | 仓库内长文 | 500 篇 |
-| 每篇配图 | 封面 + 示意图（500/800px） |
 
 ## 仓库文章目录
 
@@ -21,47 +20,36 @@
 
 - [**502/503 与源站过载：CDN 绿、源站红时的判断与修复**](articles/502-503-upstream-errors.md)  
   502 是网关收到坏响应，503 是服务暂时不可用——对照测一锤定音。  
-  📷 配图：[封面](articles/images/502-503-upstream-errors/cover-500.png) · [示意图](articles/images/502-503-upstream-errors/diagram-500.png)
 
 - [**API 接口可达性检测：Postman 能通、全国用户不通的真相**](articles/api-availability-guide.md)  
   API 故障往往最后才发现：前端缓存还在，App 打接口立刻挂。  
-  📷 配图：[封面](articles/images/api-availability-guide/cover-500.png) · [示意图](articles/images/api-availability-guide/diagram-500.png)
 
 - [**缓存脏了怎么办：CDN/浏览器缓存与网络层对照排查**](articles/cache-poisoning-stale.md)  
   刚修好服务器用户还说旧页面——可能是缓存，不是网络。  
-  📷 配图：[封面](articles/images/cache-poisoning-stale/cover-500.png) · [示意图](articles/images/cache-poisoning-stale/diagram-500.png)
 
 - [**CORS 报错与网络不通：开发者必分的两层问题**](articles/cors-vs-network-testing.md)  
   地图全绿 + 浏览器报 CORS——恭喜，网络通了，是 Header 没配。  
-  📷 配图：[封面](articles/images/cors-vs-network-testing/cover-500.png) · [示意图](articles/images/cors-vs-network-testing/diagram-500.png)
 
 - [**数据库拖垮网站：网络全绿但页面超时的应用层排查**](articles/database-not-network-guide.md)  
   本文围绕「数据库拖垮网站」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/database-not-network-guide/cover-500.png) · [示意图](articles/images/database-not-network-guide/diagram-500.png)
 
 - [**被攻击期间如何用多节点测速辅助判断影响面**](articles/ddos-attack-detection.md)  
   全国节点同时变红、延迟飙升——配合流量图确认攻击。  
-  📷 配图：[封面](articles/images/ddos-attack-detection/cover-500.png) · [示意图](articles/images/ddos-attack-detection/diagram-500.png)
 
 - [**域名解析生效慢怎么判断：TTL、运营商缓存与区域差异**](articles/dns-propagation-slow.md)  
   改 DNS 不是全世界同时变，隔 10 分钟复测看异常点变化。  
-  📷 配图：[封面](articles/images/dns-propagation-slow/cover-500.png) · [示意图](articles/images/dns-propagation-slow/diagram-500.png)
 
 - [**DNS 解析故障完全指南：迁机、换 CDN 后「部分地区打不开」怎么查**](articles/dns-troubleshooting-guide.md)  
   改完 DNS 你这边秒生效，新疆同事说还是旧 IP——这不是他电脑坏了，是解析链路不同步。  
-  📷 配图：[封面](articles/images/dns-troubleshooting-guide/cover-500.png) · [示意图](articles/images/dns-troubleshooting-guide/diagram-500.png)
 
 - [**Docker 端口映射错误：容器内正常、全国用户打不开的验收**](articles/docker-port-mapping.md)  
   docker exec 里 curl 通过，外部访问超时——端口映射或安全组问题。  
-  📷 配图：[封面](articles/images/docker-port-mapping/cover-500.png) · [示意图](articles/images/docker-port-mapping/diagram-500.png)
 
 - [**邮件内链接追踪域：营销邮件点击失败的网络排查**](articles/email-link-tracking.md)  
   本文围绕「邮件内链接追踪域」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/email-link-tracking/cover-500.png) · [示意图](articles/images/email-link-tracking/diagram-500.png)
 
 - [**云服务器安全组验收：全国地图大面积红时先查这四项**](articles/firewall-security-group-checklist.md)  
   SSH 能登、网站全国红——安全组只放了 22 没放 443。  
-  📷 配图：[封面](articles/images/firewall-security-group-checklist/cover-500.png) · [示意图](articles/images/firewall-security-group-checklist/diagram-500.png)
 
 - [**Apache 403 禁止访问 故障排查手册：现象、定位与修复**](articles/fix-more-apache-403-禁止访问.md)  
   围绕「Apache 403 禁止访问」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -143,214 +131,162 @@
 
 - [**gRPC / HTTP2 网关：REST 可达与 gRPC 故障分工**](articles/grpc-gateway-check.md)  
   本文围绕「gRPC / HTTP2 网关」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/grpc-gateway-check/cover-500.png) · [示意图](articles/images/grpc-gateway-check/diagram-500.png)
 
 - [**Gzip/Brotli 压缩配置与超时：能通但极慢的排查**](articles/gzip-brotli-compression.md)  
   没开压缩，大 JSON 响应体导致 TTFB 极高——网络通但体验差。  
-  📷 配图：[封面](articles/images/gzip-brotli-compression/cover-500.png) · [示意图](articles/images/gzip-brotli-compression/diagram-500.png)
 
 - [**HTTP 与 HTTPS 跳转故障：循环重定向与混合内容排查**](articles/http-https-redirect-issues.md)  
   301 配成循环、http 和 https 指向不同机器——对照测快速缩小范围。  
-  📷 配图：[封面](articles/images/http-https-redirect-issues/cover-500.png) · [示意图](articles/images/http-https-redirect-issues/diagram-500.png)
 
 - [**间歇性网站故障排查：「有时慢有时好」的科学点检方法**](articles/intermittent-fault-diagnosis.md)  
   间歇故障是运维噩梦：你测的时候永远正常，用户投诉的时候你不在。  
-  📷 配图：[封面](articles/images/intermittent-fault-diagnosis/cover-500.png) · [示意图](articles/images/intermittent-fault-diagnosis/diagram-500.png)
 
 - [**IPv6 双栈站点验收：AAAA 记录、防火墙与 CDN 完整检查**](articles/ipv6-troubleshooting.md)  
   IPv4 全绿不代表 IPv6 正常，双栈站点应分别验证。  
-  📷 配图：[封面](articles/images/ipv6-troubleshooting/cover-500.png) · [示意图](articles/images/ipv6-troubleshooting/diagram-500.png)
 
 - [**Kubernetes Ingress 故障：集群内正常、公网域名红的排查**](articles/k8s-ingress-troubleshoot.md)  
   kubectl get pods 全 Running，但公网域名红——Ingress 层断了。  
-  📷 配图：[封面](articles/images/k8s-ingress-troubleshoot/cover-500.png) · [示意图](articles/images/k8s-ingress-troubleshoot/diagram-500.png)
 
 - [**Let's Encrypt 限流与续签失败：HTTPS 突然全国红的证书向排查**](articles/lets-encrypt-rate-limit.md)  
   certbot renew 静默失败三个月，某天 HTTPS 突然全国红。  
-  📷 配图：[封面](articles/images/lets-encrypt-rate-limit/cover-500.png) · [示意图](articles/images/lets-encrypt-rate-limit/diagram-500.png)
 
 - [**负载均衡与健康检查：一半节点绿一半红的架构问题**](articles/load-balancer-health-check.md)  
   多台后端一台挂，用户感受是「有时能开有时不能」。  
-  📷 配图：[封面](articles/images/load-balancer-health-check/cover-500.png) · [示意图](articles/images/load-balancer-health-check/diagram-500.png)
 
 - [**混合内容与 HTTPS：网络层全绿、浏览器仍报不安全的分工排查**](articles/mixed-content-https.md)  
   本文围绕「混合内容与 HTTPS」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/mixed-content-https/cover-500.png) · [示意图](articles/images/mixed-content-https/diagram-500.png)
 
 - [**移动网络用户访问异常专项：为什么移动投诉往往最多**](articles/mobile-network-issues.md)  
   移动用户占比超 50%，不单独测移动地图等于忽略一半用户。  
-  📷 配图：[封面](articles/images/mobile-network-issues/cover-500.png) · [示意图](articles/images/mobile-network-issues/diagram-500.png)
 
 - [**数据库连接超时与网站超时：网络绿、页面仍慢的分层排查**](articles/mysql-connection-timeout.md)  
   SpeedCE 全绿但页面超时——查 MySQL 连接池和慢查询。  
-  📷 配图：[封面](articles/images/mysql-connection-timeout/cover-500.png) · [示意图](articles/images/mysql-connection-timeout/diagram-500.png)
 
 - [**Nginx 反向代理故障排查：主站绿、API 红的 8 种典型配置错误**](articles/nginx-reverse-proxy-troubleshooting.md)  
   一行 server_name 写错，表现就是「首页能开、接口全挂」。  
-  📷 配图：[封面](articles/images/nginx-reverse-proxy-troubleshooting/cover-500.png) · [示意图](articles/images/nginx-reverse-proxy-troubleshooting/diagram-500.png)
 
 - [**OAuth 回调域名校验：登录失败的网络层先行排查**](articles/oauth-callback-domain.md)  
   登录页绿、回调域红——OAuth 失败不一定是代码 bug。  
-  📷 配图：[封面](articles/images/oauth-callback-domain/cover-500.png) · [示意图](articles/images/oauth-callback-domain/diagram-500.png)
 
 - [**支付回调 URL 可达性：全国节点对回调域的验收**](articles/payment-callback-url.md)  
   主站绿、支付回调域红——订单状态不更新可能是网络层问题。  
-  📷 配图：[封面](articles/images/payment-callback-url/cover-500.png) · [示意图](articles/images/payment-callback-url/diagram-500.png)
 
 - [**晚高峰网站变慢：下午测正常、晚上变红的复测策略**](articles/peak-hour-slowdown.md)  
   晚高峰才是照妖镜——商家挑下午给你看测试 IP。  
-  📷 配图：[封面](articles/images/peak-hour-slowdown/cover-500.png) · [示意图](articles/images/peak-hour-slowdown/diagram-500.png)
 
 - [**Redis 连接失败对网站的影响：何时该先测网络再查缓存**](articles/redis-connection-issues.md)  
   Redis 挂了页面可能还能打开但功能异常——先网络后缓存。  
-  📷 配图：[封面](articles/images/redis-connection-issues/cover-500.png) · [示意图](articles/images/redis-connection-issues/diagram-500.png)
 
 - [**仅部分地区打不开？用地图精确定位省份与运营商**](articles/regional-access-failure.md)  
   「就新疆不行」「就移动不行」——地图才是区域故障的语言。  
-  📷 配图：[封面](articles/images/regional-access-failure/cover-500.png) · [示意图](articles/images/regional-access-failure/diagram-500.png)
 
 - [**电信/联通/移动单网故障：一张网全红时的缩小范围排查法**](articles/single-carrier-fault.md)  
   本文围绕「电信/联通/移动单网故障」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/single-carrier-fault/cover-500.png) · [示意图](articles/images/single-carrier-fault/diagram-500.png)
 
 - [**SNI 不匹配错误：多证书同 IP 时部分节点 HTTPS 异常**](articles/sni-mismatch-error.md)  
   本文围绕「SNI 不匹配错误」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/sni-mismatch-error/cover-500.png) · [示意图](articles/images/sni-mismatch-error/diagram-500.png)
 
 - [**SSL 证书过期与配置错误：用户报「连接不安全」时 10 分钟定位手册**](articles/ssl-certificate-troubleshooting.md)  
   证书问题最折磨人：你浏览器能开，用户大面积报「您的连接不是私密连接」。  
-  📷 配图：[封面](articles/images/ssl-certificate-troubleshooting/cover-500.png) · [示意图](articles/images/ssl-certificate-troubleshooting/diagram-500.png)
 
 - [**子域名故障排查：主站能开、接口挂了的 8 种独立原因**](articles/subdomain-troubleshooting.md)  
   www 和 api 在 DNS、证书、Nginx 上是四份独立配置。  
-  📷 配图：[封面](articles/images/subdomain-troubleshooting/cover-500.png) · [示意图](articles/images/subdomain-troubleshooting/diagram-500.png)
 
 - [**第三方脚本拖垮页面：主域绿、功能仍异常的边界**](articles/third-party-script-failure.md)  
   支付、统计、客服插件走第三方域——主站绿不代表支付能调起。  
-  📷 配图：[封面](articles/images/third-party-script-failure/cover-500.png) · [示意图](articles/images/third-party-script-failure/diagram-500.png)
 
 - [**TLS 版本过低：老客户端与新安全策略导致的区域性 HTTPS 失败**](articles/tls-version-too-low.md)  
   本文围绕「TLS 版本过低」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/tls-version-too-low/cover-500.png) · [示意图](articles/images/tls-version-too-low/diagram-500.png)
 
 - [**WAF 误拦与测速异常：sporadic 红点是不是被封了**](articles/waf-false-positive-guide.md)  
   WAF 可能只拦部分拨测 IP，表现为 sporadic 红而非全省红。  
-  📷 配图：[封面](articles/images/waf-false-positive-guide/cover-500.png) · [示意图](articles/images/waf-false-positive-guide/diagram-500.png)
 
 - [**网站迁机完整手册：DNS、源站、CDN 切换的 72 小时测速验收节奏**](articles/website-migration-guide.md)  
   迁机最紧张的是 DNS 全球生效时间——多节点测速是迁机验收的客观公证人。  
-  📷 配图：[封面](articles/images/website-migration-guide/cover-500.png) · [示意图](articles/images/website-migration-guide/diagram-500.png)
 
 - [**WebSocket / WSS 长连接：HTTPS 可达与实时业务的分工边界**](articles/websocket-wss-check.md)  
   SpeedCE 测 HTTPS 可达，WebSocket 握手失败是另一层问题。  
-  📷 配图：[封面](articles/images/websocket-wss-check/cover-500.png) · [示意图](articles/images/websocket-wss-check/diagram-500.png)
 
 - [**微信/QQ 打不开先测什么：网络层与合规层的标准分工**](articles/wechat-qq-access-guide.md)  
   本文围绕「微信/QQ 打不开先测什么」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/wechat-qq-access-guide/cover-500.png) · [示意图](articles/images/wechat-qq-access-guide/diagram-500.png)
 
 
 ### VPS线路（53 篇）
 
 - [**AWS Lightsail 对国内访问：全球绿、中国慢的常见形态**](articles/aws-lightsail-china.md)  
   本文围绕「AWS Lightsail 对国内访问」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/aws-lightsail-china/cover-500.png) · [示意图](articles/images/aws-lightsail-china/diagram-500.png)
 
 - [**搬瓦工 CN2/GIA 套餐验机：经典商家地图验收法**](articles/bandwagonhost-guide.md)  
   搬瓦工经典套餐也要地图验收——不同机房线路差异明显。  
-  📷 配图：[封面](articles/images/bandwagonhost-guide/cover-500.png) · [示意图](articles/images/bandwagonhost-guide/diagram-500.png)
 
 - [**物理机专线接入：企业专线用户的地图验收**](articles/bare-metal-dedicated-line.md)  
   本文围绕「物理机专线接入」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/bare-metal-dedicated-line/cover-500.png) · [示意图](articles/images/bare-metal-dedicated-line/diagram-500.png)
 
 - [**BGP 线路真假辨别：三网均衡才是真 BGP 的验收标准**](articles/bgp-line-verification.md)  
   真 BGP：电信联通移动都能用。假 BGP：电信绿、移动红。  
-  📷 配图：[封面](articles/images/bgp-line-verification/cover-500.png) · [示意图](articles/images/bgp-line-verification/diagram-500.png)
 
 - [**超低价 VPS 陷阱：地图验收能看出的 6 个危险信号**](articles/budget-vps-trap-guide.md)  
   年付几十块的机器不是不能用，但要靠地图知道代价在哪。  
-  📷 配图：[封面](articles/images/budget-vps-trap-guide/cover-500.png) · [示意图](articles/images/budget-vps-trap-guide/diagram-500.png)
 
 - [**云服务器到手第一步：安全组与防火墙验收再谈线路**](articles/cloud-security-group-vps.md)  
   本文围绕「云服务器到手第一步」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/cloud-security-group-vps/cover-500.png) · [示意图](articles/images/cloud-security-group-vps/diagram-500.png)
 
 - [**移动优化 CMI 线路验收：移动用户占比过半时代的一票否决项**](articles/cmi-mobile-line-guide.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/cmi-mobile-line-guide/cover-500.png) · [示意图](articles/images/cmi-mobile-line-guide/diagram-500.png)
 
 - [**CN2 GT 与 CN2 GIA 完全对比：商家话术背后的测速验证法**](articles/cn2-gt-vs-gia.md)  
   差两个字母，体验差一个档次。GT 晚高峰可能堵，GIA 贵但稳。  
-  📷 配图：[封面](articles/images/cn2-gt-vs-gia/cover-500.png) · [示意图](articles/images/cn2-gt-vs-gia/diagram-500.png)
 
 - [**托管机房 vs 公有云：同一业务选型后的地图验收差异**](articles/colocation-vs-cloud.md)  
   托管和云的核心差异在运维责任，但网络验收方法相同。  
-  📷 配图：[封面](articles/images/colocation-vs-cloud/cover-500.png) · [示意图](articles/images/colocation-vs-cloud/diagram-500.png)
 
 - [**机房故障换机后应急验证：24 小时 SpeedCE 点检 SOP**](articles/datacenter-failover-verify.md)  
   本文围绕「机房故障换机后应急验证」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/datacenter-failover-verify/cover-500.png) · [示意图](articles/images/datacenter-failover-verify/diagram-500.png)
 
 - [**独立服务器与 VPS 线路验收差异：IP 段、邻居与测速注意点**](articles/dedicated-vs-vps-line.md)  
   本文围绕「独立服务器与 VPS 线路验收差异」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/dedicated-vs-vps-line/cover-500.png) · [示意图](articles/images/dedicated-vs-vps-line/diagram-500.png)
 
 - [**欧洲 VPS 回国线路验收：德法荷机房对国内用户的真实体验**](articles/europe-vps-china-guide.md)  
   本文围绕「欧洲 VPS 回国线路验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/europe-vps-china-guide/cover-500.png) · [示意图](articles/images/europe-vps-china-guide/diagram-500.png)
 
 - [**GCP / Azure 回国访问：企业云对国内团队的地图评估**](articles/gcp-azure-china-access.md)  
   本文围绕「GCP / Azure 回国访问」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/gcp-azure-china-access/cover-500.png) · [示意图](articles/images/gcp-azure-china-access/diagram-500.png)
 
 - [**家宽测速 vs 全国节点：为什么你 Ping 快不代表用户快**](articles/home-broadband-vs-datacenter.md)  
   本文围绕「家宽测速 vs 全国节点」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/home-broadband-vs-datacenter/cover-500.png) · [示意图](articles/images/home-broadband-vs-datacenter/diagram-500.png)
 
 - [**香港 VPS 线路选购与验收：个人站、电商、API 场景怎么选**](articles/hong-kong-vps-guide.md)  
   香港机房 CN2、CMI、BGP 混杂，全国三网地图是唯一靠谱验货方式。  
-  📷 配图：[封面](articles/images/hong-kong-vps-guide/cover-500.png) · [示意图](articles/images/hong-kong-vps-guide/diagram-500.png)
 
 - [**日本 VPS 适合什么业务：东京大阪机房与三网回国实测**](articles/japan-vps-guide.md)  
   日本机便宜带宽足，但回国线路质量参差，移动地图是一票否决项。  
-  📷 配图：[封面](articles/images/japan-vps-guide/cover-500.png) · [示意图](articles/images/japan-vps-guide/diagram-500.png)
 
 - [**韩国 VPS 线路测评：离中国近不等于三网都好**](articles/korea-vps-guide.md)  
   本文围绕「韩国 VPS 线路测评」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/korea-vps-guide/cover-500.png) · [示意图](articles/images/korea-vps-guide/diagram-500.png)
 
 - [**VPS 下午测与晚高峰测：为什么优质线路必须测两次**](articles/off-peak-vs-peak-vps.md)  
   商家测试 IP 在下午往往最美，你要在 20:00-22:00 复测。  
-  📷 配图：[封面](articles/images/off-peak-vs-peak-vps/cover-500.png) · [示意图](articles/images/off-peak-vs-peak-vps/diagram-500.png)
 
 - [**甲骨文云免费 tier 验收：零成本机器的地图标准**](articles/oracle-cloud-free.md)  
   免费机也要验收：被墙 IP 和超售邻居是常见坑。  
-  📷 配图：[封面](articles/images/oracle-cloud-free/cover-500.png) · [示意图](articles/images/oracle-cloud-free/diagram-500.png)
 
 - [**禁 Ping 不等于线路差：PING 红 HTTPS 绿的正确解读**](articles/ping-blocked-not-bad.md)  
   云厂商默认禁 ICMP 是常态，验机标准改成 HTTPS 通畅率 ≥ 90%。  
-  📷 配图：[封面](articles/images/ping-blocked-not-bad/cover-500.png) · [示意图](articles/images/ping-blocked-not-bad/diagram-500.png)
 
 - [**RackNerd / DMIT 等热门商家：退款期地图验机模板**](articles/racknerd-dmit-guide.md)  
   本文围绕「RackNerd / DMIT 等热门商家」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/racknerd-dmit-guide/cover-500.png) · [示意图](articles/images/racknerd-dmit-guide/diagram-500.png)
 
 - [**新加坡 VPS 验收指南：东南亚枢纽与回国双视角测速**](articles/singapore-vps-guide.md)  
   本文围绕「新加坡 VPS 验收指南」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/singapore-vps-guide/cover-500.png) · [示意图](articles/images/singapore-vps-guide/diagram-500.png)
 
 - [**台湾 VPS 验收要点：延迟优势与线路宣传核实**](articles/taiwan-vps-guide.md)  
   本文围绕「台湾 VPS 验收要点」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/taiwan-vps-guide/cover-500.png) · [示意图](articles/images/taiwan-vps-guide/diagram-500.png)
 
 - [**美国 VPS 三网回国测评：西海岸机房怎么验、移动用户怎么办**](articles/us-vps-china-access.md)  
   不要信「洛杉矶 150ms」——那是你本地 ping，不是全国地图。  
-  📷 配图：[封面](articles/images/us-vps-china-access/cover-500.png) · [示意图](articles/images/us-vps-china-access/diagram-500.png)
 
 - [**二手 IP 段购买前避雷：被墙、被标记 IP 的全国地图特征**](articles/used-ip-segment-check.md)  
   本文围绕「二手 IP 段购买前避雷」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/used-ip-segment-check/cover-500.png) · [示意图](articles/images/used-ip-segment-check/diagram-500.png)
 
 - [**东京机房 VPS 线路验收：机房选择与三网实测**](articles/vps-dc-东京机房.md)  
   围绕「东京机房」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -402,11 +338,9 @@
 
 - [**买 VPS 前必看：用全国三网地图验线路，识破 CN2 宣传**](articles/vps-line-verification-guide.md)  
   在 HostLoc 群里，买家说 ping 28ms——样本量只有 1，且样本是你自己。  
-  📷 配图：[封面](articles/images/vps-line-verification-guide/cover-500.png) · [示意图](articles/images/vps-line-verification-guide/diagram-500.png)
 
 - [**VPS 7 天退款期验机清单：截图、三网、晚高峰证据链**](articles/vps-refund-period-checklist.md)  
   退款要有证据：三网截图 + 通畅率数字 + 晚高峰对比。  
-  📷 配图：[封面](articles/images/vps-refund-period-checklist/cover-500.png) · [示意图](articles/images/vps-refund-period-checklist/diagram-500.png)
 
 - [**俄罗斯莫斯科 VPS 线路验收：机房选择与三网实测**](articles/vps-region-俄罗斯莫斯科.md)  
   围绕「俄罗斯莫斯科」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -434,46 +368,36 @@
 
 - [**VPS 套 CDN 前后地图对比：该不该上 CDN 的数据决策**](articles/vps-with-cdn-comparison.md)  
   本文围绕「VPS 套 CDN 前后地图对比」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/vps-with-cdn-comparison/cover-500.png) · [示意图](articles/images/vps-with-cdn-comparison/diagram-500.png)
 
 - [**Vultr 各机房线路验收：按业务选东京/新加坡/洛杉矶**](articles/vultr-line-guide.md)  
   Vultr 机房多但线路质量差异大，按目标用户选机房。  
-  📷 配图：[封面](articles/images/vultr-line-guide/cover-500.png) · [示意图](articles/images/vultr-line-guide/diagram-500.png)
 
 
 ### CDN（32 篇）
 
 - [**阿里云 CDN 接入验收：回源、证书、预热与三网**](articles/aliyun-cdn-acceptance.md)  
   国内 CDN 厂商验收重点：三网均衡和回源配置。  
-  📷 配图：[封面](articles/images/aliyun-cdn-acceptance/cover-500.png) · [示意图](articles/images/aliyun-cdn-acceptance/diagram-500.png)
 
 - [**AWS CloudFront 中国访问：全球分发与国内体验双验收**](articles/aws-cloudfront-china.md)  
   本文围绕「AWS CloudFront 中国访问」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/aws-cloudfront-china/cover-500.png) · [示意图](articles/images/aws-cloudfront-china/diagram-500.png)
 
 - [**Bunny CDN 性价比线路：全球节点地图验收**](articles/bunny-cdn-guide.md)  
   Bunny CDN 便宜但国内节点覆盖有限——用地图确认。  
-  📷 配图：[封面](articles/images/bunny-cdn-guide/cover-500.png) · [示意图](articles/images/bunny-cdn-guide/diagram-500.png)
 
 - [**CDN 缓存与拨测的关系：为什么第一次慢、刷新后又快**](articles/cdn-cache-vs-speed-test.md)  
   本文围绕「CDN 缓存与拨测的关系」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/cdn-cache-vs-speed-test/cover-500.png) · [示意图](articles/images/cdn-cache-vs-speed-test/diagram-500.png)
 
 - [**CDN 证书与源站证书：两边都要绿的完整验收流程**](articles/cdn-cert-vs-origin.md)  
   CDN 证书和源站证书是两套独立配置，分别验收。  
-  📷 配图：[封面](articles/images/cdn-cert-vs-origin/cover-500.png) · [示意图](articles/images/cdn-cert-vs-origin/diagram-500.png)
 
 - [**CDN 切量 72 小时监控手册：从 T+0 到 T+72 每小时做什么**](articles/cdn-cutover-72h.md)  
   切 DNS 后半小时宣布成功，24 小时后仍有投诉——没做 72 小时点检。  
-  📷 配图：[封面](articles/images/cdn-cutover-72h/cover-500.png) · [示意图](articles/images/cdn-cutover-72h/diagram-500.png)
 
 - [**CDN 接入全攻略：切量前、切量中、故障时的多节点验收**](articles/cdn-deployment-speed-test-guide.md)  
   上了 CDN 反而有人打不开？对照测速是 CDN 运维的黄金法则。  
-  📷 配图：[封面](articles/images/cdn-deployment-speed-test-guide/cover-500.png) · [示意图](articles/images/cdn-deployment-speed-test-guide/diagram-500.png)
 
 - [**CDN 回源失败完全排查：边缘节点、超时与源站对照**](articles/cdn-origin-failure.md)  
   CDN 域名 sporadic 红、源站 IP 全绿——回源链路问题。  
-  📷 配图：[封面](articles/images/cdn-origin-failure/cover-500.png) · [示意图](articles/images/cdn-origin-failure/diagram-500.png)
 
 - [**Akamai CDN 接入验收：配置要点与三网地图标准**](articles/cdn-vendor-akamai.md)  
   围绕「Akamai」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -504,110 +428,84 @@
 
 - [**CDN 加速 WebSocket/直播流的可达性验收边界**](articles/cdn-websocket-stream.md)  
   本文围绕「CDN 加速 WebSocket/直播流的可达性验收边界」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/cdn-websocket-stream/cover-500.png) · [示意图](articles/images/cdn-websocket-stream/diagram-500.png)
 
 - [**Cloudflare 橙云开启后国内访问完整验收手册**](articles/cloudflare-china-access.md)  
   Cloudflare 免费版对国内访问有争议——用地图数据说话。  
-  📷 配图：[封面](articles/images/cloudflare-china-access/cover-500.png) · [示意图](articles/images/cloudflare-china-access/diagram-500.png)
 
 - [**全站加速 DCDN 与普通 CDN：验收标准与 SpeedCE 对照测法**](articles/dcdn-vs-cdn.md)  
   本文围绕「全站加速 DCDN 与普通 CDN」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/dcdn-vs-cdn/cover-500.png) · [示意图](articles/images/dcdn-vs-cdn/diagram-500.png)
 
 - [**边缘函数/Workers 故障：主域绿、规则不生效的排查**](articles/edge-function-troubleshoot.md)  
   本文围绕「边缘函数/Workers 故障」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/edge-function-troubleshoot/cover-500.png) · [示意图](articles/images/edge-function-troubleshoot/diagram-500.png)
 
 - [**Fastly CDN 验收：边缘规则与源站对照测速**](articles/fastly-cdn-guide.md)  
   本文围绕「Fastly CDN 验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/fastly-cdn-guide/cover-500.png) · [示意图](articles/images/fastly-cdn-guide/diagram-500.png)
 
 - [**字体 CDN 与 Google Fonts：国内加载失败的测速分工**](articles/font-cdn-google-china.md)  
   本文围绕「字体 CDN 与 Google Fonts」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/font-cdn-google-china/cover-500.png) · [示意图](articles/images/font-cdn-google-china/diagram-500.png)
 
 - [**免费 CDN 够用吗：用全国地图数据做个人站决策**](articles/free-cdn-enough.md)  
   本文围绕「免费 CDN 够用吗」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/free-cdn-enough/cover-500.png) · [示意图](articles/images/free-cdn-enough/diagram-500.png)
 
 - [**华为云/百度云 CDN 验收要点与三网地图标准**](articles/huawei-baidu-cdn-guide.md)  
   本文围绕「华为云/百度云 CDN 验收要点与三网地图标准」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/huawei-baidu-cdn-guide/cover-500.png) · [示意图](articles/images/huawei-baidu-cdn-guide/diagram-500.png)
 
 - [**图片 CDN 与 WebP/AVIF：静态域全国验收**](articles/image-cdn-webp-avif.md)  
   本文围绕「图片 CDN 与 WebP/AVIF」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/image-cdn-webp-avif/cover-500.png) · [示意图](articles/images/image-cdn-webp-avif/diagram-500.png)
 
 - [**多家 CDN 试用期地图对比选型：同域不同商的科学方法**](articles/multi-cdn-comparison.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/multi-cdn-comparison/cover-500.png) · [示意图](articles/images/multi-cdn-comparison/diagram-500.png)
 
 - [**海外 CDN 中国加速包验收：全球绿、国内慢时怎么办**](articles/overseas-cdn-china-pack.md)  
   本文围绕「海外 CDN 中国加速包验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/overseas-cdn-china-pack/cover-500.png) · [示意图](articles/images/overseas-cdn-china-pack/diagram-500.png)
 
 - [**七牛云 CDN 接入：国内站长常用方案的测速验收**](articles/qiniu-cdn-guide.md)  
   七牛云适合图片和静态资源，接入后三网地图验收。  
-  📷 配图：[封面](articles/images/qiniu-cdn-guide/cover-500.png) · [示意图](articles/images/qiniu-cdn-guide/diagram-500.png)
 
 - [**静态资源 CDN 分离验收：js/css 域与主站的独立测速清单**](articles/static-cdn-split.md)  
   主站绿不代表静态资源域绿——每个 CDN 域单独测。  
-  📷 配图：[封面](articles/images/static-cdn-split/cover-500.png) · [示意图](articles/images/static-cdn-split/diagram-500.png)
 
 - [**腾讯云 CDN 接入验收：静态加速与全站加速差异及测速要点**](articles/tencent-cdn-acceptance.md)  
   本文围绕「腾讯云 CDN 接入验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/tencent-cdn-acceptance/cover-500.png) · [示意图](articles/images/tencent-cdn-acceptance/diagram-500.png)
 
 - [**又拍云 CDN 验收：图片站与静态加速地图标准**](articles/upyun-cdn-guide.md)  
   本文围绕「又拍云 CDN 验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/upyun-cdn-guide/cover-500.png) · [示意图](articles/images/upyun-cdn-guide/diagram-500.png)
 
 
 ### 出海（32 篇）
 
 - [**全球 API 限流与 Geo 封禁：地图绿但仍 403 的边界**](articles/api-rate-limit-global.md)  
   本文围绕「全球 API 限流与 Geo 封禁」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/api-rate-limit-global/cover-500.png) · [示意图](articles/images/api-rate-limit-global/diagram-500.png)
 
 - [**App Store 审核期间服务器：海外审核节点可达性**](articles/app-store-review-server.md)  
   本文围绕「App Store 审核期间服务器」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/app-store-review-server/cover-500.png) · [示意图](articles/images/app-store-review-server/diagram-500.png)
 
 - [**全球绿、中国红：被墙/合规问题的标准判断流程**](articles/china-blocked-overseas-ok.md)  
   全球绿中国红在出海场景可能是正常现象，先明确用户在哪。  
-  📷 配图：[封面](articles/images/china-blocked-overseas-ok/cover-500.png) · [示意图](articles/images/china-blocked-overseas-ok/diagram-500.png)
 
 - [**外贸独立站测速指南：Shopify/WooCommerce 与大促前验收**](articles/cross-border-ecommerce.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/cross-border-ecommerce/cover-500.png) · [示意图](articles/images/cross-border-ecommerce/diagram-500.png)
 
 - [**跨境电商黑五/圣诞大促前测速备战完全清单**](articles/cross-border-sale-prep.md)  
   本文围绕「跨境电商黑五/圣诞大促前测速备战完全清单」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/cross-border-sale-prep/cover-500.png) · [示意图](articles/images/cross-border-sale-prep/diagram-500.png)
 
 - [**双站点 .cn 与 .com 策略：分域名测速与合规分工**](articles/dual-site-cn-com.md)  
   本文围绕「双站点 .cn 与 .com 策略」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/dual-site-cn-com/cover-500.png) · [示意图](articles/images/dual-site-cn-com/diagram-500.png)
 
 - [**欧美用户访问慢完全对策：源站、CDN、机房选址三角决策**](articles/europe-us-slow-fix.md)  
   本文围绕「欧美用户访问慢完全对策」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/europe-us-slow-fix/cover-500.png) · [示意图](articles/images/europe-us-slow-fix/diagram-500.png)
 
 - [**游戏出海服务器选址：玩家分布与全球 PING 地图对照**](articles/game-server-global.md)  
   本文围绕「游戏出海服务器选址」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/game-server-global/cover-500.png) · [示意图](articles/images/game-server-global/diagram-500.png)
 
 - [**GDPR 与 Cookie 墙：欧洲用户访问的网络层基线**](articles/gdpr-cookie-wall.md)  
   本文围绕「GDPR 与 Cookie 墙」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/gdpr-cookie-wall/cover-500.png) · [示意图](articles/images/gdpr-cookie-wall/diagram-500.png)
 
 - [**GeoDNS 智能解析验证：各地解析到不同 IP 的测速方法**](articles/geodns-verification.md)  
   本地 dig 不能代表德国用户看到的解析结果。  
-  📷 配图：[封面](articles/images/geodns-verification/cover-500.png) · [示意图](articles/images/geodns-verification/diagram-500.png)
 
 - [**网站出海测速验收：从中国节点到全球节点的完整检查**](articles/global-deployment-checklist.md)  
   你在上海打开 .com 秒开，德国客户说转圈——测速视角错了。  
-  📷 配图：[封面](articles/images/global-deployment-checklist/cover-500.png) · [示意图](articles/images/global-deployment-checklist/diagram-500.png)
 
 - [**加拿大 市场出海验收：节点选择与通畅率标准**](articles/global-region-加拿大.md)  
   围绕「加拿大」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -641,47 +539,36 @@
 
 - [**全球团队访问国内后台：双地图协作与加速方案选型**](articles/global-team-china-admin.md)  
   本文围绕「全球团队访问国内后台」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/global-team-china-admin/cover-500.png) · [示意图](articles/images/global-team-china-admin/diagram-500.png)
 
 - [**拉美节点验收：巴西、墨西哥重点市场地图标准**](articles/latin-america-nodes.md)  
   拉美网络基础设施参差，巴西和墨西哥要分开测。  
-  📷 配图：[封面](articles/images/latin-america-nodes/cover-500.png) · [示意图](articles/images/latin-america-nodes/diagram-500.png)
 
 - [**中东与非洲节点验收：新兴市场的地图达标策略**](articles/middle-east-africa-nodes.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/middle-east-africa-nodes/cover-500.png) · [示意图](articles/images/middle-east-africa-nodes/diagram-500.png)
 
 - [**多语言站点全球分发：hreflang 与各地可达性验收**](articles/multilingual-site-delivery.md)  
   本文围绕「多语言站点全球分发」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/multilingual-site-delivery/cover-500.png) · [示意图](articles/images/multilingual-site-delivery/diagram-500.png)
 
 - [**Notion 类协作工具自托管：全球团队访问验收**](articles/notion-saas-availability.md)  
   本文围绕「Notion 类协作工具自托管」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/notion-saas-availability/cover-500.png) · [示意图](articles/images/notion-saas-availability/diagram-500.png)
 
 - [**海外直播与视频会议节点选型：延迟敏感业务的地图标准**](articles/overseas-live-streaming.md)  
   本文围绕「海外直播与视频会议节点选型」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/overseas-live-streaming/cover-500.png) · [示意图](articles/images/overseas-live-streaming/diagram-500.png)
 
 - [**出海 SaaS 全球上线验收：目标市场通畅率达标手册**](articles/saas-global-launch.md)  
   SaaS 出海看目标国通畅率，不是看团队能不能访问。  
-  📷 配图：[封面](articles/images/saas-global-launch/cover-500.png) · [示意图](articles/images/saas-global-launch/diagram-500.png)
 
 - [**Shopify 店铺全球可达性：主题、支付与应用域分层测速**](articles/shopify-speedtest.md)  
   Shopify 主域由平台管，但自定义域和 App 域要自测。  
-  📷 配图：[封面](articles/images/shopify-speedtest/cover-500.png) · [示意图](articles/images/shopify-speedtest/diagram-500.png)
 
 - [**东南亚市场节点验收：新马泰印尼菲逐国达标线**](articles/southeast-asia-nodes.md)  
   东南亚各国网络质量差异大，逐国验收不能偷懒。  
-  📷 配图：[封面](articles/images/southeast-asia-nodes/cover-500.png) · [示意图](articles/images/southeast-asia-nodes/diagram-500.png)
 
 - [**出海支付域名校验：支付页、回调 URL 的独立测速**](articles/stripe-payment-domain-check.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/stripe-payment-domain-check/cover-500.png) · [示意图](articles/images/stripe-payment-domain-check/diagram-500.png)
 
 - [**WooCommerce 出海验收：插件、支付网关与主域地图清单**](articles/woocommerce-global.md)  
   本文围绕「WooCommerce 出海验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/woocommerce-global/cover-500.png) · [示意图](articles/images/woocommerce-global/diagram-500.png)
 
 
 ### 开发（64 篇）
@@ -892,7 +779,6 @@
 
 - [**灾备演练：切换 DR 站点后的全国 SpeedCE 点检**](articles/disaster-recovery-drill.md)  
   灾备切换后 5 分钟全国点检，比宣布恢复更重要。  
-  📷 配图：[封面](articles/images/disaster-recovery-drill/cover-500.png) · [示意图](articles/images/disaster-recovery-drill/diagram-500.png)
 
 - [**Docker Compose 生产部署：网络、卷、健康检查完整配置**](articles/docker-compose-production.md)  
   docker-compose up -d 后必须外部访问验收，不是 docker ps 看状态。  
@@ -983,14 +869,12 @@
 
 - [**月度网站巡检 SOP：个人站 15 分钟、企业站 1 小时版**](articles/monthly-inspection-sop.md)  
   每月固定一天三网截图存档，对比上月发现退化。  
-  📷 配图：[封面](articles/images/monthly-inspection-sop/cover-500.png) · [示意图](articles/images/monthly-inspection-sop/diagram-500.png)
 
 - [**Nginx 访问日志分析：从日志到全国地图的故障定位**](articles/nginx-log-analysis.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
 
 - [**On-Call Runbook 中的测速章节：告警后 5 分钟 SOP**](articles/oncall-runbook-speedtest.md)  
   收到告警前 30 秒打开 SpeedCE，比翻文档快。  
-  📷 配图：[封面](articles/images/oncall-runbook-speedtest/cover-500.png) · [示意图](articles/images/oncall-runbook-speedtest/diagram-500.png)
 
 - [**Linux ActiveMQ 消息中间件 命令实战：运维场景与故障排查**](articles/ops-tool-activemq-消息中间件.md)  
   围绕「ActiveMQ 消息中间件」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -1066,7 +950,6 @@
 
 - [**零停机发布：蓝绿/金丝雀发布中的地图对照**](articles/zero-downtime-deploy.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/zero-downtime-deploy/cover-500.png) · [示意图](articles/images/zero-downtime-deploy/diagram-500.png)
 
 
 ### 数据库（16 篇）
@@ -1133,7 +1016,6 @@
 
 - [**渗透测试前网络暴露面：对外域名测速清单**](articles/penetration-test-prep.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/penetration-test-prep/cover-500.png) · [示意图](articles/images/penetration-test-prep/diagram-500.png)
 
 - [**CSP 策略 安全加固实战：配置、检测与影响评估**](articles/sec-topic-csp-策略.md)  
   围绕「CSP 策略」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -1326,43 +1208,33 @@
 
 - [**企业官网可用性 SLA：用通畅率数据向管理层汇报**](articles/corporate-website-sla.md)  
   老板问「网站稳不稳」，一张三网地图比口头保证有用。  
-  📷 配图：[封面](articles/images/corporate-website-sla/cover-500.png) · [示意图](articles/images/corporate-website-sla/diagram-500.png)
 
 - [**Discuz 论坛分享链：主站与分享域的分层测速**](articles/discuz-qzone-share.md)  
   本文围绕「Discuz 论坛分享链」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/discuz-qzone-share/cover-500.png) · [示意图](articles/images/discuz-qzone-share/diagram-500.png)
 
 - [**下载站可达性与带宽：拨测与下载测速的分工**](articles/download-site-bandwidth.md)  
   本文围绕「下载站可达性与带宽」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/download-site-bandwidth/cover-500.png) · [示意图](articles/images/download-site-bandwidth/diagram-500.png)
 
 - [**电商 618/双11 大促前多节点测速备战手册**](articles/ecommerce-sale-prep.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/ecommerce-sale-prep/cover-500.png) · [示意图](articles/images/ecommerce-sale-prep/diagram-500.png)
 
 - [**金融/医疗网站网络层基线：HTTPS、证书与多活验收**](articles/fintech-medical-compliance.md)  
   金融医疗对可用性要求更高，通畅率 99% 是底线。  
-  📷 配图：[封面](articles/images/fintech-medical-compliance/cover-500.png) · [示意图](articles/images/fintech-medical-compliance/diagram-500.png)
 
 - [**论坛社区全国可达性：Discuz/Flarum 三网验收**](articles/forum-community-site.md)  
   本文围绕「论坛社区全国可达性」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/forum-community-site/cover-500.png) · [示意图](articles/images/forum-community-site/diagram-500.png)
 
 - [**游戏联机服务器社群运营：用全国 PING 地图建立信任**](articles/game-private-server-ping.md)  
   游戏玩家对延迟敏感，全国 PING 地图是社群信任基础。  
-  📷 配图：[封面](articles/images/game-private-server-ping/cover-500.png) · [示意图](articles/images/game-private-server-ping/diagram-500.png)
 
 - [**Ghost 博客部署：Headless 与主题域测速**](articles/ghost-blog-deploy.md)  
   本文围绕「Ghost 博客部署」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/ghost-blog-deploy/cover-500.png) · [示意图](articles/images/ghost-blog-deploy/diagram-500.png)
 
 - [**政府/事业单位网站：全国通畅与 IPv6 双栈验收标准**](articles/government-site-standard.md)  
   本文围绕「政府/事业单位网站」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/government-site-standard/cover-500.png) · [示意图](articles/images/government-site-standard/diagram-500.png)
 
 - [**医院预约系统网络基线：高峰与移动用户验收**](articles/hospital-appointment-system.md)  
   医院预约系统移动用户占比高，移动地图必看。  
-  📷 配图：[封面](articles/images/hospital-appointment-system/cover-500.png) · [示意图](articles/images/hospital-appointment-system/diagram-500.png)
 
 - [**播客音频站 行业网站验收：可用性标准与点检清单**](articles/industry-more-播客音频站.md)  
   围绕「播客音频站」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -1402,58 +1274,45 @@
 
 - [**App 接口域名监控：iOS/Android 反馈不一致的网络层排查**](articles/mobile-app-api-domain.md)  
   本文围绕「App 接口域名监控」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/mobile-app-api-domain/cover-500.png) · [示意图](articles/images/mobile-app-api-domain/diagram-500.png)
 
 - [**新闻媒体流量峰值：突发报道前的全国点检 SOP**](articles/news-media-peak-traffic.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/news-media-peak-traffic/cover-500.png) · [示意图](articles/images/news-media-peak-traffic/diagram-500.png)
 
 - [**在线教育平台开课前三网验收：视频域、直播与 API**](articles/online-education-platform.md)  
   开课铃响了你才发现视频域移动红——太晚了。  
-  📷 配图：[封面](articles/images/online-education-platform/cover-500.png) · [示意图](articles/images/online-education-platform/diagram-500.png)
 
 - [**个人博客上线完全验收：Hexo/Hugo/WordPress 通用测速清单**](articles/personal-blog-launch.md)  
   本文围绕「个人博客上线完全验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/personal-blog-launch/cover-500.png) · [示意图](articles/images/personal-blog-launch/diagram-500.png)
 
 - [**招聘官网高峰验收：校招季前的全国点检**](articles/recruitment-careers-site.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/recruitment-careers-site/cover-500.png) · [示意图](articles/images/recruitment-careers-site/diagram-500.png)
 
 - [**B2B SaaS 演示环境：潜在客户地域的地图验收**](articles/saas-b2b-demo-environment.md)  
   本文围绕「B2B SaaS 演示环境」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/saas-b2b-demo-environment/cover-500.png) · [示意图](articles/images/saas-b2b-demo-environment/diagram-500.png)
 
 - [**点播视频站验收：播放域、CDN 与 API 三域测速**](articles/video-on-demand-site.md)  
   本文围绕「点播视频站验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/video-on-demand-site/cover-500.png) · [示意图](articles/images/video-on-demand-site/diagram-500.png)
 
 
 ### 方法论（28 篇）
 
 - [**A/B 对照测速法：CDN vs 源站、迁机前后的系统方法**](articles/ab-comparison-method.md)  
   对照测是排障第一原则——没有对照就没有结论。  
-  📷 配图：[封面](articles/images/ab-comparison-method/cover-500.png) · [示意图](articles/images/ab-comparison-method/diagram-500.png)
 
 - [**日历提醒巡检：把测速写进 Google Calendar / 飞书**](articles/calendar-reminder-inspect.md)  
   本文围绕「日历提醒巡检」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/calendar-reminder-inspect/cover-500.png) · [示意图](articles/images/calendar-reminder-inspect/diagram-500.png)
 
 - [**客服工单测速话术大全：20+ 专业回复「打不开」模板**](articles/customer-support-scripts.md)  
   本文围绕「客服工单测速话术大全」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/customer-support-scripts/cover-500.png) · [示意图](articles/images/customer-support-scripts/diagram-500.png)
 
 - [**2026 免费测速工具决策树：按场景选 SpeedCE/ITDOG/BOCE**](articles/free-speedtest-tools-2026.md)  
   本文围绕「2026 免费测速工具决策树」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/free-speedtest-tools-2026/cover-500.png) · [示意图](articles/images/free-speedtest-tools-2026/diagram-500.png)
 
 - [**如何读懂测速地图：绿/红/灰、延迟、通畅率的完全解读**](articles/how-to-read-speed-map.md)  
   地图比表格适合找区域——平均 127ms 不告诉你问题在新疆。  
-  📷 配图：[封面](articles/images/how-to-read-speed-map/cover-500.png) · [示意图](articles/images/how-to-read-speed-map/diagram-500.png)
 
 - [**事故报告中的测速数据：运维复盘的专业写法**](articles/incident-report-speed-data.md)  
   事故报告没数据就是甩锅，有地图截图才是专业。  
-  📷 配图：[封面](articles/images/incident-report-speed-data/cover-500.png) · [示意图](articles/images/incident-report-speed-data/diagram-500.png)
 
 - [**三网对比存档法：多节点测速方法论与实操指南**](articles/method-topic-三网对比存档法.md)  
   围绕「三网对比存档法」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -1475,133 +1334,102 @@
 
 - [**On-Call 前 5 分钟：收到告警后 SpeedCE 怎么测**](articles/on-call-first-5-minutes.md)  
   本文围绕「On-Call 前 5 分钟」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/on-call-first-5-minutes/cover-500.png) · [示意图](articles/images/on-call-first-5-minutes/diagram-500.png)
 
 - [**网站上线前 30 项检查清单：含 8 项多节点测速必做项**](articles/pre-launch-30-checklist.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/pre-launch-30-checklist/cover-500.png) · [示意图](articles/images/pre-launch-30-checklist/diagram-500.png)
 
 - [**PING / HTTP / HTTPS 协议选择完全指南**](articles/protocol-selection-guide.md)  
   协议选错，结论就错——建站用 HTTPS，验机可 PING+HTTPS。  
-  📷 配图：[封面](articles/images/protocol-selection-guide/cover-500.png) · [示意图](articles/images/protocol-selection-guide/diagram-500.png)
 
 - [**季度基础设施体检：地图对比、趋势退化与升级决策**](articles/quarterly-infra-review.md)  
   本文围绕「季度基础设施体检」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/quarterly-infra-review/cover-500.png) · [示意图](articles/images/quarterly-infra-review/diagram-500.png)
 
 - [**正则匹配子域发现：漏测域名的自动化清单思路**](articles/regex-domain-inventory.md)  
   本文围绕「正则匹配子域发现」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/regex-domain-inventory/cover-500.png) · [示意图](articles/images/regex-domain-inventory/diagram-500.png)
 
 - [**测速截图存档规范：工单、论坛、事故报告的配图标准**](articles/screenshot-archive-sop.md)  
   本文围绕「测速截图存档规范」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/screenshot-archive-sop/cover-500.png) · [示意图](articles/images/screenshot-archive-sop/diagram-500.png)
 
 - [**月度 SLA 报告模板：用通畅率数据汇报老板**](articles/sla-report-monthly.md)  
   本文围绕「月度 SLA 报告模板」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/sla-report-monthly/cover-500.png) · [示意图](articles/images/sla-report-monthly/diagram-500.png)
 
 - [**SpeedCE + BOCE 协作：网络层排除后的合规与拦截检测**](articles/speedce-boce-combo.md)  
   本文围绕「SpeedCE + BOCE 协作」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/speedce-boce-combo/cover-500.png) · [示意图](articles/images/speedce-boce-combo/diagram-500.png)
 
 - [**SpeedCE + ITDOG 黄金组合：地图巡检与持续 Ping 的协作手册**](articles/speedce-itdog-combo.md)  
   本文围绕「SpeedCE + ITDOG 黄金组合」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/speedce-itdog-combo/cover-500.png) · [示意图](articles/images/speedce-itdog-combo/diagram-500.png)
 
 - [**SpeedCE vs BOCE 完全对比：轻量地图与全能运维的边界**](articles/speedce-vs-boce.md)  
   SpeedCE 看地图，BOCE 查合规——分工明确。  
-  📷 配图：[封面](articles/images/speedce-vs-boce/cover-500.png) · [示意图](articles/images/speedce-vs-boce/diagram-500.png)
 
 - [**SpeedCE vs ITDOG 完全对比：场景、优缺点与搭配策略**](articles/speedce-vs-itdog.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/speedce-vs-itdog/cover-500.png) · [示意图](articles/images/speedce-vs-itdog/diagram-500.png)
 
 - [**网络拨测与 PageSpeed 分工：通不通 vs 快不快的决策顺序**](articles/speedtest-vs-pagespeed.md)  
   本文围绕「网络拨测与 PageSpeed 分工」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/speedtest-vs-pagespeed/cover-500.png) · [示意图](articles/images/speedtest-vs-pagespeed/diagram-500.png)
 
 - [**拨测快照 vs 7×24 监控：SpeedCE 在运维体系中的位置**](articles/speedtest-vs-uptime.md)  
   本文围绕「拨测快照 vs 7×24 监控」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/speedtest-vs-uptime/cover-500.png) · [示意图](articles/images/speedtest-vs-uptime/diagram-500.png)
 
 - [**新运维入职第一天：SpeedCE 与工具链培训手册**](articles/team-onboarding-speedce.md)  
   本文围绕「新运维入职第一天」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/team-onboarding-speedce/cover-500.png) · [示意图](articles/images/team-onboarding-speedce/diagram-500.png)
 
 - [**三网分离检测法：电信、联通、移动为何必须分开测**](articles/tri-network-method.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/tri-network-method/cover-500.png) · [示意图](articles/images/tri-network-method/diagram-500.png)
 
 - [**给云厂商/CDN 工单附证据：截图规范与描述模板**](articles/vendor-ticket-evidence.md)  
   本文围绕「给云厂商/CDN 工单附证据」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/vendor-ticket-evidence/cover-500.png) · [示意图](articles/images/vendor-ticket-evidence/diagram-500.png)
 
 
 ### 对比（13 篇）
 
 - [**17CE vs SpeedCE：老牌表格派与新锐地图派实战对比**](articles/17ce-vs-speedce.md)  
   17CE 表格精确，SpeedCE 地图直观——看场景选。  
-  📷 配图：[封面](articles/images/17ce-vs-speedce/cover-500.png) · [示意图](articles/images/17ce-vs-speedce/diagram-500.png)
 
 - [**阿里云云拨测 vs SpeedCE：同云用户如何搭配**](articles/aliyun-boce-vs-speedce.md)  
   本文围绕「阿里云云拨测 vs SpeedCE」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/aliyun-boce-vs-speedce/cover-500.png) · [示意图](articles/images/aliyun-boce-vs-speedce/diagram-500.png)
 
 - [**CESU.ai vs SpeedCE：新兴工具站与地图派实测对比**](articles/cesu-vs-speedce.md)  
   本文围绕「CESU.ai vs SpeedCE」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/cesu-vs-speedce/cover-500.png) · [示意图](articles/images/cesu-vs-speedce/diagram-500.png)
 
 - [**站长之家工具生态 vs SpeedCE：Ping/测速/Whois 分工**](articles/chinaz-toolkit-review.md)  
   本文围绕「站长之家工具生态 vs SpeedCE」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/chinaz-toolkit-review/cover-500.png) · [示意图](articles/images/chinaz-toolkit-review/diagram-500.png)
 
 - [**开发者 2026 检测书签栏：12 个链接应对 90% 网络故障**](articles/developer-bookmark-list.md)  
   本文围绕「开发者 2026 检测书签栏」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/developer-bookmark-list/cover-500.png) · [示意图](articles/images/developer-bookmark-list/diagram-500.png)
 
 - [**GTmetrix vs SpeedCE：性能测试与网络拨测分工**](articles/gtmetrix-vs-speedce.md)  
   GTmetrix 测页面性能，SpeedCE 测网络可达——先通后快。  
-  📷 配图：[封面](articles/images/gtmetrix-vs-speedce/cover-500.png) · [示意图](articles/images/gtmetrix-vs-speedce/diagram-500.png)
 
 - [**地图派 vs 表格派测速工具：排障效率的实测对比**](articles/map-vs-table-tools.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/map-vs-table-tools/cover-500.png) · [示意图](articles/images/map-vs-table-tools/diagram-500.png)
 
 - [**监控平台 vs 拨测工具：7×24 告警与第一现场的关系**](articles/monitoring-vs-probing.md)  
   本文围绕「监控平台 vs 拨测工具」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/monitoring-vs-probing/cover-500.png) · [示意图](articles/images/monitoring-vs-probing/diagram-500.png)
 
 - [**PageSpeed Insights 与网络拨测：站长必须弄清的分工边界**](articles/pagespeed-vs-network.md)  
   本文围绕「PageSpeed Insights 与网络拨测」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/pagespeed-vs-network/cover-500.png) · [示意图](articles/images/pagespeed-vs-network/diagram-500.png)
 
 - [**Ping.pe 完全使用手册：与 SpeedCE 的全球/中国互补策略**](articles/ping-pe-use-cases.md)  
   本文围绕「Ping.pe 完全使用手册」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/ping-pe-use-cases/cover-500.png) · [示意图](articles/images/ping-pe-use-cases/diagram-500.png)
 
 - [**2026 个人站长免费测速 TOP5 深度评测**](articles/top5-free-speedtest-2026.md)  
   2026 年免费测速工具不少，关键是找到适合自己场景的。  
-  📷 配图：[封面](articles/images/top5-free-speedtest-2026/cover-500.png) · [示意图](articles/images/top5-free-speedtest-2026/diagram-500.png)
 
 - [**VSPING vs SpeedCE：污染检测与网络可达性的配合**](articles/vsping-vs-speedce.md)  
   本文围绕「VSPING vs SpeedCE」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/vsping-vs-speedce/cover-500.png) · [示意图](articles/images/vsping-vs-speedce/diagram-500.png)
 
 - [**WebPageTest vs SpeedCE：何时用哪个**](articles/webpagetest-vs-speedce.md)  
   本文围绕「WebPageTest vs SpeedCE」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/webpagetest-vs-speedce/cover-500.png) · [示意图](articles/images/webpagetest-vs-speedce/diagram-500.png)
 
 
 ### 进阶（44 篇）
 
 - [**A/B 测试分流域：实验组域名的独立地图验收**](articles/ab-test-traffic-split.md)  
   本文围绕「A/B 测试分流域」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/ab-test-traffic-split/cover-500.png) · [示意图](articles/images/ab-test-traffic-split/diagram-500.png)
 
 - [**收购技术尽调：目标站点全国可达性快速评估**](articles/acquisition-due-diligence.md)  
   本文围绕「收购技术尽调」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/acquisition-due-diligence/cover-500.png) · [示意图](articles/images/acquisition-due-diligence/diagram-500.png)
 
 - [**CDN 成本优化 进阶实战：变更管理与测速门禁**](articles/adv-topic-cdn-成本优化.md)  
   围绕「CDN 成本优化」，本文提供可落地的技术指南，并在关键节点说明如何用多节点测速验收上线效果。  
@@ -1641,123 +1469,93 @@
 
 - [**联盟营销追踪域：全国可达对转化链的影响**](articles/affiliate-tracking-domain.md)  
   本文围绕「联盟营销追踪域」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/affiliate-tracking-domain/cover-500.png) · [示意图](articles/images/affiliate-tracking-domain/diagram-500.png)
 
 - [**新闻发布与热点峰值：突发流量前的 30 分钟点检**](articles/cctv-news-peak.md)  
   本文围绕「新闻发布与热点峰值」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/cctv-news-peak/cover-500.png) · [示意图](articles/images/cctv-news-peak/diagram-500.png)
 
 - [**变更管理中的测速门禁：改 DNS/证书/Nginx 必测制度**](articles/change-management-speedtest.md)  
   本文围绕「变更管理中的测速门禁」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/change-management-speedtest/cover-500.png) · [示意图](articles/images/change-management-speedtest/diagram-500.png)
 
 - [**给客户季报附地图：B2B 服务商的测速汇报模板**](articles/client-report-quarterly.md)  
   本文围绕「给客户季报附地图」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/client-report-quarterly/cover-500.png) · [示意图](articles/images/client-report-quarterly/diagram-500.png)
 
 - [**竞品站点对标测速：同赛道地图对比说服管理层升级**](articles/competitor-benchmark.md)  
   本文围绕「竞品站点对标测速」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/competitor-benchmark/cover-500.png) · [示意图](articles/images/competitor-benchmark/diagram-500.png)
 
 - [**双11/618 大促测速时间表：T-7 到 T+0 的完整节奏**](articles/double11-618-prep.md)  
   大促测速不是测一次，是 T-7 到 T+0 的持续节奏。  
-  📷 配图：[封面](articles/images/double11-618-prep/cover-500.png) · [示意图](articles/images/double11-618-prep/diagram-500.png)
 
 - [**粤浙沪京基准延迟：经济发达省份的地图达标参考线**](articles/guangdong-zhejiang-baseline.md)  
   本文围绕「粤浙沪京基准延迟」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/guangdong-zhejiang-baseline/cover-500.png) · [示意图](articles/images/guangdong-zhejiang-baseline/diagram-500.png)
 
 - [**海南自贸相关站点：岛屿地理与访问特征验收**](articles/hainan-special-zone.md)  
   本文围绕「海南自贸相关站点」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/hainan-special-zone/cover-500.png) · [示意图](articles/images/hainan-special-zone/diagram-500.png)
 
 - [**ICP 备案通过后全国可达性验收：解析、证书与合规**](articles/icp-filing-launch-check.md)  
   备案通过不等于全国能访问——还要验收解析和证书。  
-  📷 配图：[封面](articles/images/icp-filing-launch-check/cover-500.png) · [示意图](articles/images/icp-filing-launch-check/diagram-500.png)
 
 - [**内蒙古/东北三省：高寒地区线路与冬季高峰**](articles/inner-mongolia-northeast.md)  
   本文围绕「内蒙古/东北三省」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/inner-mongolia-northeast/cover-500.png) · [示意图](articles/images/inner-mongolia-northeast/diagram-500.png)
 
 - [**投放落地页：广告上线前 10 分钟全国点检**](articles/landing-page-campaign.md)  
   本文围绕「投放落地页」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/landing-page-campaign/cover-500.png) · [示意图](articles/images/landing-page-campaign/diagram-500.png)
 
 - [**迁机前后对比汇报模板：给老板和客户看的双地图 PPT**](articles/migration-before-after-report.md)  
   本文围绕「迁机前后对比汇报模板」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/migration-before-after-report/cover-500.png) · [示意图](articles/images/migration-before-after-report/diagram-500.png)
 
 - [**运维交接文档中的测速基线：离职前必须留下的地图包**](articles/multi-team-handover.md)  
   本文围绕「运维交接文档中的测速基线」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/multi-team-handover/cover-500.png) · [示意图](articles/images/multi-team-handover/diagram-500.png)
 
 - [**国庆黄金周流量：全国移动用户暴增前点检**](articles/national-holiday-golden-week.md)  
   本文围绕「国庆黄金周流量」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/national-holiday-golden-week/cover-500.png) · [示意图](articles/images/national-holiday-golden-week/diagram-500.png)
 
 - [**新域名冷启动 72 小时：注册、解析、证书与地图验收节奏**](articles/new-domain-cold-start.md)  
   本文围绕「新域名冷启动 72 小时」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/new-domain-cold-start/cover-500.png) · [示意图](articles/images/new-domain-cold-start/diagram-500.png)
 
 - [**东北三省访问质量验收：寒区线路与 CDN 节点覆盖**](articles/northeast-china-access-guide.md)  
   本文围绕「东北三省访问质量验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/northeast-china-access-guide/cover-500.png) · [示意图](articles/images/northeast-china-access-guide/diagram-500.png)
 
 - [**闽粤台贸相关站点：东南沿海地图验收要点**](articles/province-fujian-taiwan-trade.md)  
   本文围绕「闽粤台贸相关站点」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/province-fujian-taiwan-trade/cover-500.png) · [示意图](articles/images/province-fujian-taiwan-trade/diagram-500.png)
 
 - [**河南/湖北中部省份访问优化：地图特征与 CDN 策略**](articles/province-henan-hubei.md)  
   本文围绕「河南/湖北中部省份访问优化」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/province-henan-hubei/cover-500.png) · [示意图](articles/images/province-henan-hubei/diagram-500.png)
 
 - [**京津冀鲁访问基线：华北片区地图达标参考**](articles/province-shandong-hebei.md)  
   本文围绕「京津冀鲁访问基线」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/province-shandong-hebei/cover-500.png) · [示意图](articles/images/province-shandong-hebei/diagram-500.png)
 
 - [**川渝地区访问验收：西南节点与线路特征**](articles/province-sichuan-chongqing.md)  
   本文围绕「川渝地区访问验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/province-sichuan-chongqing/cover-500.png) · [示意图](articles/images/province-sichuan-chongqing/diagram-500.png)
 
 - [**云贵地区访问：西南边陲地图与移动网络**](articles/province-yunnan-guizhou.md)  
   本文围绕「云贵地区访问」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/province-yunnan-guizhou/cover-500.png) · [示意图](articles/images/province-yunnan-guizhou/diagram-500.png)
 
 - [**九月开学季：教育类站点流量保障测速**](articles/school-start-september.md)  
   本文围绕「九月开学季」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/school-start-september/cover-500.png) · [示意图](articles/images/school-start-september/diagram-500.png)
 
 - [**百度/Google 爬虫与站长可达性：SEO 视角的测速**](articles/seo-crawl-baidu-google.md)  
   爬虫爬不到等于没收录——站长可达性是 SEO 基础。  
-  📷 配图：[封面](articles/images/seo-crawl-baidu-google/cover-500.png) · [示意图](articles/images/seo-crawl-baidu-google/diagram-500.png)
 
 - [**短链域名验收：跳转链路的全国节点测试**](articles/short-link-domain-check.md)  
   本文围绕「短链域名验收」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/short-link-domain-check/cover-500.png) · [示意图](articles/images/short-link-domain-check/diagram-500.png)
 
 - [**春节流量保障：移动暴增前的全国三网点检手册**](articles/spring-festival-traffic.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
-  📷 配图：[封面](articles/images/spring-festival-traffic/cover-500.png) · [示意图](articles/images/spring-festival-traffic/diagram-500.png)
 
 - [**Status Page 搭建：测速数据如何支撑公开状态页**](articles/status-page-setup.md)  
   公开状态页需要真实数据支撑，SpeedCE 截图是素材。  
-  📷 配图：[封面](articles/images/status-page-setup/cover-500.png) · [示意图](articles/images/status-page-setup/diagram-500.png)
 
 - [**多子域清单巡检法：一张表管理所有对外域名的月度测速**](articles/subdomain-inventory-method.md)  
   本文围绕「多子域清单巡检法」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/subdomain-inventory-method/cover-500.png) · [示意图](articles/images/subdomain-inventory-method/diagram-500.png)
 
 - [**2026 站长浏览器工具栏终极配置：测速/监控/性能 12 链接**](articles/ultimate-toolbar-2026.md)  
   本文围绕「2026 站长浏览器工具栏终极配置」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/ultimate-toolbar-2026/cover-500.png) · [示意图](articles/images/ultimate-toolbar-2026/diagram-500.png)
 
 - [**新疆/西藏/西北片区访问优化：地图验收与 CDN 策略**](articles/xinjiang-tibet-access-guide.md)  
   西北片区是测速地图的照妖镜——很多线路在这里暴露。  
-  📷 配图：[封面](articles/images/xinjiang-tibet-access-guide/cover-500.png) · [示意图](articles/images/xinjiang-tibet-access-guide/diagram-500.png)
 
 - [**年终基础设施报告：12 个月地图存档如何汇总**](articles/year-end-summary-report.md)  
   本文围绕「年终基础设施报告」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  
-  📷 配图：[封面](articles/images/year-end-summary-report/cover-500.png) · [示意图](articles/images/year-end-summary-report/diagram-500.png)
 
 
 ## 工具与脚本
@@ -1766,7 +1564,6 @@
 |------|------|
 | `scripts/longform_article_generator.py` | 生成 500 篇 1.5–2 万字差异化长文 |
 | `scripts/diverse_article_generator.py` | 短文版生成器（已弃用，请用 longform） |
-| `scripts/generate_article_images.py` | 生成封面与示意图 |
 | `scripts/generate_root_readme.py` | 更新本 README |
 | `scripts/generate_seo_index.py` | 生成 SEO / AI 收录索引与 GitHub Pages 页面 |
 
