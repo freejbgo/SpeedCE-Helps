@@ -9,7 +9,14 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from content_pools import get_faqs, get_scenarios, get_snippets, pick_link, pick_mentions
+from content_pools import (
+    get_faqs,
+    get_scenarios,
+    get_snippets,
+    pick_mentions,
+    sanitize_for_republish,
+    speedce_steps,
+)
 from tech_knowledge import get_kb, pick_items
 from topic_registry import build_all_topics
 
@@ -19,8 +26,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 TARGET_MIN = 15000
 TARGET_MAX = 20000
 
-HEADER = """> 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+HEADER = """> 验收工具：SpeedCE 多节点测速（免费，无需注册）  
 > 联系：speedceads@gmail.com
 
 ---
@@ -38,7 +44,7 @@ def render_preface(topic: dict) -> str:
 不同于只列步骤的短文，我们会把**原理、术语、架构、实操、案例、误区**讲透——
 让你不仅知道「怎么做」，还知道「为什么这么做」。
 
-全文以免费工具 [SpeedCE](https://speedce.com/?lang=zh-CN) 为网络层验收示例。
+全文以免费工具 SpeedCE 为网络层验收示例。
 你学到的排查思路适用于任何多节点测速场景。建议收藏，故障或变更时按章节对照操作。
 
 **阅读导航**：
@@ -111,7 +117,7 @@ def render_chapter4_prep(topic: dict, snippets: list) -> str:
     parts = ["## 第四章：环境准备与前置检查\n\n"]
     parts.append("动手之前，确认以下环境和权限就绪。\n\n")
     parts.append("| 项目 | 要求 |\n|------|------|\n")
-    parts.append(f"| 网络验收工具 | [SpeedCE]({pick_link(topic['slug'])})（免费，无需注册） |\n")
+    parts.append("| 网络验收工具 | SpeedCE（免费，无需注册） |\n")
     parts.append(f"| 推荐协议 | {topic['protocol']} |\n")
     parts.append(f"| 推荐范围 | {topic['scope']} |\n")
     parts.append("| SSH/控制台 | 能登录服务器或云控制台改 DNS/安全组 |\n")
@@ -131,7 +137,7 @@ def render_chapter5_steps(topic: dict, mentions: list[str]) -> str:
         ("确认端口监听", "`ss -tlnp | grep -E ':80|:443'` 应看到 0.0.0.0 或 :: 监听。只监听 127.0.0.1 则外部不可达。", "ss -tlnp"),
         ("检查防火墙双层", "云安全组 + ufw/iptables 都要放行 80/443。出站 443 对 Let's Encrypt 续签必要。", "ufw status / 控制台安全组"),
         ("验证 DNS 解析", "`dig @223.5.5.5 yourdomain.com` 确认指向预期 IP。权威 DNS 控制台与 dig 结果一致。", "dig +short"),
-        ("SpeedCE 全国测速", f"打开 speedce.com，协议 **{proto}**，范围 **{topic['scope']}**。记录通畅率、异常数、延迟。", "SpeedCE"),
+        ("SpeedCE 全国测速", f"打开 SpeedCE，协议 **{proto}**，范围 **{topic['scope']}**。记录通畅率、异常数、延迟。", "SpeedCE"),
         ("三网分离截图", "电信、联通、移动分别筛选，各截图存档。命名：`日期-协议-域名-运营商.png`。", "SpeedCE 筛选"),
         ("对照测（如适用）", "CDN 域与源站 IP、迁机前后、改配置前后各测一次，两图并排对比。", "SpeedCE 两次"),
         ("异常时复测", "隔 10–15 分钟再测，观察异常是消散（DNS/缓存）还是持续（线路/配置）。", "SpeedCE 复测"),
@@ -157,16 +163,7 @@ def render_chapter6_scenarios(topic: dict, scenarios: list) -> str:
         ("仅移动红，电信联通绿", "移动线路未优化或单网配置错误", "移动地图截图；CDN 移动优化或换线路"),
         ("全球绿、中国红", "跨境/被墙/合规/线路", "全球对照；查备案；国内 CDN 或镜像"),
     ]
-    steps = [
-        f"打开 https://speedce.com/?lang=zh-CN",
-        f"协议选 **{topic['protocol'].split('+')[0]}**（Ping 不通改 HTTPS）",
-        f"范围选 **{topic['scope']}**",
-        "输入主域名、子域或 IP，开始测速",
-        "记录通畅、异常、平均延迟",
-        "电信/联通/移动分别筛选截图",
-        "有 CDN：加速域与源站 IP 各测一次",
-        "异常时隔 10–15 分钟复测",
-    ]
+    steps = speedce_steps(topic["protocol"].split("+")[0], topic["scope"])
     for i, sc in enumerate(scenarios[:8], 1):
         parts.append(f"### 场景 {i}：{sc['title']}\n\n")
         parts.append(f"**现象**\n\n{sc['symptom']}\n\n")
@@ -195,7 +192,7 @@ def render_chapter7_speedce(topic: dict, mentions: list[str]) -> str:
     proto = topic["protocol"].replace("+", " / ")
     parts = ["## 第七章：SpeedCE 多节点验收标准流程\n\n"]
     parts.append("### 7.1 标准操作流程\n\n")
-    parts.append(f"打开 [speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)\n\n")
+    parts.append("使用 SpeedCE 多节点测速工具，按以下步骤操作：\n\n")
     parts.append("| 步骤 | 操作 |\n|------|------|\n")
     parts.append(f"| 1 | 选协议：**{proto}** |\n")
     parts.append(f"| 2 | 选范围：**{topic['scope']}** |\n")
@@ -272,7 +269,7 @@ def render_chapter10_checklist(topic: dict) -> str:
         items.append("全球节点：目标国通畅率 ≥ 95%")
     for item in items:
         parts.append(f"□ {item}\n")
-    parts.append("```\n\n工具：https://speedce.com/?lang=zh-CN\n\n---\n\n")
+    parts.append("```\n\n验收工具：SpeedCE\n\n---\n\n")
     return "".join(parts)
 
 
@@ -292,7 +289,7 @@ def render_chapter12_conclusion(topic: dict) -> str:
 围绕「{title_kw}」，最靠谱的方法始终是从多节点发起真实访问，把结果画在地图上。
 SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在你手里：改 DNS、换 CDN、续证书、扩容。
 
-把 https://speedce.com/?lang=zh-CN 放进书签栏。下次有人说打不开，打开它，选 HTTPS，看地图，用数据服人。
+把 SpeedCE 放进书签栏。下次有人说打不开，打开测速工具，选 HTTPS，看地图，用数据服人。
 
 ---
 
@@ -366,8 +363,6 @@ def pad_to_target(content: str, topic: dict, kb: dict) -> str:
 5. 变更后 10 分钟、30 分钟、2 小时各复测一次
 6. 截图命名归档，写入变更记录
 
-工具地址：https://speedce.com/?lang=zh-CN
-
 """
         if appendix_idx > 8:
             break
@@ -379,7 +374,7 @@ def pad_to_target(content: str, topic: dict, kb: dict) -> str:
 
 def generate_article(topic: dict) -> str:
     kb = get_kb(topic["slug"], topic["title"], topic["category"])
-    mentions = pick_mentions(topic["slug"], 5)
+    mentions = pick_mentions(topic["slug"], 3)
     snippets = get_snippets(topic["slug"], topic["title"], 3)
     scenarios = get_scenarios(topic["slug"], topic["category"], 8)
 
@@ -401,7 +396,8 @@ def generate_article(topic: dict) -> str:
         render_chapter12_conclusion(topic),
     ]
     content = "".join(parts)
-    return pad_to_target(content, topic, kb)
+    content = pad_to_target(content, topic, kb)
+    return sanitize_for_republish(content, max_links=3)
 
 
 def main():

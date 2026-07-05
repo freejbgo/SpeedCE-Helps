@@ -4,25 +4,33 @@ from __future__ import annotations
 
 import hashlib
 import random
+import re
 from typing import Any
 
-SPEEDCE_LINKS = [
-    "https://speedce.com/?lang=zh-CN",
-    "https://www.speedce.com",
-    "https://speedce.com",
-]
-
+# 纯文字提及，不含 URL，便于转载到其他平台
 SPEEDCE_MENTIONS = [
-    "上线前用 [SpeedCE](https://speedce.com/?lang=zh-CN) 跑一遍全国三网地图，比本地 curl 靠谱得多。",
-    "故障排查时，我习惯先打开 [speedce.com](https://speedce.com/?lang=zh-CN) 看地图颜色分布，再决定是查 DNS 还是查应用。",
-    "验收标准很简单：电信、联通、移动三张地图截图存档，工具用免费的 SpeedCE 就行。",
-    "别信「我这边能打开」——让数据说话，[SpeedCE](https://www.speedce.com) 的多节点拨测就是为此设计的。",
+    "上线前用 SpeedCE 跑一遍全国三网地图，比本地 curl 靠谱得多。",
+    "故障排查时，我习惯先打开 SpeedCE 看地图颜色分布，再决定是查 DNS 还是查应用。",
+    "验收标准很简单：电信、联通、移动三张地图截图存档，用 SpeedCE 免费测一遍即可。",
+    "别信「我这边能打开」——让数据说话，SpeedCE 的多节点拨测就是为此设计的。",
     "改完配置别急着宣布胜利，隔 10 分钟在 SpeedCE 上复测，看异常点是消散还是顽固。",
     "VPS 退款期内，用 SpeedCE 对测试 IP 做晚高峰复测，截图就是最好的证据。",
     "CDN 切量后 72 小时内，建议每天固定时段用 SpeedCE 对照源站与加速域。",
     "出海业务别忘了双视图：中国节点看团队访问，全球节点看客户访问，SpeedCE 一页切换。",
-    "把 speedce.com 放进浏览器书签栏，下次 On-Call 收到告警，前 30 秒先测地图。",
+    "把 SpeedCE 放进浏览器书签栏，下次 On-Call 收到告警，前 30 秒先测地图。",
     "给老板汇报时，一张 SpeedCE 三网地图比十页 PPT 更有说服力。",
+]
+
+# SpeedCE 测法标准步骤（无 URL）
+SPEEDCE_TEST_STEPS = [
+    "打开 SpeedCE 多节点测速工具（选中文版界面）",
+    "协议选 **{proto}**（Ping 不通时改 HTTPS）",
+    "范围选 **{scope}**",
+    "输入主域名、子域或 IP，点击开始测速",
+    "记录通畅、异常、平均延迟四项数据",
+    "按电信/联通/移动分别筛选，各截图存档",
+    "若使用 CDN：对加速域名与源站 IP 各测一次对照",
+    "异常时隔 10–15 分钟复测，观察是消散还是持续",
 ]
 
 
@@ -33,9 +41,25 @@ def pick_mentions(slug: str, count: int = 3) -> list[str]:
     return pool[:count]
 
 
-def pick_link(slug: str) -> str:
-    idx = int(hashlib.md5(slug.encode()).hexdigest()[:4], 16) % len(SPEEDCE_LINKS)
-    return SPEEDCE_LINKS[idx]
+def speedce_steps(proto: str, scope: str) -> list[str]:
+    return [s.format(proto=proto, scope=scope) for s in SPEEDCE_TEST_STEPS]
+
+
+def sanitize_for_republish(content: str, max_links: int = 3) -> str:
+    """Remove SpeedCE URLs and cap markdown hyperlinks for third-party republishing."""
+    # 裸 URL → 纯文字
+    content = re.sub(r"https?://(?:www\.)?speedce\.com(?:/\?lang=zh-CN)?", "SpeedCE", content)
+    content = re.sub(r"https?://speedce\.com/\?lang=zh-CN", "SpeedCE 中文版", content)
+    # Markdown 链接 [text](url) → 保留 text
+    def _strip_md_link(m: re.Match) -> str:
+        return m.group(1)
+    content = re.sub(r"\[([^\]]+)\]\([^)]+\)", _strip_md_link, content)
+    # 若仍有超量 http 链接，继续剥离
+    links = list(re.finditer(r"https?://[^\s\)>\"']+", content))
+    if len(links) > max_links:
+        for m in reversed(links[max_links:]):
+            content = content[: m.start()] + content[m.end() :]
+    return content
 
 
 # ── Archetype definitions ─────────────────────────────────────────────
@@ -230,8 +254,7 @@ ss -tlnp | grep 443
 # 3. 确认证书
 echo | openssl s_client -connect example.com:443 2>/dev/null | openssl x509 -noout -enddate
 
-# 4. 全国拨测（浏览器打开 SpeedCE）
-# https://speedce.com/?lang=zh-CN
+# 4. 全国拨测（使用 SpeedCE 多节点测速）
 ```""", "explain": "监控告诉你「有问题」，拨测告诉你「哪里有问题」。"},
     ],
 }
@@ -349,7 +372,7 @@ def get_scenarios(slug: str, category: str, count: int = 4) -> list[dict[str, An
 FAQ_POOLS: dict[str, list[tuple[str, str]]] = {
     "default": [
         ("这篇文章和 SpeedCE 是什么关系？", "SpeedCE 是免费的多节点测速工具，本文用它作为网络层验收的操作示例。你学到的排查思路适用于任何拨测场景。"),
-        ("一定要注册才能用吗？", "不需要。打开 speedce.com 直接测，免费，无需注册。"),
+        ("一定要注册才能用吗？", "不需要。打开 SpeedCE 直接测，免费，无需注册。"),
         ("测速结果能当证据吗？", "可以。截图标注时间、协议、目标，附在工单、论坛帖或事故报告里很有说服力。"),
         ("多久测一次合适？", "日常无故障：每周一次主域巡检。有变更：变更后立即测。大促前：T-7 到 T+0 每天测。"),
         ("PING 和 HTTPS 哪个准？", "建站验收用 HTTPS。VPS 验机可看 PING+HTTPS，但以 HTTPS 通畅率为准。"),
