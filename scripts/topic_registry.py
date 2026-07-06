@@ -378,13 +378,14 @@ def build_all_topics() -> list[dict]:
          "SpeedCE,ITDOG,对比", "没有最好的工具，只有最合适的场景。"),
         ("speedce-vs-boce", "SpeedCE vs BOCE 完全对比：轻量地图与全能运维的边界",
          "SpeedCE,BOCE,对比", "SpeedCE 看地图，BOCE 查合规——分工明确。"),
-        ("protocol-selection-guide", "PING / HTTP / HTTPS 协议选择完全指南",
-         "PING,HTTPS,协议,SpeedCE", "协议选错，结论就错——建站用 HTTPS，验机可 PING+HTTPS。"),
+        ("protocol-selection-guide", "SpeedCE 六种检测工具选择完全指南：HTTP / HTTPS / PING / TCPing / DNS / 路由追踪",
+         "HTTP,HTTPS,PING,TCPing,DNS,路由追踪,SpeedCE", "工具选错，结论就错——建站用 HTTPS，迁机查 DNS，绕路用路由追踪。"),
         ("incident-report-speed-data", "事故报告中的测速数据：运维复盘的专业写法",
          "事故报告,复盘,SpeedCE", "事故报告没数据就是甩锅，有地图截图才是专业。"),
     ]
     for slug, title, kw, hook in method:
-        _add(t, "方法论", slug, title, kw, hook)
+        proto = "按场景选择（见 7.2 工具表）" if slug == "protocol-selection-guide" else "HTTPS"
+        _add(t, "方法论", slug, title, kw, hook, proto)
 
     # ── 对比 15 ──
     compare = [

@@ -1,7 +1,7 @@
 title: SpeedCE 技术文档库
 description: >-
-  多节点网站测速 · 网络排障 · 500 篇站长技术实战长文（中文）+ 500 篇英文 SEO 指南。
-  SpeedCE 免费在线测速工具：https://speedce.com/?lang=zh-CN
+  多节点网站/网络检测 · 网络排障 · 500 篇站长技术实战长文（中文）+ 500 篇英文 SEO 指南。
+  SpeedCE 免费在线检测工具（HTTP/HTTPS/PING/TCPing/DNS/路由追踪）：https://speedce.com/?lang=zh-CN
 lang: zh-CN
 url: https://freejbgo.github.io
 baseurl: /SpeedCE-Helps

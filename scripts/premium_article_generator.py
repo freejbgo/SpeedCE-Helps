@@ -741,7 +741,7 @@ def build_topics() -> list[dict]:
         ("方法论", "pre-launch-30-checklist", "网站上线前 30 项检查清单：含 8 项多节点测速必做项", "上线清单,验收,SpeedCE"),
         ("方法论", "monthly-inspection-sop", "月度网站巡检 SOP：个人站 15 分钟、企业站 1 小时版", "月度巡检,SOP,SpeedCE"),
         ("方法论", "quarterly-infra-review", "季度基础设施体检：地图对比、趋势退化与升级决策", "季度体检,基础设施,SpeedCE"),
-        ("方法论", "protocol-selection-guide", "PING / HTTP / HTTPS 协议选择完全指南：一次选对少绕弯路", "PING,HTTPS,协议,SpeedCE"),
+        ("方法论", "protocol-selection-guide", "SpeedCE 六种检测工具选择完全指南：HTTP / HTTPS / PING / TCPing / DNS / 路由追踪", "HTTP,HTTPS,PING,TCPing,DNS,路由追踪,SpeedCE"),
         ("方法论", "speedtest-vs-pagespeed", "网络拨测与 PageSpeed 分工：通不通 vs 快不快的决策顺序", "PageSpeed,网络测速,SpeedCE"),
         ("方法论", "speedtest-vs-uptime", "拨测快照 vs 7×24 监控：SpeedCE 在运维体系中的位置", "Uptime,监控,拨测,SpeedCE"),
         ("方法论", "speedce-itdog-combo", "SpeedCE + ITDOG 黄金组合：地图巡检与持续 Ping 的协作手册", "SpeedCE,ITDOG,工具组合"),

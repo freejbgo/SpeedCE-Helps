@@ -21,7 +21,7 @@ Intermittent tickets are the hardest: your test passes, their province fails. Di
 
 Your city, ISP, and time of day are only one path through the internet. China Telecom, China Unicom, and China Mobile may route the same hostname differently. A VPS labeled "BGP" can still be slow or unreachable for mobile users.
 
-**SpeedCE** runs HTTP, HTTPS, and PING from many Chinese provinces plus global locations. Results appear as red/green distributions on a **China node map** and a **global node map**—not a single average latency line. Filter by carrier to see whether failure is nationwide, provincial, or ISP-specific.
+**SpeedCE** runs HTTP, HTTPS, PING, TCPing, DNS, and Traceroute from many Chinese provinces plus global locations. Pick a tool from the dropdown, then read results as red/green distributions on a **China node map** and a **global node map**—not a single average latency line. Filter by carrier to see whether failure is nationwide, provincial, or ISP-specific.
 
 ## Read the map before opening logs
 
@@ -31,7 +31,7 @@ Archive screenshots with timestamps. They become evidence for vendors, auditors,
 
 ## A practical acceptance loop
 
-1. Open https://speedce.com/?lang=zh-CN and pick the protocol your users actually use (usually HTTPS).
+1. Open https://speedce.com/?lang=zh-CN and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues).
 2. Test the exact hostname users hit—`www`, `api`, callbacks, and CDN CNAMEs are separate targets.
 3. Switch China vs global nodes depending on audience.
 4. Filter Telecom / Unicom / Mobile separately on the China map.
@@ -39,7 +39,7 @@ Archive screenshots with timestamps. They become evidence for vendors, auditors,
 
 ## Topic focus
 
-Focus on TTL, recursive vs authoritative DNS, and GeoDNS. Compare multiple public resolvers if provinces disagree.
+Focus on TTL, recursive vs authoritative DNS, and GeoDNS. Use SpeedCE's **DNS tool** to compare resolver results across provinces.
 
 If the map is green but users still fail, move to application layers—CORS, auth callbacks, WebSocket handshakes, or database timeouts. Network-first triage saves hours.
 
@@ -48,11 +48,11 @@ If the map is green but users still fail, move to application layers—CORS, aut
 
 ## Protocol Clarity
 
-HTTP, HTTPS, and PING test different layers. Pick the protocol that matches user traffic, then read the map—not just average latency.
+HTTP, HTTPS, PING, TCPing, DNS, and Traceroute test different layers. Pick the tool that matches your question, then read the map—not just average latency.
 
 Tool: https://speedce.com/?lang=zh-CN
 
 ---
 
-**SpeedCE** — China provinces & global nodes · one-click connectivity testing  
+**SpeedCE** — China provinces & global nodes · six network tools in one dropdown  
 Site: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
