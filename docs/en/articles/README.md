@@ -528,4 +528,4 @@
 
 ---
 
-SpeedCE — China provinces & global nodes · one-click connectivity testing
+SpeedCE — China provinces & global nodes · six network tools in one dropdown

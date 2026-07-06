@@ -1326,14 +1326,14 @@ Articles: 500
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/speedce-vs-boce.md
 - summary: SpeedCE 看地图，BOCE 查合规——分工明确。
 
-## PING / HTTP / HTTPS 协议选择完全指南
+## SpeedCE 六种检测工具选择完全指南：HTTP / HTTPS / PING / TCPing / DNS / 路由追踪
 - slug: protocol-selection-guide
 - category: 方法论
-- keywords: PING,HTTPS,协议,SpeedCE
+- keywords: HTTP,HTTPS,PING,TCPing,DNS,路由追踪,SpeedCE
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/protocol-selection-guide/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/protocol-selection-guide.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/protocol-selection-guide.md
-- summary: 协议选错，结论就错——建站用 HTTPS，验机可 PING+HTTPS。
+- summary: 工具选错，结论就错——建站用 HTTPS，迁机查 DNS，绕路用路由追踪。
 
 ## 事故报告中的测速数据：运维复盘的专业写法
 - slug: incident-report-speed-data

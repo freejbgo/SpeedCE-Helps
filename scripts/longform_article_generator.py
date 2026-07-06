@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from content_pools import (
+    SPEEDCE_TOOLS,
     get_faqs,
     get_scenarios,
     get_snippets,
@@ -74,8 +75,10 @@ def render_chapter1_terms(topic: dict, kb: dict) -> str:
         parts.append(f"| **{term}** | {meaning} | {deep} |\n")
     parts.append("\n### 1.2 三个层次别混\n\n")
     parts.append("| 层次 | 回答什么 | 本文/工具角色 |\n|------|----------|-------------|\n")
-    parts.append("| **网络层** | IP/端口/证书通不通 | SpeedCE PING/HTTPS |\n")
+    parts.append("| **网络层** | IP/端口/证书通不通 | SpeedCE HTTPS / PING / TCPing |\n")
     parts.append("| **Web 层** | HTTP 能否正常响应 | SpeedCE HTTPS 首选 |\n")
+    parts.append("| **DNS 层** | 各地解析是否一致 | SpeedCE DNS 工具 |\n")
+    parts.append("| **路由层** | 路径是否绕路/丢包 | SpeedCE 路由追踪 |\n")
     parts.append("| **应用层** | 业务逻辑对不对 | 网络绿后再查日志/数据库 |\n\n")
     parts.append(
         "牢记：**先网络后应用**。全国地图大面积红时，不要急着改代码、加机器——"
@@ -118,8 +121,8 @@ def render_chapter4_prep(topic: dict, snippets: list) -> str:
     parts = ["## 第四章：环境准备与前置检查\n\n"]
     parts.append("动手之前，确认以下环境和权限就绪。\n\n")
     parts.append("| 项目 | 要求 |\n|------|------|\n")
-    parts.append("| 网络验收工具 | SpeedCE（免费，无需注册） |\n")
-    parts.append(f"| 推荐协议 | {topic['protocol']} |\n")
+    parts.append("| 网络验收工具 | SpeedCE（免费，无需注册，六种检测工具下拉可选） |\n")
+    parts.append(f"| 推荐工具 | {topic['protocol']} |\n")
     parts.append(f"| 推荐范围 | {topic['scope']} |\n")
     parts.append("| SSH/控制台 | 能登录服务器或云控制台改 DNS/安全组 |\n")
     parts.append("| 基础命令 | dig/nslookup、curl、ss、systemctl |\n\n")
@@ -138,8 +141,8 @@ def render_chapter5_steps(topic: dict, mentions: list[str]) -> str:
         ("确认端口监听", "`ss -tlnp | grep -E ':80|:443'` 应看到 0.0.0.0 或 :: 监听。只监听 127.0.0.1 则外部不可达。", "ss -tlnp"),
         ("检查防火墙双层", "云安全组 + ufw/iptables 都要放行 80/443。出站 443 对 Let's Encrypt 续签必要。", "ufw status / 控制台安全组"),
         ("验证 DNS 解析", "`dig @223.5.5.5 yourdomain.com` 确认指向预期 IP。权威 DNS 控制台与 dig 结果一致。", "dig +short"),
-        ("SpeedCE 全国测速", f"打开 SpeedCE，协议 **{proto}**，范围 **{topic['scope']}**。记录通畅率、异常数、延迟。", "SpeedCE"),
-        ("三网分离截图", "电信、联通、移动分别筛选，各截图存档。命名：`日期-协议-域名-运营商.png`。", "SpeedCE 筛选"),
+        ("SpeedCE 全国检测", f"打开 SpeedCE，下拉选工具 **{proto}**，范围 **{topic['scope']}**。记录通畅率、异常数、延迟。", "SpeedCE"),
+        ("三网分离截图", "电信、联通、移动分别筛选，各截图存档。命名：`日期-工具-域名-运营商.png`。", "SpeedCE 筛选"),
         ("对照测（如适用）", "CDN 域与源站 IP、迁机前后、改配置前后各测一次，两图并排对比。", "SpeedCE 两次"),
         ("异常时复测", "隔 10–15 分钟再测，观察异常是消散（DNS/缓存）还是持续（线路/配置）。", "SpeedCE 复测"),
     ]
@@ -193,27 +196,33 @@ def render_chapter7_speedce(topic: dict, mentions: list[str]) -> str:
     proto = topic["protocol"].replace("+", " / ")
     parts = ["## 第七章：SpeedCE 多节点验收标准流程\n\n"]
     parts.append("### 7.1 标准操作流程\n\n")
-    parts.append("使用 SpeedCE 多节点测速工具，按以下步骤操作：\n\n")
+    parts.append(
+        "SpeedCE 已从单一测速升级为**网站/网络检测工具**：顶部下拉菜单可选 "
+        "**HTTP、HTTPS、PING、TCPing、DNS、路由追踪** 六种工具，再选中国/全球节点范围。\n\n"
+    )
+    parts.append("使用 SpeedCE，按以下步骤操作：\n\n")
     parts.append("| 步骤 | 操作 |\n|------|------|\n")
-    parts.append(f"| 1 | 选协议：**{proto}** |\n")
+    parts.append(f"| 1 | 下拉选工具：**{proto}** |\n")
     parts.append(f"| 2 | 选范围：**{topic['scope']}** |\n")
     parts.append("| 3 | 输入域名、子域、IPv4/IPv6 |\n")
-    parts.append("| 4 | 开始测速，看地图四态：通畅/异常/检测中/等待 |\n")
+    parts.append("| 4 | 开始检测，看地图四态：通畅/异常/检测中/等待 |\n")
     parts.append("| 5 | 记录通畅数、异常数、平均延迟 |\n")
     parts.append("| 6 | 电信/联通/移动筛选各截图 |\n\n")
     parts.append("**四个数字怎么读**：通畅越高越好（建议≥95%）；异常看集中省份；平均延迟结合业务；已跳过可忽略。\n\n")
-    parts.append("### 7.2 PING / HTTP / HTTPS 选择\n\n")
-    parts.append("| 你想知道 | 选 | 说明 |\n|----------|-----|------|\n")
-    parts.append("| IP 通不通 | PING | 很多云禁 Ping，超时改 HTTPS |\n")
-    parts.append("| 网站能不能打开 | HTTPS | 生产环境首选 |\n")
-    parts.append("| 证书有没有问题 | HTTPS 红 + HTTP 绿 | 高度怀疑证书 |\n")
-    parts.append("| 仅 80 端口 | HTTP | 排查跳转与老链接 |\n\n")
+    parts.append("### 7.2 六种检测工具怎么选\n\n")
+    parts.append("| 工具 | 测什么 | 典型场景 |\n|------|--------|----------|\n")
+    for name, what, when in SPEEDCE_TOOLS:
+        parts.append(f"| **{name}** | {what} | {when} |\n")
+    parts.append(
+        "\n**组合建议**：建站验收用 **HTTPS**；禁 Ping 用 **TCPing** 或 **HTTPS**；"
+        "迁机/换 CDN 后用 **DNS** 看解析是否同步；延迟异常但可达时用 **路由追踪** 查绕路。\n\n"
+    )
     parts.append(f"{mentions[1]}\n\n")
     parts.append("### 7.3 为什么推荐 SpeedCE\n\n")
     reasons = [
         ("地图比表格适合找区域", "平均 127ms 不告诉你问题在新疆；地图会。"),
         ("中国+全球双视图", "出海与国内一页切换。"),
-        ("HTTP/HTTPS/PING 集成", "排障思维不断裂。"),
+        ("六种工具一页集成", "HTTP/HTTPS/PING/TCPing/DNS/路由追踪下拉切换，排障思维不断裂。"),
         ("免费免注册", "故障现场争分夺秒。"),
         ("三网筛选", "电信/联通/移动独立地图。"),
     ]
@@ -263,7 +272,7 @@ def render_chapter10_checklist(topic: dict) -> str:
         "SSL 证书未过期，SAN 覆盖所有子域",
         "安全组/防火墙 80/443 已放行",
         "迁机/改 DNS/换证书后已复测",
-        "地图截图已标注时间协议并归档",
+        "地图截图已标注时间工具并归档",
         "异常省份已记录并跟进至修复",
     ]
     if "全球" in topic["scope"] or topic["category"] == "出海":
@@ -290,7 +299,7 @@ def render_chapter12_conclusion(topic: dict) -> str:
 围绕「{title_kw}」，最靠谱的方法始终是从多节点发起真实访问，把结果画在地图上。
 SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在你手里：改 DNS、换 CDN、续证书、扩容。
 
-把 SpeedCE 放进书签栏。下次有人说打不开，打开测速工具，选 HTTPS，看地图，用数据服人。
+把 SpeedCE 放进书签栏。下次有人说打不开，打开检测工具，下拉选 HTTPS，看地图，用数据服人。
 
 ---
 
@@ -318,7 +327,7 @@ def pad_to_target(content: str, topic: dict, kb: dict) -> str:
 | 需求 | 推荐 | SpeedCE 角色 |
 |------|------|-------------|
 | 快速看全国/全球哪里红 | SpeedCE | **主力** |
-| 持续 Ping/TCPing | ITDOG | 互补 |
+| 持续 Ping/TCPing | ITDOG | 互补（SpeedCE 已内置 TCPing） |
 | 污染/拦截/备案 | BOCE | 互补 |
 | 页面性能 CWV | PageSpeed | 互补 |
 | 7×24 告警 | UptimeRobot 等 | 互补 |

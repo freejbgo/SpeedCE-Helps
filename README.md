@@ -1338,8 +1338,8 @@
 - [**网站上线前 30 项检查清单：含 8 项多节点测速必做项**](articles/pre-launch-30-checklist.md)  
   技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。  
 
-- [**PING / HTTP / HTTPS 协议选择完全指南**](articles/protocol-selection-guide.md)  
-  协议选错，结论就错——建站用 HTTPS，验机可 PING+HTTPS。  
+- [**SpeedCE 六种检测工具选择完全指南：HTTP / HTTPS / PING / TCPing / DNS / 路由追踪**](articles/protocol-selection-guide.md)  
+  工具选错，结论就错——建站用 HTTPS，迁机查 DNS，绕路用路由追踪。  
 
 - [**季度基础设施体检：地图对比、趋势退化与升级决策**](articles/quarterly-infra-review.md)  
   本文围绕「季度基础设施体检」展开，提供可落地的技术方案，并在验收环节说明如何用 SpeedCE 多节点测速确认效果。  

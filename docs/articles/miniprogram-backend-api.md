@@ -35,7 +35,7 @@ permalink: articles/miniprogram-backend-api.html
 
 | 层次 | 回答什么 | SpeedCE 角色 |
 |------|----------|-------------|
-| 网络层 | IP/端口通不通 | PING / HTTPS 可达 |
+| 网络层 | IP/端口/证书通不通 | SpeedCE HTTPS / PING / TCPing |
 | Web 层 | 网站能否正常响应 | HTTPS 首选 |
 | 应用层 | 业务逻辑对不对 | 网络绿后再查日志 |
 
@@ -56,14 +56,18 @@ permalink: articles/miniprogram-backend-api.html
 | **三网分** | 电信、联通、移动各一张图 |
 | **多次测** | DNS 生效、晚高峰、间歇故障至少 2–3 次 |
 
-### 1.4 PING / HTTP / HTTPS 分别什么时候用
+### 1.4 六种检测工具怎么选
 
-| 你想知道 | 选 | 说明 |
-|----------|-----|------|
-| IP 通不通 | PING | 很多云禁 Ping，超时改 HTTPS |
-| 网站能不能打开 | HTTPS | 生产环境首选 |
-| 证书有没有问题 | HTTPS 红 + HTTP 绿 | 高度怀疑证书 |
-| 仅 80 端口 | HTTP | 排查跳转与老链接 |
+SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由追踪** 六种工具：
+
+| 工具 | 测什么 | 典型场景 |
+|------|--------|----------|
+| **HTTP** | 检测 80 端口 HTTP 连通性 | 排查跳转、混合内容、仅开 80 的场景 |
+| **HTTPS** | 检测 443 端口 TLS 与 HTTP 响应 | 建站验收首选，覆盖证书与 Web 层 |
+| **PING** | ICMP 连通性与延迟 | 快速看 IP 通不通；云厂商禁 Ping 时改 HTTPS |
+| **TCPing** | TCP 端口连通性（默认 443） | 禁 ICMP 时替代 Ping，验证端口是否监听 |
+| **DNS** | 全国/全球多节点 DNS 解析 | 迁机、换 CDN、分线路解析后看各地解析是否一致 |
+| **路由追踪** | 逐跳路由路径与延迟 | 定位跨省/跨网路由绕路、中间节点异常 |
 
 ---
 
@@ -73,10 +77,10 @@ permalink: articles/miniprogram-backend-api.html
 
 | 步骤 | 操作 |
 |------|------|
-| 1 | 选协议：**HTTPS** |
+| 1 | 下拉选工具：**HTTPS** |
 | 2 | 选范围：**中国节点** |
 | 3 | 输入域名、子域、IPv4/IPv6 |
-| 4 | 开始测速，看地图四态：通畅/异常/检测中/等待 |
+| 4 | 开始检测，看地图四态：通畅/异常/检测中/等待 |
 | 5 | 记录通畅数、异常数、平均延迟 |
 | 6 | 电信/联通/移动筛选各截图 |
 
@@ -606,7 +610,7 @@ permalink: articles/miniprogram-backend-api.html
 
 一个页面切换，出海与国内都覆盖。
 
-### 8.3 HTTP/HTTPS/PING 一页集成
+### 8.3 六种工具一页集成
 
 排障时思维不断裂。
 

@@ -482,7 +482,7 @@ permalink: /
 - [退款期证据收集法：多节点测速方法论与实操指南](https://freejbgo.github.io/SpeedCE-Helps/articles/method-topic-退款期证据收集法/)
 - [On-Call 前 5 分钟：收到告警后 SpeedCE 怎么测](https://freejbgo.github.io/SpeedCE-Helps/articles/on-call-first-5-minutes/)
 - [网站上线前 30 项检查清单：含 8 项多节点测速必做项](https://freejbgo.github.io/SpeedCE-Helps/articles/pre-launch-30-checklist/)
-- [PING / HTTP / HTTPS 协议选择完全指南](https://freejbgo.github.io/SpeedCE-Helps/articles/protocol-selection-guide/)
+- [SpeedCE 六种检测工具选择完全指南：HTTP / HTTPS / PING / TCPing / DNS / 路由追踪](https://freejbgo.github.io/SpeedCE-Helps/articles/protocol-selection-guide/)
 - [季度基础设施体检：地图对比、趋势退化与升级决策](https://freejbgo.github.io/SpeedCE-Helps/articles/quarterly-infra-review/)
 - [正则匹配子域发现：漏测域名的自动化清单思路](https://freejbgo.github.io/SpeedCE-Helps/articles/regex-domain-inventory/)
 - [测速截图存档规范：工单、论坛、事故报告的配图标准](https://freejbgo.github.io/SpeedCE-Helps/articles/screenshot-archive-sop/)
