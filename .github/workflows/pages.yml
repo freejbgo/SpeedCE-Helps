@@ -10,6 +10,9 @@ on:
       - "articles/**"
       - "scripts/generate_seo_index.py"
       - "scripts/generate_en_articles.py"
+      - "scripts/content_pools.py"
+      - "scripts/longform_article_generator.py"
+      - "docs/_layouts/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 

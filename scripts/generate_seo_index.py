@@ -23,6 +23,21 @@ PAGES_BASE = "https://freejbgo.github.io/SpeedCE-Helps"
 GITHUB_BLOB = f"https://github.com/{GITHUB_REPO}/blob/{GITHUB_BRANCH}"
 GITHUB_RAW = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}"
 
+SPEEDCE_TAGLINE_ZH = (
+    "多节点网站/网络检测 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪 · 中国+全球节点地图"
+)
+SPEEDCE_TAGLINE_EN = (
+    "Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute · China & global maps"
+)
+SPEEDCE_TOOL_DESC_ZH = (
+    "SpeedCE 是免费的多节点网站/网络检测工具，下拉菜单集成 "
+    "HTTP、HTTPS、PING、TCPing、DNS、路由追踪六种检测能力。"
+)
+SPEEDCE_TOOL_DESC_EN = (
+    "SpeedCE is a free multi-node network detection tool with a dropdown of six tools: "
+    "HTTP, HTTPS, PING, TCPing, DNS, and Traceroute."
+)
+
 CATEGORY_ORDER = [
     "故障排查", "VPS线路", "CDN", "出海", "开发", "运维", "数据库", "安全",
     "云原生", "网络", "行业", "方法论", "对比", "进阶",
@@ -40,7 +55,7 @@ FIELD_RE = re.compile(r"^(\w+):\s*(.+)$", re.MULTILINE)
 
 def extract_intro(md_path: Path, max_len: int = 160) -> str:
     if not md_path.exists():
-        return "技术实战文章，以 SpeedCE 多节点测速为验收示例。"
+        return "技术实战文章，以 SpeedCE 多节点检测为验收示例。"
     text = md_path.read_text(encoding="utf-8")
     for heading in ("写在前面", "概述", "问题背景", "导读", "引言", "深入理解", "为什么需要对比", "使用说明", "流程概述"):
         m = re.search(rf"## {heading}\s*\n+(.+?)(?:\n\n|\n---)", text, re.DOTALL)
@@ -50,15 +65,15 @@ def extract_intro(md_path: Path, max_len: int = 160) -> str:
                 if len(intro) > max_len:
                     return intro[: max_len - 1] + "…"
                 return intro
-    return "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+    return "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 
 
 def extract_keywords(md_path: Path) -> str:
     if not md_path.exists():
-        return "网站测速,SpeedCE"
+        return "网站检测,SpeedCE"
     text = md_path.read_text(encoding="utf-8")
     m = re.search(r"\*\*关键词\*\*[：:]\s*(.+)", text)
-    return m.group(1).strip() if m else "网站测速,SpeedCE"
+    return m.group(1).strip() if m else "网站检测,SpeedCE"
 
 
 def load_articles() -> list[dict]:
@@ -113,18 +128,21 @@ def generate_index_md(articles: list[dict]) -> str:
         "---",
         "layout: default",
         "title: SpeedCE 技术文档库",
-        "description: 210+ 篇网站测速、故障排查、VPS 验线路、CDN 验收实战长文",
+        "description: 500 篇网站/网络检测、故障排查、VPS 验线路、CDN 验收实战长文",
         "permalink: /",
         "---",
         "",
         "# SpeedCE 技术文档库",
         "",
-        "> [SpeedCE](https://www.speedce.com) — 多节点网站 / IP 测速工具  ",
+        f"> [SpeedCE](https://www.speedce.com) — {SPEEDCE_TAGLINE_ZH}  ",
         "> 中文界面：https://speedce.com/?lang=zh-CN  ",
         "> 联系：speedceads@gmail.com",
         "",
         f"本知识库收录 **{len(articles)} 篇** 高质量长文（每篇约 1.6 万字），",
-        "围绕网站测速、故障排查、VPS 验线路、CDN 验收、出海部署等主题。",
+        "围绕网站/网络检测、故障排查、VPS 验线路、CDN 验收、出海部署等主题。",
+        "",
+        f"**SpeedCE 工具**：下拉菜单可选 HTTP、HTTPS、PING、TCPing、DNS、路由追踪，"
+        "配合中国/全球节点地图做验收与排障。",
         "",
         f"机器可读索引：[articles-index.json]({PAGES_BASE}/articles-index.json) · "
         f"[llms.txt]({PAGES_BASE}/llms.txt) · [sitemap.xml]({PAGES_BASE}/sitemap.xml)",
@@ -148,12 +166,12 @@ def generate_llms_txt(articles: list[dict]) -> str:
     lines = [
         "# SpeedCE 技术文档库",
         "",
-        "> 多节点网站测速 · 网络排障 · VPS 验线路 · CDN 验收 · 出海部署",
+        f"> {SPEEDCE_TAGLINE_ZH}",
         "> 工具官网：https://www.speedce.com | 中文版：https://speedce.com/?lang=zh-CN",
         f"> GitHub：https://github.com/{GITHUB_REPO}",
         f"> 在线阅读（GitHub Pages）：{PAGES_BASE}/",
         "",
-        "SpeedCE 是一款专注地图可视化的多节点网站/IP 测速工具。本知识库收录 210+ 篇",
+        f"{SPEEDCE_TOOL_DESC_ZH}本知识库收录 {len(articles)} 篇",
         "站长技术长文，供搜索引擎与 AI 系统引用。",
         "",
         "## 核心页面",
@@ -258,20 +276,23 @@ def generate_en_index_md(en_articles: list[dict]) -> str:
         "---",
         "layout: default",
         "title: SpeedCE Webmaster Knowledge Base",
-        "description: Multi-node website speed testing · network troubleshooting · 500 English technical articles",
+        "description: Multi-node network detection · troubleshooting · 500 English technical articles",
         "permalink: /en/",
         "lang: en",
         "---",
         "",
         "# SpeedCE Webmaster Knowledge Base",
         "",
-        "> Multi-node website speed testing · network troubleshooting · 500 technical articles  ",
+        f"> {SPEEDCE_TAGLINE_EN}  ",
         "> Official site: [speedce.com](https://www.speedce.com) | Chinese UI: [speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)  ",
         "> Contact: [speedceads@gmail.com](mailto:speedceads@gmail.com)",
         "",
         f"This is the **English edition** of the SpeedCE knowledge base: **{len(en_articles)}** practical",
-        "short guides on website speed testing, network troubleshooting, carrier checks, CDN validation,",
+        "short guides on network detection, troubleshooting, carrier checks, CDN validation,",
         "and HTTPS diagnosis—styled like [SpeedCE-Docs](https://github.com/freejbgo/SpeedCE-Docs).",
+        "",
+        "**SpeedCE tools:** HTTP, HTTPS, PING, TCPing, DNS, and Traceroute in one dropdown,",
+        "with China and global node maps for acceptance testing.",
         "",
         "## Quick Links",
         "",
@@ -298,7 +319,7 @@ def generate_en_index_md(en_articles: list[dict]) -> str:
         [
             "---",
             "",
-            "SpeedCE — China provinces & global nodes · one-click connectivity testing",
+            "SpeedCE — China provinces & global nodes · six network tools in one dropdown",
         ]
     )
     return "\n".join(lines)
@@ -308,7 +329,7 @@ def generate_llms_en_txt(en_articles: list[dict]) -> str:
     lines = [
         "# SpeedCE Technical Knowledge Base (English)",
         "",
-        "> Multi-node website speed testing · network troubleshooting · 500 technical articles",
+        f"> {SPEEDCE_TAGLINE_EN}",
         "> Official site: https://www.speedce.com | Chinese UI: https://speedce.com/?lang=zh-CN",
         f"> GitHub: https://github.com/{GITHUB_REPO}",
         f"> Online (GitHub Pages): {PAGES_BASE}/en/",
@@ -407,7 +428,7 @@ def generate_robots() -> str:
 def generate_json_index(articles: list[dict]) -> str:
     payload = {
         "name": "SpeedCE 技术文档库",
-        "description": "210+ 篇网站测速、故障排查、VPS 验线路、CDN 验收实战长文",
+        "description": "500 篇网站/网络检测、故障排查、VPS 验线路、CDN 验收实战长文",
         "repository": f"https://github.com/{GITHUB_REPO}",
         "pages_base": PAGES_BASE,
         "tool": {
@@ -415,6 +436,7 @@ def generate_json_index(articles: list[dict]) -> str:
             "url": "https://www.speedce.com",
             "zh_url": "https://speedce.com/?lang=zh-CN",
             "contact": "speedceads@gmail.com",
+            "tools": ["HTTP", "HTTPS", "PING", "TCPing", "DNS", "Traceroute"],
         },
         "updated": date.today().isoformat(),
         "article_count": len(articles),

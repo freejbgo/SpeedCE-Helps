@@ -2,7 +2,7 @@
 layout: article
 title: "外贸独立站测速指南：Shopify/WooCommerce 与大促前验收"
 category: 出海
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: 外贸,独立站,跨境电商,SpeedCE
 ---
 

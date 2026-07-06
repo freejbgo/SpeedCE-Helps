@@ -2,7 +2,7 @@
 layout: article
 title: "Typecho/Emlog 轻量博客：小站也要做的全国验收"
 category: 开发
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: Typecho,Emlog,博客,SpeedCE
 ---
 

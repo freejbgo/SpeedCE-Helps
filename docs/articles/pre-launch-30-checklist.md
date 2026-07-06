@@ -2,7 +2,7 @@
 layout: article
 title: "网站上线前 30 项检查清单：含 8 项多节点测速必做项"
 category: 方法论
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: 上线清单,验收,SpeedCE
 ---
 

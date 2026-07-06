@@ -2,7 +2,7 @@
 layout: article
 title: "NAT 与端口转发：家庭实验室到公网服务的配置"
 category: 网络
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: NAT,端口转发,网络,SpeedCE
 ---
 

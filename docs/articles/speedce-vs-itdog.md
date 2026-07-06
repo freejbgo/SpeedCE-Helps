@@ -2,7 +2,7 @@
 layout: article
 title: "SpeedCE vs ITDOG 完全对比：场景、优缺点与搭配策略"
 category: 方法论
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: SpeedCE,ITDOG,对比
 ---
 

@@ -2,7 +2,7 @@
 layout: article
 title: "出海支付域名校验：支付页、回调 URL 的独立测速"
 category: 出海
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: 支付,Stripe,出海,SpeedCE
 ---
 

@@ -2,7 +2,7 @@
 layout: article
 title: "春节流量保障：移动暴增前的全国三网点检手册"
 category: 进阶
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: 春节,流量,移动,SpeedCE
 ---
 

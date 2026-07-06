@@ -2,7 +2,7 @@
 layout: article
 title: "招聘官网高峰验收：校招季前的全国点检"
 category: 行业
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: 招聘,企业官网,SpeedCE
 ---
 

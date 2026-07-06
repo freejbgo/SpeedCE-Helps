@@ -1,20 +1,23 @@
 ---
 layout: default
 title: SpeedCE Webmaster Knowledge Base
-description: Multi-node website speed testing · network troubleshooting · 500 English technical articles
+description: Multi-node network detection · troubleshooting · 500 English technical articles
 permalink: /en/
 lang: en
 ---
 
 # SpeedCE Webmaster Knowledge Base
 
-> Multi-node website speed testing · network troubleshooting · 500 technical articles  
+> Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute · China & global maps  
 > Official site: [speedce.com](https://www.speedce.com) | Chinese UI: [speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)  
 > Contact: [speedceads@gmail.com](mailto:speedceads@gmail.com)
 
 This is the **English edition** of the SpeedCE knowledge base: **500** practical
-short guides on website speed testing, network troubleshooting, carrier checks, CDN validation,
+short guides on network detection, troubleshooting, carrier checks, CDN validation,
 and HTTPS diagnosis—styled like [SpeedCE-Docs](https://github.com/freejbgo/SpeedCE-Docs).
+
+**SpeedCE tools:** HTTP, HTTPS, PING, TCPing, DNS, and Traceroute in one dropdown,
+with China and global node maps for acceptance testing.
 
 ## Quick Links
 
@@ -195,4 +198,4 @@ and HTTPS diagnosis—styled like [SpeedCE-Docs](https://github.com/freejbgo/Spe
 
 ---
 
-SpeedCE — China provinces & global nodes · one-click connectivity testing
+SpeedCE — China provinces & global nodes · six network tools in one dropdown

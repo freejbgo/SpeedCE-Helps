@@ -334,7 +334,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/cmi-mobile-line-guide/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/cmi-mobile-line-guide.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/cmi-mobile-line-guide.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## VPS 7 天退款期验机清单：截图、三网、晚高峰证据链
 - slug: vps-refund-period-checklist
@@ -460,7 +460,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/multi-cdn-comparison/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/multi-cdn-comparison.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/multi-cdn-comparison.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 静态资源 CDN 分离验收：js/css 域与主站的独立测速清单
 - slug: static-cdn-split
@@ -514,7 +514,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/cross-border-ecommerce/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/cross-border-ecommerce.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/cross-border-ecommerce.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 东南亚市场节点验收：新马泰印尼菲逐国达标线
 - slug: southeast-asia-nodes
@@ -550,7 +550,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/stripe-payment-domain-check/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/stripe-payment-domain-check.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/stripe-payment-domain-check.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 全球绿、中国红：被墙/合规问题的标准判断流程
 - slug: china-blocked-overseas-ok
@@ -586,7 +586,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/middle-east-africa-nodes/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/middle-east-africa-nodes.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/middle-east-africa-nodes.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## React 生产环境部署验收：构建产物、CDN 与 API 域分层检查
 - slug: react-production-deploy
@@ -757,7 +757,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/typecho-emlog-setup/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/typecho-emlog-setup.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/typecho-emlog-setup.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 小程序后端 API 部署：合法域、备案与移动网络验收
 - slug: miniprogram-backend
@@ -784,7 +784,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/nginx-log-analysis/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/nginx-log-analysis.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/nginx-log-analysis.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## logrotate 配置与磁盘管理：防止日志撑满导致假死
 - slug: logrotate-config
@@ -910,7 +910,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/zero-downtime-deploy/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/zero-downtime-deploy.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/zero-downtime-deploy.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 灾备演练：切换 DR 站点后的全国 SpeedCE 点检
 - slug: disaster-recovery-drill
@@ -1054,7 +1054,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/penetration-test-prep/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/penetration-test-prep.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/penetration-test-prep.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## SSL/TLS 安全加固：版本、密码套件与兼容性权衡
 - slug: ssl-tls-hardening
@@ -1081,7 +1081,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/secrets-management/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/secrets-management.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/secrets-management.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## Docker 最佳实践：镜像优化、安全与生产部署
 - slug: docker-best-practices
@@ -1180,7 +1180,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/bgp-routing-basics/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/bgp-routing-basics.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/bgp-routing-basics.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## NAT 与端口转发：家庭实验室到公网服务的配置
 - slug: nat-port-forwarding
@@ -1189,7 +1189,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/nat-port-forwarding/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/nat-port-forwarding.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/nat-port-forwarding.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## WireGuard VPN 部署：组网、路由与内网服务暴露
 - slug: vpn-wireguard-setup
@@ -1207,7 +1207,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/ecommerce-sale-prep/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/ecommerce-sale-prep.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/ecommerce-sale-prep.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 在线教育平台开课前三网验收：视频域、直播与 API
 - slug: online-education-platform
@@ -1243,7 +1243,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/news-media-peak-traffic/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/news-media-peak-traffic.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/news-media-peak-traffic.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 游戏联机服务器社群运营：用全国 PING 地图建立信任
 - slug: game-private-server-ping
@@ -1261,7 +1261,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/recruitment-careers-site/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/recruitment-careers-site.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/recruitment-careers-site.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 医院预约系统网络基线：高峰与移动用户验收
 - slug: hospital-appointment-system
@@ -1288,7 +1288,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/tri-network-method/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/tri-network-method.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/tri-network-method.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## A/B 对照测速法：CDN vs 源站、迁机前后的系统方法
 - slug: ab-comparison-method
@@ -1306,7 +1306,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/pre-launch-30-checklist/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/pre-launch-30-checklist.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/pre-launch-30-checklist.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## SpeedCE vs ITDOG 完全对比：场景、优缺点与搭配策略
 - slug: speedce-vs-itdog
@@ -1315,7 +1315,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/speedce-vs-itdog/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/speedce-vs-itdog.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/speedce-vs-itdog.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## SpeedCE vs BOCE 完全对比：轻量地图与全能运维的边界
 - slug: speedce-vs-boce
@@ -1378,7 +1378,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/map-vs-table-tools/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/map-vs-table-tools.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/map-vs-table-tools.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 春节流量保障：移动暴增前的全国三网点检手册
 - slug: spring-festival-traffic
@@ -1387,7 +1387,7 @@ Articles: 500
 - pages: https://freejbgo.github.io/SpeedCE-Helps/articles/spring-festival-traffic/
 - github: https://github.com/freejbgo/SpeedCE-Helps/blob/main/articles/spring-festival-traffic.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-Helps/main/articles/spring-festival-traffic.md
-- summary: 技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。
+- summary: 技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。
 
 ## 双11/618 大促测速时间表：T-7 到 T+0 的完整节奏
 - slug: double11-618-prep

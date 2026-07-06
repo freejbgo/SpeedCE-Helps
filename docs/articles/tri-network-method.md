@@ -2,7 +2,7 @@
 layout: article
 title: "三网分离检测法：电信、联通、移动为何必须分开测"
 category: 方法论
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: 三网测速,电信,联通,移动,SpeedCE
 ---
 

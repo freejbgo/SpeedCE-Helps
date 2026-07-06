@@ -2,7 +2,7 @@
 layout: article
 title: "多家 CDN 试用期地图对比选型：同域不同商的科学方法"
 category: CDN
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: CDN对比,选型,SpeedCE
 ---
 

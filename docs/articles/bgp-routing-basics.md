@@ -2,7 +2,7 @@
 layout: article
 title: "BGP 路由基础：VPS 选购时该看懂什么"
 category: 网络
-description: "技术实战文章：场景驱动 + SpeedCE 测速验收 + 实操指南。"
+description: "技术实战文章：场景驱动 + SpeedCE 多节点检测验收 + 实操指南。"
 keywords: BGP,路由,VPS,SpeedCE
 ---
 
