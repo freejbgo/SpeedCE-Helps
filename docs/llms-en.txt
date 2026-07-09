@@ -1,6 +1,6 @@
 # SpeedCE Technical Knowledge Base (English)
 
-> Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute · China & global maps
+> Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute/IP Geo/WHOIS · China & global maps
 > Official site: https://www.speedce.com | Chinese UI: https://speedce.com/?lang=zh-CN
 > GitHub: https://github.com/freejbgo/SpeedCE-Helps
 > Online (GitHub Pages): https://freejbgo.github.io/SpeedCE-Helps/en/

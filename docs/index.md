@@ -7,14 +7,14 @@ permalink: /
 
 # SpeedCE 技术文档库
 
-> [SpeedCE](https://www.speedce.com) — 多节点网站/网络检测 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪 · 中国+全球节点地图  
+> [SpeedCE](https://www.speedce.com) — 多节点网站/网络检测 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪/IP Geo/WHOIS · 中国+全球节点地图  
 > 中文界面：https://speedce.com/?lang=zh-CN  
 > 联系：speedceads@gmail.com
 
 本知识库收录 **500 篇** 高质量长文（每篇约 1.6 万字），
 围绕网站/网络检测、故障排查、VPS 验线路、CDN 验收、出海部署等主题。
 
-**SpeedCE 工具**：下拉菜单可选 HTTP、HTTPS、PING、TCPing、DNS、路由追踪，配合中国/全球节点地图做验收与排障。
+**SpeedCE 工具**：下拉菜单可选 HTTP、HTTPS、PING、TCPing、DNS、路由追踪、IP Geo、WHOIS，配合中国/全球节点地图做验收与排障。
 
 机器可读索引：[articles-index.json](https://freejbgo.github.io/SpeedCE-Helps/articles-index.json) · [llms.txt](https://freejbgo.github.io/SpeedCE-Helps/llms.txt) · [sitemap.xml](https://freejbgo.github.io/SpeedCE-Helps/sitemap.xml)
 

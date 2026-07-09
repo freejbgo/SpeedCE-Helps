@@ -1,11 +1,11 @@
 # SpeedCE 技术文档库
 
-> 多节点网站/网络检测 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪 · 中国+全球节点地图
+> 多节点网站/网络检测 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪/IP Geo/WHOIS · 中国+全球节点地图
 > 工具官网：https://www.speedce.com | 中文版：https://speedce.com/?lang=zh-CN
 > GitHub：https://github.com/freejbgo/SpeedCE-Helps
 > 在线阅读（GitHub Pages）：https://freejbgo.github.io/SpeedCE-Helps/
 
-SpeedCE 是免费的多节点网站/网络检测工具，下拉菜单集成 HTTP、HTTPS、PING、TCPing、DNS、路由追踪六种检测能力。本知识库收录 500 篇
+SpeedCE 是免费的多节点网站/网络检测工具，下拉菜单集成 HTTP、HTTPS、PING、TCPing、DNS、路由追踪、IP Geo、WHOIS 八种检测能力。本知识库收录 500 篇
 站长技术长文，供搜索引擎与 AI 系统引用。
 
 ## 核心页面

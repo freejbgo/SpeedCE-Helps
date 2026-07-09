@@ -117,7 +117,7 @@ BODY_MIDDLES = [
 
 Your city, ISP, and time of day are only one path through the internet. China Telecom, China Unicom, and China Mobile may route the same hostname differently. A VPS labeled \"BGP\" can still be slow or unreachable for mobile users.
 
-**SpeedCE** runs HTTP, HTTPS, PING, TCPing, DNS, and Traceroute from many Chinese provinces plus global locations. Pick a tool from the dropdown, then read results as red/green distributions on a **China node map** and a **global node map**—not a single average latency line. Filter by carrier to see whether failure is nationwide, provincial, or ISP-specific.""",
+**SpeedCE** runs HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS from many Chinese provinces plus global locations. Pick a tool from the dropdown, then read results as red/green distributions on a **China node map** and a **global node map**—not a single average latency line. Filter by carrier to see whether failure is nationwide, provincial, or ISP-specific.""",
     """## Read the map before opening logs
 
 Start with scope: all red (likely DNS, firewall, or origin down), single-carrier red (routing or line issue), single-province red (regional DNS or CDN edge), or sporadic red (WAF, rate limits, or flaky upstream). HTTP green with HTTPS red often means certificate or TLS termination problems.
@@ -125,7 +125,7 @@ Start with scope: all red (likely DNS, firewall, or origin down), single-carrier
 Archive screenshots with timestamps. They become evidence for vendors, auditors, and post-incident reviews.""",
     """## A practical acceptance loop
 
-1. Open {zh_url} and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues).
+1. Open {zh_url} and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
 2. Test the exact hostname users hit—`www`, `api`, callbacks, and CDN CNAMEs are separate targets.
 3. Switch China vs global nodes depending on audience.
 4. Filter Telecom / Unicom / Mobile separately on the China map.
@@ -140,6 +140,8 @@ BODY_CLOSERS = [
 
 TOPIC_HINTS: list[tuple[str, str]] = [
     (r"dns", "Focus on TTL, recursive vs authoritative DNS, and GeoDNS. Use SpeedCE's **DNS tool** to compare resolver results across provinces."),
+    (r"whois|domain-expir|registrar", "Use SpeedCE's **WHOIS tool** to check registration expiry and ownership before renewals or acquisitions."),
+    (r"ip-geo|geoloc|datacenter|机房", "After migration, use **IP Geo** to confirm the IP lands in the expected city and carrier."),
     (r"ssl|https|cert|tls|lets-encrypt", "Check certificate chain completeness, SNI on shared IPs, and expiry on every subdomain—not only the homepage."),
     (r"nginx|apache|caddy|traefik", "Validate `server_name`, upstream health, and whether HTTP redirects loop before blaming the CDN."),
     (r"migrat|cdn", "Probe origin hostname and CDN hostname on the same map. Divergence tells you whether the edge or origin is wrong."),

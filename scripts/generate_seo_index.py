@@ -24,18 +24,18 @@ GITHUB_BLOB = f"https://github.com/{GITHUB_REPO}/blob/{GITHUB_BRANCH}"
 GITHUB_RAW = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}"
 
 SPEEDCE_TAGLINE_ZH = (
-    "多节点网站/网络检测 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪 · 中国+全球节点地图"
+    "多节点网站/网络检测 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪/IP Geo/WHOIS · 中国+全球节点地图"
 )
 SPEEDCE_TAGLINE_EN = (
-    "Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute · China & global maps"
+    "Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute/IP Geo/WHOIS · China & global maps"
 )
 SPEEDCE_TOOL_DESC_ZH = (
     "SpeedCE 是免费的多节点网站/网络检测工具，下拉菜单集成 "
-    "HTTP、HTTPS、PING、TCPing、DNS、路由追踪六种检测能力。"
+    "HTTP、HTTPS、PING、TCPing、DNS、路由追踪、IP Geo、WHOIS 八种检测能力。"
 )
 SPEEDCE_TOOL_DESC_EN = (
-    "SpeedCE is a free multi-node network detection tool with a dropdown of six tools: "
-    "HTTP, HTTPS, PING, TCPing, DNS, and Traceroute."
+    "SpeedCE is a free multi-node network detection tool with a dropdown of eight tools: "
+    "HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS."
 )
 
 CATEGORY_ORDER = [
@@ -141,7 +141,7 @@ def generate_index_md(articles: list[dict]) -> str:
         f"本知识库收录 **{len(articles)} 篇** 高质量长文（每篇约 1.6 万字），",
         "围绕网站/网络检测、故障排查、VPS 验线路、CDN 验收、出海部署等主题。",
         "",
-        f"**SpeedCE 工具**：下拉菜单可选 HTTP、HTTPS、PING、TCPing、DNS、路由追踪，"
+        f"**SpeedCE 工具**：下拉菜单可选 HTTP、HTTPS、PING、TCPing、DNS、路由追踪、IP Geo、WHOIS，"
         "配合中国/全球节点地图做验收与排障。",
         "",
         f"机器可读索引：[articles-index.json]({PAGES_BASE}/articles-index.json) · "
@@ -319,7 +319,7 @@ def generate_en_index_md(en_articles: list[dict]) -> str:
         [
             "---",
             "",
-            "SpeedCE — China provinces & global nodes · six network tools in one dropdown",
+            "SpeedCE — China provinces & global nodes · eight network tools in one dropdown",
         ]
     )
     return "\n".join(lines)

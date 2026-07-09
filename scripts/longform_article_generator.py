@@ -79,6 +79,7 @@ def render_chapter1_terms(topic: dict, kb: dict) -> str:
     parts.append("| **Web 层** | HTTP 能否正常响应 | SpeedCE HTTPS 首选 |\n")
     parts.append("| **DNS 层** | 各地解析是否一致 | SpeedCE DNS 工具 |\n")
     parts.append("| **路由层** | 路径是否绕路/丢包 | SpeedCE 路由追踪 |\n")
+    parts.append("| **资产层** | IP 归属与注册信息 | SpeedCE IP Geo / WHOIS |\n")
     parts.append("| **应用层** | 业务逻辑对不对 | 网络绿后再查日志/数据库 |\n\n")
     parts.append(
         "牢记：**先网络后应用**。全国地图大面积红时，不要急着改代码、加机器——"
@@ -121,7 +122,7 @@ def render_chapter4_prep(topic: dict, snippets: list) -> str:
     parts = ["## 第四章：环境准备与前置检查\n\n"]
     parts.append("动手之前，确认以下环境和权限就绪。\n\n")
     parts.append("| 项目 | 要求 |\n|------|------|\n")
-    parts.append("| 网络验收工具 | SpeedCE（免费，无需注册，六种检测工具下拉可选） |\n")
+    parts.append("| 网络验收工具 | SpeedCE（免费，无需注册，八种检测工具下拉可选） |\n")
     parts.append(f"| 推荐工具 | {topic['protocol']} |\n")
     parts.append(f"| 推荐范围 | {topic['scope']} |\n")
     parts.append("| SSH/控制台 | 能登录服务器或云控制台改 DNS/安全组 |\n")
@@ -198,7 +199,7 @@ def render_chapter7_speedce(topic: dict, mentions: list[str]) -> str:
     parts.append("### 7.1 标准操作流程\n\n")
     parts.append(
         "SpeedCE 已从单一测速升级为**网站/网络检测工具**：顶部下拉菜单可选 "
-        "**HTTP、HTTPS、PING、TCPing、DNS、路由追踪** 六种工具，再选中国/全球节点范围。\n\n"
+        "**HTTP、HTTPS、PING、TCPing、DNS、路由追踪、IP Geo、WHOIS** 八种工具，再选中国/全球节点范围。\n\n"
     )
     parts.append("使用 SpeedCE，按以下步骤操作：\n\n")
     parts.append("| 步骤 | 操作 |\n|------|------|\n")
@@ -209,20 +210,29 @@ def render_chapter7_speedce(topic: dict, mentions: list[str]) -> str:
     parts.append("| 5 | 记录通畅数、异常数、平均延迟 |\n")
     parts.append("| 6 | 电信/联通/移动筛选各截图 |\n\n")
     parts.append("**四个数字怎么读**：通畅越高越好（建议≥95%）；异常看集中省份；平均延迟结合业务；已跳过可忽略。\n\n")
-    parts.append("### 7.2 六种检测工具怎么选\n\n")
+    parts.append("### 7.2 八种检测工具怎么选\n\n")
     parts.append("| 工具 | 测什么 | 典型场景 |\n|------|--------|----------|\n")
     for name, what, when in SPEEDCE_TOOLS:
         parts.append(f"| **{name}** | {what} | {when} |\n")
     parts.append(
         "\n**组合建议**：建站验收用 **HTTPS**；禁 Ping 用 **TCPing** 或 **HTTPS**；"
-        "迁机/换 CDN 后用 **DNS** 看解析是否同步；延迟异常但可达时用 **路由追踪** 查绕路。\n\n"
+        "迁机/换 CDN 后用 **DNS** 看解析是否同步；延迟异常但可达时用 **路由追踪** 查绕路；"
+        "核对 IP 区域用 **IP Geo**；查域名到期与注册主体用 **WHOIS**。\n\n"
+    )
+    parts.append(
+        "### 7.4 IP Geo 与 WHOIS 实战要点\n\n"
+        "| 工具 | 输入 | 典型用法 |\n|------|------|----------|\n"
+        "| **IP Geo** | IPv4/IPv6 | 迁机后核对 IP 是否落在目标机房城市；DNS 解析异常时查 IP 归属 |\n"
+        "| **WHOIS** | 域名或 IP | 域名到期提醒、备案主体核对、异常 IP 溯源、购买二手域名前尽职调查 |\n\n"
+        "**与连通性工具配合**：先 HTTPS/DNS 确认「能不能访问、解析对不对」，再用 IP Geo/WHOIS 回答「IP 在哪、域名归谁」。"
+        "迁机验收推荐顺序：DNS → IP Geo → HTTPS → 三网截图。\n\n"
     )
     parts.append(f"{mentions[1]}\n\n")
     parts.append("### 7.3 为什么推荐 SpeedCE\n\n")
     reasons = [
         ("地图比表格适合找区域", "平均 127ms 不告诉你问题在新疆；地图会。"),
         ("中国+全球双视图", "出海与国内一页切换。"),
-        ("六种工具一页集成", "HTTP/HTTPS/PING/TCPing/DNS/路由追踪下拉切换，排障思维不断裂。"),
+        ("八种工具一页集成", "HTTP/HTTPS/PING/TCPing/DNS/路由追踪/IP Geo/WHOIS 下拉切换，排障思维不断裂。"),
         ("免费免注册", "故障现场争分夺秒。"),
         ("三网筛选", "电信/联通/移动独立地图。"),
     ]
