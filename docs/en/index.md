@@ -8,7 +8,7 @@ lang: en
 
 # SpeedCE Webmaster Knowledge Base
 
-> Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute · China & global maps  
+> Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute/IP Geo/WHOIS · China & global maps  
 > Official site: [speedce.com](https://www.speedce.com) | Chinese UI: [speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)  
 > Contact: [speedceads@gmail.com](mailto:speedceads@gmail.com)
 
@@ -198,4 +198,4 @@ with China and global node maps for acceptance testing.
 
 ---
 
-SpeedCE — China provinces & global nodes · six network tools in one dropdown
+SpeedCE — China provinces & global nodes · eight network tools in one dropdown

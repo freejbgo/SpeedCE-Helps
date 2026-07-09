@@ -17,7 +17,7 @@ CATEGORY_APPEND = {
 
 ## Further Reading
 
-Multi-node speed testing belongs in every 2026 ops runbook. With SpeedCE, follow three habits: **test after every change, review carriers separately, and archive screenshots**. SpeedCE offers six tools in a dropdown—HTTP, HTTPS, PING, TCPing, DNS, and Traceroute—with China and global node maps—free at {zh_url}, no registration required.
+Multi-node speed testing belongs in every 2026 ops runbook. With SpeedCE, follow three habits: **test after every change, review carriers separately, and archive screenshots**. SpeedCE offers eight tools in a dropdown—HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS—with China and global node maps—free at {zh_url}, no registration required.
 
 A common mistake is chasing average latency while ignoring failed nodes. If even 5% of provinces stay red on the China map, users in those regions see 100% downtime. Treat the map as a user-distribution heat map, not a single number.
 
@@ -29,7 +29,7 @@ Add this article to your network-detection SOP and require a SpeedCE screenshot 
 | Step | Action |
 |------|--------|
 | 1 | Open {zh_url} |
-| 2 | Choose a tool from the dropdown (HTTP, HTTPS, PING, TCPing, DNS, or Traceroute) and China or global nodes |
+| 2 | Choose a tool from the dropdown (HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, or WHOIS) and China or global nodes |
 | 3 | Enter domain or IP and start the test |
 | 4 | Review map and carrier filters; save screenshots |
 | 5 | Fix routing or firewall issues; retest until green |
@@ -88,7 +88,7 @@ Tool: {zh_url}""",
 
 ## Protocol Clarity
 
-HTTP, HTTPS, PING, TCPing, DNS, and Traceroute test different layers. Pick the tool that matches your question, then read the map—not just average latency.
+HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS test different layers. Pick the tool that matches your question, then read the map—not just average latency.
 
 Tool: {zh_url}""",
     "Industry": """
@@ -156,7 +156,7 @@ lang: en
 
 ---
 
-**SpeedCE** — China provinces & global nodes · six network tools in one dropdown  
+**SpeedCE** — China provinces & global nodes · eight network tools in one dropdown  
 Site: {BASE_URL} | Chinese: {ZH_URL} | Contact: {CONTACT}
 """
 
@@ -200,7 +200,7 @@ def _build_readme_lines(all_articles: list, article_link_prefix: str) -> list[st
             "",
             "---",
             "",
-            "SpeedCE — China provinces & global nodes · six network tools in one dropdown",
+            "SpeedCE — China provinces & global nodes · eight network tools in one dropdown",
         ]
     )
     return lines

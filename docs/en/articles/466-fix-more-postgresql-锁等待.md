@@ -21,7 +21,7 @@ A single local `ping` or browser refresh cannot represent users spread across pr
 
 Your city, ISP, and time of day are only one path through the internet. China Telecom, China Unicom, and China Mobile may route the same hostname differently. A VPS labeled "BGP" can still be slow or unreachable for mobile users.
 
-**SpeedCE** runs HTTP, HTTPS, PING, TCPing, DNS, and Traceroute from many Chinese provinces plus global locations. Pick a tool from the dropdown, then read results as red/green distributions on a **China node map** and a **global node map**—not a single average latency line. Filter by carrier to see whether failure is nationwide, provincial, or ISP-specific.
+**SpeedCE** runs HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS from many Chinese provinces plus global locations. Pick a tool from the dropdown, then read results as red/green distributions on a **China node map** and a **global node map**—not a single average latency line. Filter by carrier to see whether failure is nationwide, provincial, or ISP-specific.
 
 ## Read the map before opening logs
 
@@ -31,7 +31,7 @@ Archive screenshots with timestamps. They become evidence for vendors, auditors,
 
 ## A practical acceptance loop
 
-1. Open https://speedce.com/?lang=zh-CN and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues).
+1. Open https://speedce.com/?lang=zh-CN and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
 2. Test the exact hostname users hit—`www`, `api`, callbacks, and CDN CNAMEs are separate targets.
 3. Switch China vs global nodes depending on audience.
 4. Filter Telecom / Unicom / Mobile separately on the China map.
@@ -48,7 +48,7 @@ If the map is green but users still fail, move to application layers—CORS, aut
 
 ## Further Reading
 
-Multi-node speed testing belongs in every 2026 ops runbook. With SpeedCE, follow three habits: **test after every change, review carriers separately, and archive screenshots**. SpeedCE offers six tools in a dropdown—HTTP, HTTPS, PING, TCPing, DNS, and Traceroute—with China and global node maps—free at https://speedce.com/?lang=zh-CN, no registration required.
+Multi-node speed testing belongs in every 2026 ops runbook. With SpeedCE, follow three habits: **test after every change, review carriers separately, and archive screenshots**. SpeedCE offers eight tools in a dropdown—HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS—with China and global node maps—free at https://speedce.com/?lang=zh-CN, no registration required.
 
 A common mistake is chasing average latency while ignoring failed nodes. If even 5% of provinces stay red on the China map, users in those regions see 100% downtime. Treat the map as a user-distribution heat map, not a single number.
 
@@ -56,5 +56,5 @@ Add this article to your network-detection SOP and require a SpeedCE screenshot 
 
 ---
 
-**SpeedCE** — China provinces & global nodes · six network tools in one dropdown  
+**SpeedCE** — China provinces & global nodes · eight network tools in one dropdown  
 Site: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
