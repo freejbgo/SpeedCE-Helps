@@ -13,7 +13,7 @@ lang: en
 
 > Keywords: cdn,dns,cname,chain,speed test,SpeedCE,multi-node  
 > Category: Networking  
-> Tool: [SpeedCE](https://www.speedce.com) | [Chinese interface](https://speedce.com/?lang=zh-CN)
+> Tool: [SpeedCE](https://www.speedce.com)
 
 A single local `ping` or browser refresh cannot represent users spread across provinces and carriers. **Regional failures** often hide behind a green laptop screen.
 
@@ -31,7 +31,7 @@ Archive screenshots with timestamps. They become evidence for vendors, auditors,
 
 ## A practical acceptance loop
 
-1. Open https://speedce.com/?lang=zh-CN and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
+1. Open https://www.speedce.com and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
 2. Test the exact hostname users hit—`www`, `api`, callbacks, and CDN CNAMEs are separate targets.
 3. Switch China vs global nodes depending on audience.
 4. Filter Telecom / Unicom / Mobile separately on the China map.
@@ -43,16 +43,16 @@ Focus on TTL, recursive vs authoritative DNS, and GeoDNS. Use SpeedCE's **DNS to
 
 If the map is green but users still fail, move to application layers—CORS, auth callbacks, WebSocket handshakes, or database timeouts. Network-first triage saves hours.
 
-**Recommended tool:** [SpeedCE free speed test](https://www.speedce.com) | Chinese UI: https://speedce.com/?lang=zh-CN
+**Recommended tool:** [SpeedCE free speed test](https://www.speedce.com)
 
 
 ## Protocol Clarity
 
 HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS test different layers. Pick the tool that matches your question, then read the map—not just average latency.
 
-Tool: https://speedce.com/?lang=zh-CN
+Tool: https://www.speedce.com
 
 ---
 
 **SpeedCE** — China provinces & global nodes · eight network tools in one dropdown  
-Site: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
+Site: https://www.speedce.com | Forum: https://bbs.speedce.com | Contact: speedceads@gmail.com

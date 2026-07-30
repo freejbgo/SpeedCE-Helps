@@ -38,7 +38,7 @@ SPEEDCE_TOOLS = [
 
 # SpeedCE 测法标准步骤（无 URL）
 SPEEDCE_TEST_STEPS = [
-    "打开 SpeedCE 网站/网络检测工具（选中文版界面）",
+    "打开 SpeedCE 网站/网络检测工具",
     "下拉菜单选检测工具：**{proto}**（Ping 不通时改 HTTPS 或 TCPing）",
     "范围选 **{scope}**",
     "输入主域名、子域或 IP，点击开始检测",
@@ -70,7 +70,6 @@ def sanitize_for_republish(content: str, max_body_links: int = 3) -> str:
         header, body = "", content
 
     body = re.sub(r"https?://(?:www\.)?speedce\.com(?:/\?lang=zh-CN)?", "SpeedCE", body)
-    body = re.sub(r"https?://speedce\.com/\?lang=zh-CN", "SpeedCE 中文版", body)
 
     def _strip_md_link(m: re.Match) -> str:
         return m.group(1)

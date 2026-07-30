@@ -28,7 +28,7 @@ TARGET_MIN = 15000
 TARGET_MAX = 20000
 
 HEADER = """> 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---

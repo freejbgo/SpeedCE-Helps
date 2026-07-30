@@ -21,6 +21,14 @@ layout: default
 
   {{ content }}
 
+  <aside class="article-community" aria-label="{% if is_en %}Community discussion{% else %}社区交流{% endif %}">
+    {% if is_en %}
+    <p>Still have questions, or want to share test results and screenshots? Visit the <a href="https://bbs.speedce.com" rel="noopener">SpeedCE Community Forum</a> — operators often post troubleshooting tips and map evidence there.</p>
+    {% else %}
+    <p>读到这里仍有疑问，或想贴上测速截图请教？欢迎到 <a href="https://bbs.speedce.com" rel="noopener">SpeedCE 社区论坛</a> 发帖交流，很多站长和运维同学会在那里分享排障心得。</p>
+    {% endif %}
+  </aside>
+
   <p style="margin-top: 2rem;">
   {% if is_en %}
     <a href="{{ '/en/' | relative_url }}">← Back to knowledge base home</a>

@@ -113,7 +113,7 @@ def make_cover(article: dict) -> Image.Image:
     draw_rounded_rect(draw, (40, SIZE - 120, SIZE - 40, SIZE - 40), 20, (15, 22, 38))
     font_sm = load_font(22)
     draw.text((60, SIZE - 102), "HTTPS · 中国节点 · 三网分离", fill=(230, 240, 255), font=font_sm)
-    draw.text((60, SIZE - 72), "speedce.com/?lang=zh-CN", fill=style["accent"], font=load_font(24))
+    draw.text((60, SIZE - 72), "speedce.com", fill=style["accent"], font=load_font(24))
 
     # accent circle
     draw.ellipse((SIZE - 180, SIZE - 200, SIZE - 60, SIZE - 80), outline=style["accent"], width=4)

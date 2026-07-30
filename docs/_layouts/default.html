@@ -44,11 +44,22 @@
     blockquote { border-left: 4px solid #ddd; margin-left: 0; padding-left: 1rem; color: #555; }
     .article-meta { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
     .article-meta span { margin-right: 1rem; }
+    .article-community {
+      margin-top: 2.5rem;
+      padding: 1rem 1.25rem;
+      border-left: 4px solid #ddd;
+      background: #f6f8fa;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .article-community p { margin: 0; }
     .lang-switch { font-size: 0.9rem; margin-top: 0.5rem; }
     pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; }
     pre { overflow-x: auto; padding: 0.75rem; background: #f6f8fa; border-radius: 6px; }
     @media (prefers-color-scheme: dark) {
       pre { background: #1c1c1c; }
+      .article-community { background: #1c1c1c; border-color: #444; color: #bbb; }
     }
   </style>
 </head>
@@ -66,11 +77,13 @@
         <a href="{{ '/en/articles/' | relative_url }}">Articles</a>
         <a href="{{ '/llms-en.txt' | relative_url }}">AI Index</a>
         <a href="https://www.speedce.com" rel="noopener">SpeedCE Tool</a>
+        <a href="https://bbs.speedce.com" rel="noopener">Forum</a>
       {% else %}
         <a href="{{ '/' | relative_url }}">首页</a>
         <a href="{{ '/articles/' | relative_url }}">文章目录</a>
         <a href="{{ '/llms.txt' | relative_url }}">AI 索引</a>
-        <a href="https://www.speedce.com/?lang=zh-CN" rel="noopener">SpeedCE 检测</a>
+        <a href="https://www.speedce.com" rel="noopener">SpeedCE 检测</a>
+        <a href="https://bbs.speedce.com" rel="noopener">社区论坛</a>
       {% endif %}
       <a href="https://github.com/freejbgo/SpeedCE-Helps" rel="noopener">GitHub</a>
     </nav>
@@ -92,7 +105,7 @@
     <p>
       <strong>SpeedCE</strong> — China provinces & global nodes · six network tools in one dropdown<br>
       Site: <a href="https://www.speedce.com">speedce.com</a> |
-      Chinese: <a href="https://speedce.com/?lang=zh-CN">speedce.com/?lang=zh-CN</a> |
+      Forum: <a href="https://bbs.speedce.com">bbs.speedce.com</a> |
       Contact: <a href="mailto:speedceads@gmail.com">speedceads@gmail.com</a>
     </p>
     <p>Source: <a href="https://github.com/freejbgo/SpeedCE-Helps">GitHub</a></p>
@@ -100,7 +113,7 @@
     <p>
       <strong>SpeedCE</strong> — 覆盖中国各省市 · 全球节点 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪<br>
       官网：<a href="https://www.speedce.com">speedce.com</a> |
-      中文：<a href="https://speedce.com/?lang=zh-CN">speedce.com/?lang=zh-CN</a> |
+      论坛：<a href="https://bbs.speedce.com">bbs.speedce.com</a> |
       联系：<a href="mailto:speedceads@gmail.com">speedceads@gmail.com</a>
     </p>
     <p>知识库源码：<a href="https://github.com/freejbgo/SpeedCE-Helps">GitHub</a> · <a href="{{ '/en/' | relative_url }}">English</a></p>

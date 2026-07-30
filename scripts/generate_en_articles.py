@@ -125,7 +125,7 @@ Start with scope: all red (likely DNS, firewall, or origin down), single-carrier
 Archive screenshots with timestamps. They become evidence for vendors, auditors, and post-incident reviews.""",
     """## A practical acceptance loop
 
-1. Open {zh_url} and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
+1. Open {base_url} and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
 2. Test the exact hostname users hit—`www`, `api`, callbacks, and CDN CNAMEs are separate targets.
 3. Switch China vs global nodes depending on audience.
 4. Filter Telecom / Unicom / Mobile separately on the China map.
@@ -181,7 +181,7 @@ def build_body(slug: str, title_zh: str, en_category: str) -> str:
 
 {closer}
 
-**Recommended tool:** [SpeedCE free speed test]({{base_url}}) | Chinese UI: {{zh_url}}"""
+**Recommended tool:** [SpeedCE free speed test]({{base_url}})"""
 
 
 def load_topics() -> list[dict]:
