@@ -9,7 +9,7 @@ lang: en
 # SpeedCE Webmaster Knowledge Base
 
 > Multi-node network detection · HTTP/HTTPS/PING/TCPing/DNS/Traceroute/IP Geo/WHOIS · China & global maps  
-> Official site: [speedce.com](https://www.speedce.com) | Chinese UI: [speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)  
+> Official site: [speedce.com](https://www.speedce.com) | Forum: [bbs.speedce.com](https://bbs.speedce.com)  
 > Contact: [speedceads@gmail.com](mailto:speedceads@gmail.com)
 
 This is the **English edition** of the SpeedCE knowledge base: **500** practical

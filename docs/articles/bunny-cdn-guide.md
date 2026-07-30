@@ -9,7 +9,7 @@ keywords: BunnyCDN,CDN,SpeedCE
 # Bunny CDN 性价比线路：全球节点地图验收
 
 > 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---
@@ -224,7 +224,7 @@ curl -I http://$(hostname -I | awk '{print $1}')
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -268,7 +268,7 @@ CDN 不是万能药，源站慢要先修源站。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -312,7 +312,7 @@ SpeedCE 测 HTTPS 可达，不测 WS 协议。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -356,7 +356,7 @@ CDN 域名 HTTPS 红，源站 HTTPS 绿。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -400,7 +400,7 @@ DNS 切到 CDN 后半小时测速全绿，24 小时后仍有投诉。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -444,7 +444,7 @@ DNS 缓存全球不同步，切量验收至少 72 小时。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -488,7 +488,7 @@ CDN 不是万能药，源站慢要先修源站。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -532,7 +532,7 @@ SpeedCE 测 HTTPS 可达，不测 WS 协议。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测

@@ -1,7 +1,7 @@
 # 搬瓦工 CN2/GIA 套餐验机：经典商家地图验收法
 
 > 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---
@@ -216,7 +216,7 @@ SpeedCE 下拉菜单现在有 HTTP、HTTPS、PING、TCPing、DNS、路由追踪�
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -260,7 +260,7 @@ SpeedCE 全球节点全绿，中国节点全红。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -304,7 +304,7 @@ VPS 验机必须测晚高峰，移动地图是一票否决项。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -348,7 +348,7 @@ VPS 验机必须测晚高峰，移动地图是一票否决项。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -392,7 +392,7 @@ VPS 验机必须测晚高峰，移动地图是一票否决项。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -436,7 +436,7 @@ PING 全超时，HTTPS 通畅率 96%。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -480,7 +480,7 @@ SpeedCE 全球节点全绿，中国节点全红。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -524,7 +524,7 @@ VPS 验机必须测晚高峰，移动地图是一票否决项。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测

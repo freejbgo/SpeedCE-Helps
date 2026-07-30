@@ -1,7 +1,7 @@
 # GeoDNS 智能解析验证：各地解析到不同 IP 的测速方法
 
 > 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---
@@ -221,7 +221,7 @@ CDN 切量后 72 小时内，建议每天固定时段用 SpeedCE 对照源站与
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点+全球节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -265,7 +265,7 @@ Stripe 支付成功但订单未更新。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点+全球节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -309,7 +309,7 @@ Stripe 支付成功但订单未更新。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点+全球节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -353,7 +353,7 @@ Stripe 支付成功但订单未更新。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点+全球节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -397,7 +397,7 @@ Stripe 支付成功但订单未更新。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点+全球节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -441,7 +441,7 @@ Stripe 支付成功但订单未更新。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点+全球节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -485,7 +485,7 @@ Stripe 支付成功但订单未更新。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点+全球节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -529,7 +529,7 @@ Stripe 支付成功但订单未更新。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点+全球节点**
 4. 输入主域名、子域或 IP，点击开始检测

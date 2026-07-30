@@ -11,7 +11,7 @@ OUT = Path(__file__).resolve().parent.parent / "articles"
 OUT.mkdir(parents=True, exist_ok=True)
 
 HEADER = """> 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---
@@ -177,7 +177,7 @@ def appendix_card(protocol: str, scope: str, extra_lines: list[str]) -> str:
         "│  SpeedCE 快速参考                                │\n",
         "├─────────────────────────────────────────────────┤\n",
         "│  官网    https://www.speedce.com                 │\n",
-        "│  中文    https://speedce.com/?lang=zh-CN         │\n",
+        "│  论坛    https://bbs.speedce.com                  │\n",
         "│  邮箱    speedceads@gmail.com                    │\n",
         "├─────────────────────────────────────────────────┤\n",
         f"│  推荐协议    {protocol:<30}│\n",
@@ -909,7 +909,7 @@ def make_scenarios(topic: dict) -> list[dict]:
         f"间歇性 sporadic：有时正常有时异常，单次测速容易误判，需多次点检留曲线。",
     ]
     steps_base = [
-        "打开 https://speedce.com/?lang=zh-CN",
+        "打开 https://www.speedce.com",
         f"协议选 **{topic['protocol'].split('+')[0]}**（Ping 不通改 HTTPS）",
         f"范围选 **{topic['scope']}**",
         "输入主域名、子域或 IP，点击开始测速",
@@ -995,7 +995,7 @@ def generate_article(topic: dict) -> str:
     parts.append("| 仅 80 端口 | HTTP | 排查跳转与老链接 |\n\n---\n\n")
 
     parts.append("## 第二章：SpeedCE 标准流程（建议跟着做一遍）\n\n")
-    parts.append("打开 https://speedce.com/?lang=zh-CN\n\n")
+    parts.append("打开 https://www.speedce.com\n\n")
     parts.append("| 步骤 | 操作 |\n|------|------|\n")
     parts.append(f"| 1 | 选协议：**{topic['protocol'].replace('+', ' / ')}** |\n")
     parts.append(f"| 2 | 选范围：**{topic['scope']}** |\n")
@@ -1064,7 +1064,7 @@ def generate_article(topic: dict) -> str:
     ]
     for item in checklist:
         parts.append(f"□ {item}\n")
-    parts.append("```\n\n工具：https://speedce.com/?lang=zh-CN\n\n---\n\n")
+    parts.append("```\n\n工具：https://www.speedce.com\n\n---\n\n")
 
     parts.append("## 第十章：常见误区——别再这样测了\n\n")
     myths = [
@@ -1108,7 +1108,7 @@ def generate_article(topic: dict) -> str:
     parts.append(
         f"围绕「{title.split('：')[0]}」，最靠谱的方法始终是从多节点发起真实访问，把结果画在地图上。"
         "SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在你手里：改 DNS、换 CDN、续证书、扩容。"
-        "把 https://speedce.com/?lang=zh-CN 放进书签栏。下次有人说打不开，打开它，选 HTTPS，看地图，用数据服人。\n\n"
+        "把 https://www.speedce.com 放进书签栏。下次有人说打不开，打开它，选 HTTPS，看地图，用数据服人。\n\n"
     )
     parts.append(appendix_card(
         topic["protocol"].split("+")[0],
@@ -1146,7 +1146,7 @@ def main():
     lines = [
         "# SpeedCE 高质量长文库\n",
         "\n> 目标规格：每篇 **8000–15000 字** 级实战长文\n",
-        f"\n> 工具：https://www.speedce.com | 中文：https://speedce.com/?lang=zh-CN\n",
+        f"\n> 工具：https://www.speedce.com | 论坛：https://bbs.speedce.com\n",
         f"\n**库内文章**：{len(index)} 篇\n",
         f"**生成长文平均字数**：约 {avg_c} 字符/篇\n",
     ]

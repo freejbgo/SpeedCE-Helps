@@ -1,7 +1,7 @@
 # SpeedCE Technical Knowledge Base (English)
 
 > Multi-node website speed testing · network troubleshooting · 500 technical articles
-> Official site: [speedce.com](https://www.speedce.com) | Chinese: [?lang=zh-CN](https://speedce.com/?lang=zh-CN)
+> Official site: [speedce.com](https://www.speedce.com) | Forum: [bbs.speedce.com](https://bbs.speedce.com)
 > Contact: speedceads@gmail.com
 
 ## Article Index

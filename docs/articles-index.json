@@ -6,7 +6,7 @@
   "tool": {
     "name": "SpeedCE",
     "url": "https://www.speedce.com",
-    "zh_url": "https://speedce.com/?lang=zh-CN",
+    "forum_url": "https://bbs.speedce.com",
     "contact": "speedceads@gmail.com",
     "tools": [
       "HTTP",
@@ -17,7 +17,7 @@
       "Traceroute"
     ]
   },
-  "updated": "2026-07-27",
+  "updated": "2026-07-30",
   "article_count": 500,
   "articles": [
     {

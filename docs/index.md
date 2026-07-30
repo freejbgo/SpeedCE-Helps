@@ -8,7 +8,7 @@ permalink: /
 # SpeedCE 技术文档库
 
 > [SpeedCE](https://www.speedce.com) — 多节点网站/网络检测 · HTTP/HTTPS/PING/TCPing/DNS/路由追踪/IP Geo/WHOIS · 中国+全球节点地图  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 本知识库收录 **500 篇** 高质量长文（每篇约 1.6 万字），

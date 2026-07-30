@@ -9,7 +9,7 @@ keywords: TCP,UDP,网络,SpeedCE
 # TCP 与 UDP 基础：建站场景下该关心什么
 
 > 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---
@@ -219,7 +219,7 @@ IPv4 全绿，IPv6 用户访问失败。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -263,7 +263,7 @@ AAAA 记录指向错误 IP 或防火墙未放行 v6。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -307,7 +307,7 @@ IPv4 全绿，IPv6 用户访问失败。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -351,7 +351,7 @@ AAAA 记录指向错误 IP 或防火墙未放行 v6。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -395,7 +395,7 @@ IPv4 全绿，IPv6 用户访问失败。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -439,7 +439,7 @@ AAAA 记录指向错误 IP 或防火墙未放行 v6。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -483,7 +483,7 @@ IPv4 全绿，IPv6 用户访问失败。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -527,7 +527,7 @@ AAAA 记录指向错误 IP 或防火墙未放行 v6。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测

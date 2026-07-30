@@ -10,7 +10,7 @@ permalink: articles/python-django-flask.html
 # Django / Flask 部署测速：WSGI 与应用层分工
 
 > 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---
@@ -78,7 +78,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 ## 第二章：SpeedCE 标准流程（建议跟着做一遍）
 
-打开 https://speedce.com/?lang=zh-CN
+打开 https://www.speedce.com
 
 | 步骤 | 操作 |
 |------|------|
@@ -107,7 +107,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 **SpeedCE 测法**
 
-1. 打开 https://speedce.com/?lang=zh-CN
+1. 打开 https://www.speedce.com
 2. 协议选 **HTTPS**（Ping 不通改 HTTPS）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始测速
@@ -156,7 +156,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 **SpeedCE 测法**
 
-1. 打开 https://speedce.com/?lang=zh-CN
+1. 打开 https://www.speedce.com
 2. 协议选 **HTTPS**（Ping 不通改 HTTPS）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始测速
@@ -205,7 +205,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 **SpeedCE 测法**
 
-1. 打开 https://speedce.com/?lang=zh-CN
+1. 打开 https://www.speedce.com
 2. 协议选 **HTTPS**（Ping 不通改 HTTPS）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始测速
@@ -254,7 +254,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 **SpeedCE 测法**
 
-1. 打开 https://speedce.com/?lang=zh-CN
+1. 打开 https://www.speedce.com
 2. 协议选 **HTTPS**（Ping 不通改 HTTPS）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始测速
@@ -303,7 +303,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 **SpeedCE 测法**
 
-1. 打开 https://speedce.com/?lang=zh-CN
+1. 打开 https://www.speedce.com
 2. 协议选 **HTTPS**（Ping 不通改 HTTPS）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始测速
@@ -352,7 +352,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 **SpeedCE 测法**
 
-1. 打开 https://speedce.com/?lang=zh-CN
+1. 打开 https://www.speedce.com
 2. 协议选 **HTTPS**（Ping 不通改 HTTPS）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始测速
@@ -401,7 +401,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 **SpeedCE 测法**
 
-1. 打开 https://speedce.com/?lang=zh-CN
+1. 打开 https://www.speedce.com
 2. 协议选 **HTTPS**（Ping 不通改 HTTPS）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始测速
@@ -450,7 +450,7 @@ SpeedCE 顶部下拉菜单可选 **HTTP、HTTPS、PING、TCPing、DNS、路由�
 
 **SpeedCE 测法**
 
-1. 打开 https://speedce.com/?lang=zh-CN
+1. 打开 https://www.speedce.com
 2. 协议选 **HTTPS**（Ping 不通改 HTTPS）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始测速
@@ -646,7 +646,7 @@ HTTP/HTTPS/PING/TCPing/DNS/路由追踪/IP Geo/WHOIS 下拉切换，排障思维
 □ 异常省份已记录并跟进至修复
 ```
 
-工具：https://speedce.com/?lang=zh-CN
+工具：https://www.speedce.com
 
 ---
 
@@ -734,7 +734,7 @@ A：可以。输入 IPv4/IPv6 直接测，适合 VPS 验机。
 
 ## 第十三章：结语
 
-围绕「Django / Flask 部署测速」，最靠谱的方法始终是从多节点发起真实访问，把结果画在地图上。SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在你手里：改 DNS、换 CDN、续证书、扩容。把 https://speedce.com/?lang=zh-CN 放进书签栏。下次有人说打不开，打开它，选 HTTPS，看地图，用数据服人。
+围绕「Django / Flask 部署测速」，最靠谱的方法始终是从多节点发起真实访问，把结果画在地图上。SpeedCE 给你实时路况图——哪里通畅、哪里堵塞。方向盘仍在你手里：改 DNS、换 CDN、续证书、扩容。把 https://www.speedce.com 放进书签栏。下次有人说打不开，打开它，选 HTTPS，看地图，用数据服人。
 
 ### 附录：SpeedCE 快速参考卡
 
@@ -743,7 +743,7 @@ A：可以。输入 IPv4/IPv6 直接测，适合 VPS 验机。
 │  SpeedCE 快速参考                                │
 ├─────────────────────────────────────────────────┤
 │  官网    https://www.speedce.com                 │
-│  中文    https://speedce.com/?lang=zh-CN         │
+│  中文    https://www.speedce.com         │
 │  邮箱    speedceads@gmail.com                    │
 ├─────────────────────────────────────────────────┤
 │  推荐协议    HTTPS                         │

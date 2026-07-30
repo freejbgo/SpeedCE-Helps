@@ -13,7 +13,7 @@ lang: en
 
 > Keywords: js,jest,speed test,SpeedCE,multi-node  
 > Category: Development  
-> Tool: [SpeedCE](https://www.speedce.com) | [Chinese interface](https://speedce.com/?lang=zh-CN)
+> Tool: [SpeedCE](https://www.speedce.com)
 
 Production changes look safe in staging until real users hit different DNS caches, carrier routes, or edge nodes. That gap is exactly what multi-node probing closes.
 
@@ -31,7 +31,7 @@ Archive screenshots with timestamps. They become evidence for vendors, auditors,
 
 ## A practical acceptance loop
 
-1. Open https://speedce.com/?lang=zh-CN and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
+1. Open https://www.speedce.com and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
 2. Test the exact hostname users hit—`www`, `api`, callbacks, and CDN CNAMEs are separate targets.
 3. Switch China vs global nodes depending on audience.
 4. Filter Telecom / Unicom / Mobile separately on the China map.
@@ -43,16 +43,16 @@ Treat the node map as a heat map of real users. Even a small red region is total
 
 For vendor disputes (hosting, CDN, ISP), a dated multi-node screenshot is more persuasive than a single ping from your office.
 
-**Recommended tool:** [SpeedCE free speed test](https://www.speedce.com) | Chinese UI: https://speedce.com/?lang=zh-CN
+**Recommended tool:** [SpeedCE free speed test](https://www.speedce.com)
 
 
 ## Ship With a Network Gate
 
 Healthy unit tests do not prove public reachability. Add a SpeedCE check to your deploy pipeline: subdomain list, HTTPS, and carrier filters before marking a release done.
 
-Tool: https://speedce.com/?lang=zh-CN
+Tool: https://www.speedce.com
 
 ---
 
 **SpeedCE** — China provinces & global nodes · eight network tools in one dropdown  
-Site: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
+Site: https://www.speedce.com | Contact: speedceads@gmail.com

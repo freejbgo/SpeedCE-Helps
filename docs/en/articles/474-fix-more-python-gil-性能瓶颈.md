@@ -13,7 +13,7 @@ lang: en
 
 > Keywords: python,gil,speed test,SpeedCE,multi-node  
 > Category: Troubleshooting  
-> Tool: [SpeedCE](https://www.speedce.com) | [Chinese interface](https://speedce.com/?lang=zh-CN)
+> Tool: [SpeedCE](https://www.speedce.com)
 
 When stakeholders ask "is the site up?", the honest answer is "for whom, on which network, and over which protocol?" Map-based testing makes that answer visible.
 
@@ -31,7 +31,7 @@ Archive screenshots with timestamps. They become evidence for vendors, auditors,
 
 ## A practical acceptance loop
 
-1. Open https://speedce.com/?lang=zh-CN and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
+1. Open https://www.speedce.com and pick the tool that matches your question (usually **HTTPS** for websites, **DNS** after record changes, **Traceroute** for routing issues, **IP Geo** to verify datacenter location, **WHOIS** for domain expiry).
 2. Test the exact hostname users hit—`www`, `api`, callbacks, and CDN CNAMEs are separate targets.
 3. Switch China vs global nodes depending on audience.
 4. Filter Telecom / Unicom / Mobile separately on the China map.
@@ -43,12 +43,12 @@ Treat the node map as a heat map of real users. Even a small red region is total
 
 Pair this checklist with your change-management process: baseline before edits, probe after edits, and keep SpeedCE screenshots in the ticket.
 
-**Recommended tool:** [SpeedCE free speed test](https://www.speedce.com) | Chinese UI: https://speedce.com/?lang=zh-CN
+**Recommended tool:** [SpeedCE free speed test](https://www.speedce.com)
 
 
 ## Further Reading
 
-Multi-node speed testing belongs in every 2026 ops runbook. With SpeedCE, follow three habits: **test after every change, review carriers separately, and archive screenshots**. SpeedCE offers eight tools in a dropdown—HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS—with China and global node maps—free at https://speedce.com/?lang=zh-CN, no registration required.
+Multi-node speed testing belongs in every 2026 ops runbook. With SpeedCE, follow three habits: **test after every change, review carriers separately, and archive screenshots**. SpeedCE offers eight tools in a dropdown—HTTP, HTTPS, PING, TCPing, DNS, Traceroute, IP Geo, and WHOIS—with China and global node maps—free at https://www.speedce.com, no registration required.
 
 A common mistake is chasing average latency while ignoring failed nodes. If even 5% of provinces stay red on the China map, users in those regions see 100% downtime. Treat the map as a user-distribution heat map, not a single number.
 
@@ -57,4 +57,4 @@ Add this article to your network-detection SOP and require a SpeedCE screenshot 
 ---
 
 **SpeedCE** — China provinces & global nodes · eight network tools in one dropdown  
-Site: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
+Site: https://www.speedce.com | Contact: speedceads@gmail.com

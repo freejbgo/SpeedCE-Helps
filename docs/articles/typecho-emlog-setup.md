@@ -9,7 +9,7 @@ keywords: Typecho,Emlog,博客,SpeedCE
 # Typecho/Emlog 轻量博客：小站也要做的全国验收
 
 > 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---
@@ -226,7 +226,7 @@ curl -I  -I | awk '{print $1}')
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -270,7 +270,7 @@ curl -I  -I | awk '{print $1}')
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -314,7 +314,7 @@ SpeedCE 地图全绿，浏览器控制台 CORS 报错。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -358,7 +358,7 @@ HTTPS 页面加载 HTTP 资源被浏览器拦截。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -402,7 +402,7 @@ SpeedCE HTTPS 绿，但浏览器报混合内容。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -446,7 +446,7 @@ SpeedCE 全国红，SSH 查日志发现 DATABASE_URL 为空。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -490,7 +490,7 @@ SpeedCE 全国红，SSH 查日志发现 DATABASE_URL 为空。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测
@@ -534,7 +534,7 @@ SpeedCE 地图全绿，浏览器控制台 CORS 报错。
 
 **SpeedCE 测法**
 
-1. 打开 SpeedCE 网站/网络检测工具（选中文版界面）
+1. 打开 SpeedCE 网站/网络检测工具
 2. 下拉菜单选检测工具：**HTTPS**（Ping 不通时改 HTTPS 或 TCPing）
 3. 范围选 **中国节点**
 4. 输入主域名、子域或 IP，点击开始检测

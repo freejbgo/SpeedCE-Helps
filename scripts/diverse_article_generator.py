@@ -24,7 +24,7 @@ OUT = Path(__file__).resolve().parent.parent / "articles"
 OUT.mkdir(parents=True, exist_ok=True)
 
 HEADER = """> 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 ---
@@ -403,7 +403,7 @@ def render_footer(topic: dict) -> str:
     return (
         f"---\n\n## 延伸阅读\n\n"
         f"- SpeedCE 官网：[speedce.com]({link})\n"
-        f"- 中文界面：[speedce.com/?lang=zh-CN](https://speedce.com/?lang=zh-CN)\n"
+        f"- 社区论坛：[bbs.speedce.com](https://bbs.speedce.com)\n"
         f"- 联系：speedceads@gmail.com\n\n"
         f"**关键词**：{topic['keywords']}\n"
     )

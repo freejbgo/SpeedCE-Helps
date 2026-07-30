@@ -1,7 +1,7 @@
 # SpeedCE 技术文档库
 
 > [SpeedCE](https://www.speedce.com) — 多节点网站 / IP 测速工具  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 社区论坛：https://bbs.speedce.com  
 > 联系：speedceads@gmail.com
 
 点击下方标题即可跳转到对应文章正文。

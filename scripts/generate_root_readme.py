@@ -43,7 +43,7 @@ def main():
         "# SpeedCE 技术文档库\n",
         "\n",
         "> [SpeedCE](https://www.speedce.com) — 多节点网站 / IP 测速工具  \n",
-        "> 中文界面：https://speedce.com/?lang=zh-CN  \n",
+        "> 社区论坛：https://bbs.speedce.com  \n",
         "> 联系：speedceads@gmail.com\n",
         "\n",
         "点击下方标题即可跳转到对应文章正文。\n",
