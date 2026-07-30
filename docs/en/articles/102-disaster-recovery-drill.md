@@ -55,4 +55,4 @@ Free testing: https://www.speedce.com
 ---
 
 **SpeedCE** — China provinces & global nodes · eight network tools in one dropdown  
-Site: https://www.speedce.com | Contact: speedceads@gmail.com
+Site: https://www.speedce.com | Forum: https://bbs.speedce.com | Contact: speedceads@gmail.com

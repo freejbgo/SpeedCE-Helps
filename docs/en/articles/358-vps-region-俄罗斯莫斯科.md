@@ -61,4 +61,4 @@ Before buying or renewing VPS capacity, validate advertised lines with real mult
 ---
 
 **SpeedCE** — China provinces & global nodes · eight network tools in one dropdown  
-Site: https://www.speedce.com | Contact: speedceads@gmail.com
+Site: https://www.speedce.com | Forum: https://bbs.speedce.com | Contact: speedceads@gmail.com
