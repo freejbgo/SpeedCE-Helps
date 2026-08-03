@@ -131,8 +131,15 @@ def cookie_get(cookie: str, name: str) -> str | None:
     return None
 
 
+def sorted_query(params: dict) -> str:
+    """CSDN/Aliyun 网关签名要求 query 按 key 排序。"""
+    return urllib.parse.urlencode(sorted((str(k), str(v)) for k, v in params.items()))
+
+
 def ca_sign(method: str, path_with_query: str, content_type: str = "") -> dict[str, str]:
     nonce = str(uuid.uuid4())
+    # Aliyun API Gateway 风格：
+    # Method\nAccept\nContent-MD5\nContent-Type\nDate\nx-ca-*\nPathAndQuery
     string_to_sign = (
         f"{method}\n*/*\n\n{content_type}\n\n"
         f"x-ca-key:{CA_KEY}\nx-ca-nonce:{nonce}\n{path_with_query}"
@@ -159,10 +166,11 @@ def http_json(
     body: dict | None = None,
     signed_path: str | None = None,
     content_type: str = "",
+    soft: bool = False,
 ) -> dict:
     headers = {
         "User-Agent": UA,
-        "Accept": "application/json, text/plain, */*",
+        "Accept": "*/*" if signed_path is not None else "application/json, text/plain, */*",
         "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
         "Referer": referer,
         "Origin": origin,
@@ -187,22 +195,44 @@ def http_json(
     try:
         with urllib.request.urlopen(req, timeout=45) as resp:
             text = resp.read().decode("utf-8", "replace")
+            status_code = resp.status
     except urllib.error.HTTPError as e:
         text = e.read().decode("utf-8", "replace")
-        if e.code in (401, 403) or "WAF" in text:
+        status_code = e.code
+        if soft:
+            return {
+                "_error": True,
+                "_status": status_code,
+                "_raw": text[:500],
+                "message": text[:500],
+            }
+        if "HMAC signature does not match" in text:
             die(
-                f"CSDN 拒绝访问 ({e.code})。常见原因：Cookie 过期，或触发了安全校验。\n"
-                f"请重新登录 CSDN，更新 ~/csdn_cookie.txt 后再试。\n"
+                f"CSDN 接口签名校验失败 ({status_code})。\n"
+                f"这通常是脚本签名算法/参数排序问题，不一定是 Cookie 过期。\n"
                 f"响应片段: {text[:240]}"
             )
-        die(f"HTTP {e.code} from {url}: {text[:300]}")
+        if status_code in (401, 403) or "WAF" in text:
+            die(
+                f"CSDN 拒绝访问 ({status_code})。常见原因：Cookie 过期，或触发了安全校验。\n"
+                f"请重新登录 CSDN，更新 GitHub Secret `CSDN_COOKIE` 后再试。\n"
+                f"响应片段: {text[:240]}"
+            )
+        die(f"HTTP {status_code} from {url}: {text[:300]}")
     except urllib.error.URLError as e:
+        if soft:
+            return {"_error": True, "_status": 0, "message": str(e)}
         die(f"网络错误: {e}")
 
     try:
-        return json.loads(text)
+        parsed = json.loads(text)
     except json.JSONDecodeError:
+        if soft:
+            return {"_error": True, "_status": status_code, "_raw": text[:500]}
         die(f"接口返回不是 JSON: {text[:300]}")
+    if soft and isinstance(parsed, dict):
+        parsed.setdefault("_status", status_code)
+    return parsed
 
 
 def extract_title(md_text: str, fallback: str) -> str:
@@ -276,55 +306,81 @@ def fetch_published_titles(cookie: str, username: str) -> dict[str, dict]:
     return titles
 
 
+def _ingest_console_rows(titles: dict[str, dict], rows: list) -> None:
+    for row in rows:
+        title = normalize_title(str(row.get("title") or row.get("articleTitle") or ""))
+        if not title:
+            continue
+        aid = row.get("articleId") or row.get("id") or row.get("article_id")
+        status = row.get("status") or row.get("articleStatus") or row.get("pubStatus")
+        titles[title] = {
+            "title": row.get("title") or row.get("articleTitle"),
+            "id": aid,
+            "source": f"console:{status}",
+            "url": row.get("url"),
+        }
+
+
 def fetch_console_titles(cookie: str) -> dict[str, dict]:
-    """创作中心接口：尽量覆盖已发布 + 草稿。"""
+    """创作中心接口：尽量覆盖已发布 + 草稿。
+
+    该接口依赖 HMAC 签名；若签名/接口变更失败，返回空字典，由调用方降级。
+    """
     titles: dict[str, dict] = {}
-    page = 1
-    while True:
-        qs = urllib.parse.urlencode(
-            {
+    # 依次尝试不同 status；只要某一种能分页拉通就继续
+    status_values = ("all_v3", "all", "draft", "enable")
+
+    for status in status_values:
+        page = 1
+        got_any = False
+        while page <= 100:
+            params = {
                 "page": page,
-                "status": "all_v3",
                 "pageSize": 50,
+                "status": status,
             }
+            qs = sorted_query(params)
+            path = f"/blog/phoenix/console/v1/article/list?{qs}"
+            url = f"{BIZ}{path}"
+            data = http_json(
+                "GET",
+                url,
+                cookie,
+                referer="https://mp.csdn.net/",
+                origin="https://mp.csdn.net",
+                signed_path=path,
+                soft=True,
+            )
+            if data.get("_error") or data.get("code") not in (200, "200", 0, "0", None):
+                # 当前 status 不可用，试下一个
+                if page == 1:
+                    msg = data.get("message") or data.get("msg") or data.get("_raw") or data
+                    info(f"提示: 创作中心列表 status={status} 不可用，尝试其他参数。详情: {msg}")
+                break
+
+            payload = data.get("data") or {}
+            rows = payload.get("list") or payload.get("articles") or []
+            if not rows:
+                break
+            got_any = True
+            _ingest_console_rows(titles, rows)
+            total = payload.get("total") or payload.get("count")
+            if total is not None and page * 50 >= int(total):
+                break
+            if len(rows) < 50:
+                break
+            page += 1
+            time.sleep(0.35)
+
+        if got_any:
+            info(f"创作中心列表可用（status={status}）")
+            break
+
+    if not titles:
+        info(
+            "提示: 未能读取创作中心/草稿列表，将仅按「已发布标题」去重。\n"
+            "      若草稿箱里已有同标题文章，仍可能再存一份草稿；建议先小批量 --limit 5 验证。"
         )
-        path = f"/blog/phoenix/console/v1/article/list?{qs}"
-        url = f"{BIZ}{path}"
-        data = http_json(
-            "GET",
-            url,
-            cookie,
-            referer="https://mp.csdn.net/",
-            origin="https://mp.csdn.net",
-            signed_path=path,
-        )
-        if data.get("code") not in (200, "200", 0, "0"):
-            # 不直接失败：有的账号/地区可能列表接口变更，仍可用已发布列表去重
-            info(f"提示: 创作中心列表接口返回异常，将主要依赖已发布列表去重。详情: {data.get('message') or data.get('msg') or data}")
-            break
-        payload = data.get("data") or {}
-        rows = payload.get("list") or payload.get("articles") or []
-        if not rows:
-            break
-        for row in rows:
-            title = normalize_title(str(row.get("title") or row.get("articleTitle") or ""))
-            if not title:
-                continue
-            aid = row.get("articleId") or row.get("id") or row.get("article_id")
-            status = row.get("status") or row.get("articleStatus") or row.get("pubStatus")
-            titles[title] = {
-                "title": row.get("title") or row.get("articleTitle"),
-                "id": aid,
-                "source": f"console:{status}",
-                "url": row.get("url"),
-            }
-        total = payload.get("total") or payload.get("count")
-        if total is not None and page * 50 >= int(total):
-            break
-        if len(rows) < 50:
-            break
-        page += 1
-        time.sleep(0.35)
     return titles
 
 
