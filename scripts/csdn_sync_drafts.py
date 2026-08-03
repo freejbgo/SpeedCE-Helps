@@ -23,8 +23,10 @@ import hmac
 import html as html_lib
 import json
 import os
+import random
 import re
 import shutil
+import subprocess
 import sys
 import time
 import urllib.error
@@ -156,17 +158,29 @@ def ca_sign(method: str, path_with_query: str, content_type: str = "") -> dict[s
     }
 
 
-def http_json(
+def _parse_json_response(text: str, status_code: int, *, soft: bool) -> dict:
+    try:
+        parsed = json.loads(text)
+    except json.JSONDecodeError:
+        if soft:
+            return {"_error": True, "_status": status_code, "_raw": text[:500]}
+        die(f"接口返回不是 JSON: {text[:300]}")
+    if soft and isinstance(parsed, dict):
+        parsed.setdefault("_status", status_code)
+    return parsed
+
+
+def _http_json_once(
     method: str,
     url: str,
     cookie: str,
     *,
     referer: str,
     origin: str,
-    body: dict | None = None,
-    signed_path: str | None = None,
-    content_type: str = "",
-    soft: bool = False,
+    body: dict | None,
+    signed_path: str | None,
+    content_type: str,
+    soft: bool,
 ) -> dict:
     headers = {
         "User-Agent": UA,
@@ -175,6 +189,7 @@ def http_json(
         "Referer": referer,
         "Origin": origin,
         "Cookie": cookie,
+        "Connection": "close",
         "sec-ch-ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": '"macOS"',
@@ -193,7 +208,7 @@ def http_json(
 
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
     try:
-        with urllib.request.urlopen(req, timeout=45) as resp:
+        with urllib.request.urlopen(req, timeout=60) as resp:
             text = resp.read().decode("utf-8", "replace")
             status_code = resp.status
     except urllib.error.HTTPError as e:
@@ -220,19 +235,126 @@ def http_json(
             )
         die(f"HTTP {status_code} from {url}: {text[:300]}")
     except urllib.error.URLError as e:
-        if soft:
-            return {"_error": True, "_status": 0, "message": str(e)}
-        die(f"网络错误: {e}")
+        raise ConnectionError(str(e.reason if hasattr(e, "reason") else e)) from e
+    except TimeoutError as e:
+        raise ConnectionError(str(e)) from e
+
+    return _parse_json_response(text, status_code, soft=soft)
+
+
+def _http_json_curl(
+    method: str,
+    url: str,
+    cookie: str,
+    *,
+    referer: str,
+    origin: str,
+    body: dict | None,
+    signed_path: str | None,
+    content_type: str,
+    soft: bool,
+) -> dict:
+    """GitHub Actions 上 urllib 偶发被 CSDN 重置时，用 curl 再试一次。"""
+    headers = {
+        "User-Agent": UA,
+        "Accept": "*/*" if signed_path is not None else "application/json, text/plain, */*",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "Referer": referer,
+        "Origin": origin,
+        "Cookie": cookie,
+    }
+    if body is not None:
+        content_type = content_type or "application/json"
+        headers["Content-Type"] = content_type
+    if signed_path is not None:
+        headers.update(ca_sign(method, signed_path, content_type))
+
+    cmd = [
+        "curl",
+        "-sS",
+        "-L",
+        "--http1.1",
+        "--connect-timeout",
+        "20",
+        "--max-time",
+        "60",
+        "-X",
+        method,
+    ]
+    for k, v in headers.items():
+        cmd.extend(["-H", f"{k}: {v}"])
+    if body is not None:
+        cmd.extend(["--data-binary", json.dumps(body, ensure_ascii=False)])
+    cmd.append(url)
 
     try:
-        parsed = json.loads(text)
-    except json.JSONDecodeError:
-        if soft:
-            return {"_error": True, "_status": status_code, "_raw": text[:500]}
-        die(f"接口返回不是 JSON: {text[:300]}")
-    if soft and isinstance(parsed, dict):
-        parsed.setdefault("_status", status_code)
-    return parsed
+        proc = subprocess.run(cmd, capture_output=True, text=True, check=False)
+    except FileNotFoundError as e:
+        raise ConnectionError("curl 不可用") from e
+    if proc.returncode != 0:
+        raise ConnectionError(proc.stderr.strip() or f"curl exit {proc.returncode}")
+    return _parse_json_response(proc.stdout, 200, soft=soft)
+
+
+def http_json(
+    method: str,
+    url: str,
+    cookie: str,
+    *,
+    referer: str,
+    origin: str,
+    body: dict | None = None,
+    signed_path: str | None = None,
+    content_type: str = "",
+    soft: bool = False,
+    retries: int = 5,
+) -> dict:
+    last_err: Exception | None = None
+    attempts = max(retries, 1)
+    for i in range(attempts):
+        try:
+            return _http_json_once(
+                method,
+                url,
+                cookie,
+                referer=referer,
+                origin=origin,
+                body=body,
+                signed_path=signed_path,
+                content_type=content_type,
+                soft=soft,
+            )
+        except ConnectionError as e:
+            last_err = e
+            info(f"网络抖动，准备重试 ({i + 1}/{attempts}): {e}")
+            time.sleep(min(2 ** i, 20) + random.uniform(0.2, 1.0))
+
+    # urllib 连续失败后，改用 curl 再试几轮（Actions 环境更常见）
+    for i in range(3):
+        try:
+            info(f"改用 curl 重试 ({i + 1}/3): {url}")
+            return _http_json_curl(
+                method,
+                url,
+                cookie,
+                referer=referer,
+                origin=origin,
+                body=body,
+                signed_path=signed_path,
+                content_type=content_type,
+                soft=soft,
+            )
+        except ConnectionError as e:
+            last_err = e
+            time.sleep(2 + i * 2)
+
+    if soft:
+        return {"_error": True, "_status": 0, "message": str(last_err)}
+    die(
+        f"网络错误（已重试）: {last_err}\n"
+        f"这通常是 GitHub Actions 访问 CSDN 时被重置，不一定是 Cookie 问题。\n"
+        f"请稍后在 Actions 里再点一次 Run workflow。"
+    )
 
 
 def extract_title(md_text: str, fallback: str) -> str:
@@ -257,11 +379,90 @@ def load_local_articles(articles_dir: Path) -> list[LocalArticle]:
     return items
 
 
+def _curl_text(url: str, cookie: str, referer: str = BLOG) -> str:
+    proc = subprocess.run(
+        [
+            "curl",
+            "-sS",
+            "-L",
+            "--http1.1",
+            "--connect-timeout",
+            "20",
+            "--max-time",
+            "60",
+            "-H",
+            f"User-Agent: {UA}",
+            "-H",
+            "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "-H",
+            f"Referer: {referer}",
+            "-H",
+            f"Cookie: {cookie}",
+            url,
+        ],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if proc.returncode != 0:
+        raise ConnectionError(proc.stderr.strip() or f"curl exit {proc.returncode}")
+    return proc.stdout
+
+
+def fetch_published_titles_from_html(cookie: str, username: str) -> dict[str, dict]:
+    """备用方案：从博主文章列表页 HTML 提取已发布标题。"""
+    titles: dict[str, dict] = {}
+    title_re = re.compile(
+        r'href="https?://blog\.csdn\.net/%s/article/details/(\d+)"[^>]*>(.*?)</a>'
+        % re.escape(username),
+        re.I | re.S,
+    )
+    alt_re = re.compile(
+        r'data-articleid="(\d+)"[\s\S]{0,400}?<a[^>]*>(.*?)</a>',
+        re.I,
+    )
+    for page in range(1, 51):
+        url = f"{BLOG}/{username}/article/list/{page}"
+        html = ""
+        for attempt in range(3):
+            try:
+                html = _curl_text(url, cookie, referer=f"{BLOG}/{username}")
+                break
+            except ConnectionError as e:
+                info(f"HTML 列表第 {page} 页重试 {attempt + 1}/3: {e}")
+                time.sleep(2 + attempt * 2)
+        if not html:
+            break
+
+        found = 0
+        seen_ids: set[str] = set()
+        for m in list(title_re.finditer(html)) + list(alt_re.finditer(html)):
+            aid, raw_title = m.group(1), m.group(2)
+            if aid in seen_ids:
+                continue
+            seen_ids.add(aid)
+            title = normalize_title(re.sub(r"<[^>]+>", "", html_lib.unescape(raw_title)))
+            if not title or title in {"阅读全文", "查看更多"}:
+                continue
+            titles[title] = {
+                "title": title,
+                "id": aid,
+                "source": "published-html",
+                "url": f"{BLOG}/{username}/article/details/{aid}",
+            }
+            found += 1
+        if found == 0:
+            break
+        time.sleep(0.5)
+    return titles
+
+
 def fetch_published_titles(cookie: str, username: str) -> dict[str, dict]:
     """公开主页接口：已发布文章标题。"""
     titles: dict[str, dict] = {}
     page = 1
     total = None
+    api_failed = False
     while True:
         qs = urllib.parse.urlencode(
             {
@@ -278,10 +479,18 @@ def fetch_published_titles(cookie: str, username: str) -> dict[str, dict]:
             cookie,
             referer=f"{BLOG}/{username}?type=blog",
             origin=BLOG,
+            soft=True,
+            retries=5,
         )
+        if data.get("_error"):
+            api_failed = True
+            info(f"提示: 已发布列表 API 失败，将尝试 HTML 备用方案。详情: {data.get('message') or data.get('_raw')}")
+            break
         code = data.get("code")
         if code not in (200, "200", None) and "data" not in data:
-            die(f"拉取已发布列表失败: {data}")
+            api_failed = True
+            info(f"提示: 已发布列表 API 返回异常，将尝试 HTML 备用方案。详情: {data}")
+            break
         payload = data.get("data") or {}
         rows = payload.get("list") or []
         if total is None:
@@ -302,7 +511,23 @@ def fetch_published_titles(cookie: str, username: str) -> dict[str, dict]:
         if len(rows) < 100:
             break
         page += 1
-        time.sleep(0.3)
+        time.sleep(0.5 + random.uniform(0, 0.5))
+
+    if titles:
+        return titles
+
+    if api_failed or not titles:
+        html_titles = fetch_published_titles_from_html(cookie, username)
+        if html_titles:
+            info(f"HTML 备用方案成功，拿到已发布标题 {len(html_titles)} 个")
+            return html_titles
+
+    if not titles:
+        die(
+            "无法从 CSDN 拉取已发布文章标题（API 与 HTML 备用都失败）。\n"
+            "常见原因是 GitHub Actions 出口 IP 被 CSDN 重置。\n"
+            "请稍后重试 Run workflow；若连续失败，把 Actions 日志发我。"
+        )
     return titles
 
 

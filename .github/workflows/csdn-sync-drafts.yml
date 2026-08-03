@@ -44,6 +44,21 @@ jobs:
           fi
           echo "CSDN_COOKIE secret 已配置（内容不会打印）"
 
+      - name: Warm up network to CSDN
+        run: |
+          set +e
+          for i in 1 2 3; do
+            echo "warmup try $i"
+            curl -sS -I --http1.1 --connect-timeout 15 --max-time 30 \
+              -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" \
+              "https://blog.csdn.net/" | head -n 5
+            if [ $? -eq 0 ]; then
+              exit 0
+            fi
+            sleep $((i * 3))
+          done
+          echo "warmup failed, continue anyway"
+
       - name: Run CSDN draft sync
         env:
           CSDN_COOKIE: ${{ secrets.CSDN_COOKIE }}
@@ -58,7 +73,18 @@ jobs:
           else
             echo "模式: 仅预览（不会写入 CSDN）"
           fi
-          python3 scripts/csdn_sync_drafts.py "${ARGS[@]}"
+
+          # GitHub Actions 访问 CSDN 偶发 Connection reset，整任务级重试
+          for i in 1 2 3; do
+            echo "==== sync attempt $i/3 ===="
+            if python3 scripts/csdn_sync_drafts.py "${ARGS[@]}"; then
+              exit 0
+            fi
+            echo "attempt $i failed, sleep before retry..."
+            sleep $((i * 8))
+          done
+          echo "::error::连续 3 次仍失败。多半是 GitHub Actions 访问 CSDN 被重置，请稍后再 Run workflow。"
+          exit 1
 
       - name: Upload sync result (if present)
         if: always()
