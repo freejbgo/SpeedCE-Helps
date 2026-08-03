@@ -1,3 +1,8 @@
 speedce-tech/
 speedce-500-articles.bundle
 scripts/__pycache__/
+csdn_cookie.txt
+**/csdn_cookie.txt
+_csdn_pending/
+csdn_sync_result.json
+**/csdn_sync_result.json
