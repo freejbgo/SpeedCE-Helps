@@ -1,0 +1,72 @@
+name: Sync unpublished articles to CSDN drafts
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "预览(dry-run) 或 真正同步(sync)"
+        required: true
+        default: dry-run
+        type: choice
+        options:
+          - dry-run
+          - sync
+      limit:
+        description: "最多同步多少篇（0=不限制；建议先填 5）"
+        required: true
+        default: "5"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  sync-drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ensure CSDN_COOKIE secret exists
+        env:
+          CSDN_COOKIE: ${{ secrets.CSDN_COOKIE }}
+        run: |
+          if [ -z "$CSDN_COOKIE" ]; then
+            echo "::error::缺少仓库 Secret: CSDN_COOKIE"
+            echo "请打开 GitHub 仓库 → Settings → Secrets and variables → Actions"
+            echo "新建 Secret，Name 填 CSDN_COOKIE，Value 粘贴整段 CSDN Cookie"
+            exit 1
+          fi
+          echo "CSDN_COOKIE secret 已配置（内容不会打印）"
+
+      - name: Run CSDN draft sync
+        env:
+          CSDN_COOKIE: ${{ secrets.CSDN_COOKIE }}
+        run: |
+          set -euo pipefail
+          LIMIT="${{ github.event.inputs.limit }}"
+          MODE="${{ github.event.inputs.mode }}"
+          ARGS=(--temp-dir /tmp/csdn-pending --limit "$LIMIT")
+          if [ "$MODE" = "sync" ]; then
+            ARGS+=(--sync)
+            echo "模式: 真正写入 CSDN 草稿"
+          else
+            echo "模式: 仅预览（不会写入 CSDN）"
+          fi
+          python3 scripts/csdn_sync_drafts.py "${ARGS[@]}"
+
+      - name: Upload sync result (if present)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: csdn-sync-result
+          path: |
+            /home/runner/csdn_sync_result.json
+            /tmp/csdn-pending/sync_result.json
+          if-no-files-found: ignore
+          retention-days: 7

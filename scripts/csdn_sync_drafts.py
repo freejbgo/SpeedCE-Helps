@@ -6,9 +6,12 @@
 - 按标题去重：CSDN 已发布或草稿里已有同标题则跳过
 - 未发布文章先复制到 /tmp/csdn-pending/，同步完可删除
 - 默认只做预览（dry-run），加 --sync 才会真正写入草稿
-- Cookie 从本机文件读取（默认 ~/csdn_cookie.txt），不要提交到 Git
+- Cookie 读取顺序：
+  1) 环境变量 CSDN_COOKIE（适合 GitHub Actions 浏览器一键运行）
+  2) 本机文件（默认 ~/csdn_cookie.txt）
+- 不要把 Cookie 提交到 Git
 
-仅使用 Python 标准库，Mac 一般自带 python3 即可运行。
+仅使用 Python 标准库。
 """
 
 from __future__ import annotations
@@ -73,24 +76,48 @@ def normalize_title(title: str) -> str:
     return t
 
 
-def load_cookie(cookie_file: Path) -> str:
-    if not cookie_file.is_file():
-        die(
-            f"找不到 Cookie 文件: {cookie_file}\n"
-            f"请先在 Mac 上创建该文件，并把整段 Cookie 粘贴进去（只有一行）。"
-        )
-    raw = cookie_file.read_text(encoding="utf-8").strip()
+def normalize_cookie_text(raw: str) -> str:
+    raw = (raw or "").strip()
     if not raw:
-        die(f"Cookie 文件是空的: {cookie_file}")
+        return ""
     # 允许用户误把 "Cookie: xxx" 整行贴进来
     if raw.lower().startswith("cookie:"):
         raw = raw.split(":", 1)[1].strip()
+    # GitHub Secrets / 文本框里有时会带首尾引号
+    if (raw.startswith("'") and raw.endswith("'")) or (
+        raw.startswith('"') and raw.endswith('"')
+    ):
+        raw = raw[1:-1].strip()
+    return raw
+
+
+def validate_cookie(raw: str) -> str:
+    if not raw:
+        die("Cookie 为空。")
     if "UserName=" not in raw and "UserToken=" not in raw:
         die(
             "Cookie 看起来不完整：应包含 UserName / UserToken 等登录字段。\n"
             "请重新登录 CSDN 后，从浏览器 Network 请求头里复制整段 Cookie。"
         )
     return raw
+
+
+def load_cookie(cookie_file: Path) -> str:
+    env_cookie = normalize_cookie_text(os.environ.get("CSDN_COOKIE", ""))
+    if env_cookie:
+        info("已从环境变量 CSDN_COOKIE 读取登录信息")
+        return validate_cookie(env_cookie)
+
+    if not cookie_file.is_file():
+        die(
+            f"找不到 Cookie。\n"
+            f"- 浏览器一键运行：请在 GitHub 仓库 Secrets 里配置 CSDN_COOKIE\n"
+            f"- 本地运行：请创建文件 {cookie_file}，并把整段 Cookie 粘贴进去"
+        )
+    raw = normalize_cookie_text(cookie_file.read_text(encoding="utf-8"))
+    if not raw:
+        die(f"Cookie 文件是空的: {cookie_file}")
+    return validate_cookie(raw)
 
 
 def cookie_get(cookie: str, name: str) -> str | None:
