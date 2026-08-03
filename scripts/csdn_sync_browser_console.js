@@ -70,12 +70,42 @@
     };
   }
 
+  const DONE_KEY = "csdnSyncDoneTitles";
+
+  function loadDoneMap() {
+    try {
+      return JSON.parse(localStorage.getItem(DONE_KEY) || "{}") || {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveDoneMap(map) {
+    localStorage.setItem(DONE_KEY, JSON.stringify(map));
+  }
+
+  function markDone(title, articleId) {
+    const map = loadDoneMap();
+    map[normalizeTitle(title)] = {
+      title,
+      articleId: articleId || "",
+      at: new Date().toISOString(),
+    };
+    saveDoneMap(map);
+    console.log("已记录到本地去重列表:", title);
+    return map;
+  }
+
+  function listDone() {
+    return loadDoneMap();
+  }
+
   async function fetchJson(url, options = {}) {
     const resp = await fetch(url, {
       credentials: "include",
       ...options,
       headers: {
-        "Content-Type": "application/json",
+        ...(options.body ? { "Content-Type": "application/json" } : {}),
         ...(options.headers || {}),
       },
     });
@@ -87,7 +117,11 @@
       throw new Error(`非 JSON 响应 (${resp.status}): ${text.slice(0, 200)}`);
     }
     if (!resp.ok) {
-      throw new Error(`HTTP ${resp.status}: ${text.slice(0, 200)}`);
+      const msg = (data && (data.msg || data.message)) || text.slice(0, 200);
+      const err = new Error(`HTTP ${resp.status}: ${msg}`);
+      err.status = resp.status;
+      err.payload = data;
+      throw err;
     }
     return data;
   }
@@ -240,9 +274,13 @@
     return text.length > 180 ? text.slice(0, 179) + "…" : text;
   }
 
-  async function saveDraft(title, markdown) {
+  function isRateLimited(err) {
+    const msg = String((err && err.message) || err || "");
+    return msg.includes("频繁发布") || msg.includes("请稍后再试");
+  }
+
+  async function saveDraft(title, markdown, { retries = 6, waitSec = 60 } = {}) {
     const path = "/blog-console-api/v3/mdeditor/saveArticle";
-    const sign = await hmacSign("POST", path, "application/json");
     const body = {
       title,
       markdowncontent: markdown,
@@ -263,22 +301,40 @@
       vote_id: 0,
       pubStatus: "draft",
     };
-    const data = await fetchJson(`${BIZ}${path}`, {
-      method: "POST",
-      headers: {
-        ...sign,
-        Origin: "https://editor.csdn.net",
-        Referer: "https://editor.csdn.net/",
-      },
-      body: JSON.stringify(body),
-    });
-    if (data.code !== 200) {
-      throw new Error(data.msg || data.message || JSON.stringify(data));
+
+    let lastErr;
+    for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+        const sign = await hmacSign("POST", path, "application/json");
+        const data = await fetchJson(`${BIZ}${path}`, {
+          method: "POST",
+          headers: {
+            ...sign,
+            Origin: "https://editor.csdn.net",
+            Referer: "https://editor.csdn.net/",
+          },
+          body: JSON.stringify(body),
+        });
+        if (data.code !== 200) {
+          throw new Error(data.msg || data.message || JSON.stringify(data));
+        }
+        return data.data || {};
+      } catch (e) {
+        lastErr = e;
+        if (isRateLimited(e) && attempt < retries) {
+          console.warn(
+            `  触发 CSDN 频控，${waitSec} 秒后重试 (${attempt}/${retries})...`
+          );
+          await sleep(waitSec * 1000);
+          continue;
+        }
+        throw e;
+      }
     }
-    return data.data || {};
+    throw lastErr;
   }
 
-  async function plan(limit = 5) {
+  async function plan(limit = 5, { skipConsole = true } = {}) {
     const username = getCookie("UserName") || getCookie("UN");
     if (!username) {
       throw new Error("未检测到 CSDN 登录 Cookie，请先登录并打开 https://editor.csdn.net/md/");
@@ -293,10 +349,19 @@
     const existing = await fetchPublishedTitles(username);
     console.log("已发布标题:", existing.size);
 
-    console.log("尝试拉取创作中心/草稿标题...");
-    const consoleTitles = await fetchConsoleTitles();
-    console.log("创作中心标题:", consoleTitles.size);
-    for (const [k, v] of consoleTitles) existing.set(k, v);
+    const doneMap = loadDoneMap();
+    const doneCount = Object.keys(doneMap).length;
+    console.log("本地已同步记录:", doneCount);
+    for (const key of Object.keys(doneMap)) existing.set(key, doneMap[key]);
+
+    if (!skipConsole) {
+      console.log("尝试拉取创作中心/草稿标题...");
+      const consoleTitles = await fetchConsoleTitles();
+      console.log("创作中心标题:", consoleTitles.size);
+      for (const [k, v] of consoleTitles) existing.set(k, v);
+    } else {
+      console.log("已跳过创作中心列表（签名不稳定）；草稿去重改用本地记录。");
+    }
 
     const pending = [];
     let skipped = 0;
@@ -311,7 +376,7 @@
     }
 
     console.log("======== 对比结果 ========");
-    console.log("跳过（标题已存在）:", skipped);
+    console.log("跳过（已发布/本地已同步）:", skipped);
     console.log("待同步到草稿:", pending.length);
     pending.slice(0, 20).forEach((a, i) => {
       console.log(`${i + 1}. ${a.title}  <=  ${a.path}`);
@@ -325,24 +390,27 @@
     return result;
   }
 
-  async function sync(limit = 5) {
-    const { pending } = await plan(limit);
+  async function sync(limit = 5, options = {}) {
+    const delaySec = options.delaySec != null ? options.delaySec : 45;
+    const waitSec = options.waitSec != null ? options.waitSec : 90;
+    const { pending } = await plan(limit, options);
     if (!pending.length) {
       console.log("没有需要同步的文章");
       return [];
     }
+    console.log(`开始同步：每篇间隔约 ${delaySec} 秒，遇频控自动等待重试`);
     const results = [];
     for (let i = 0; i < pending.length; i++) {
       const art = pending[i];
       console.log(`[${i + 1}/${pending.length}] 存草稿: ${art.title}`);
       try {
         const content = await loadArticleContent(art.path);
-        // 若 README 标题和正文 H1 不一致，以正文 H1 为准
         const hm = content.match(/^#\s+(.+?)\s*$/m);
         const title = (hm ? hm[1].trim() : art.title) || art.title;
-        const data = await saveDraft(title, content);
+        const data = await saveDraft(title, content, { waitSec });
         const id = data.id || data.art_id || data.articleId;
         const editUrl = id ? `https://editor.csdn.net/md/?articleId=${id}` : "";
+        markDone(title, id);
         console.log("  成功:", editUrl || id);
         results.push({ ok: true, title, path: art.path, id, editUrl });
       } catch (e) {
@@ -353,20 +421,28 @@
           path: art.path,
           error: String(e.message || e),
         });
+        if (isRateLimited(e)) {
+          console.warn("仍被频控，停止本轮。请过 10~30 分钟后再执行 await csdnSync.sync(5)");
+          break;
+        }
       }
-      await sleep(1200);
+      if (i < pending.length - 1) {
+        console.log(`  等待 ${delaySec} 秒后继续...`);
+        await sleep(delaySec * 1000);
+      }
     }
-    console.log("同步完成。请打开草稿箱检查: https://mp.csdn.net/");
+    console.log("本轮结束。请打开草稿箱检查: https://mp.csdn.net/");
     return results;
   }
 
-  window.csdnSync = { dryRun, sync, plan };
+  window.csdnSync = { dryRun, sync, plan, markDone, listDone };
   console.log(
     [
       "已加载 csdnSync。",
       "先预览: await csdnSync.dryRun(5)",
       "再同步: await csdnSync.sync(5)",
       "全量同步: await csdnSync.sync(0)",
+      "记录已成功文章: csdnSync.markDone('标题', '文章ID')",
     ].join("\n")
   );
 })();
