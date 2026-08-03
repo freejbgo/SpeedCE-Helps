@@ -1,19 +1,25 @@
 /**
  * 在浏览器里同步 SpeedCE-Helps 中文文章到 CSDN 草稿（适合只会用浏览器的情况）
  *
+ * 完整操作文档：
+ *   scripts/CSDN同步到草稿使用说明.md
+ *   https://github.com/freejbgo/SpeedCE-Helps/blob/main/scripts/CSDN同步到草稿使用说明.md
+ *
  * 使用步骤：
  * 1. 浏览器登录 CSDN
  * 2. 打开：https://editor.csdn.net/md/
  * 3. 按 F12 → 点 Console / 控制台
- * 4. 粘贴本文件全部内容，回车
- * 5. 先预览： await csdnSync.dryRun(5)
- * 6. 再小批量写入草稿： await csdnSync.sync(5)
- * 7. 确认无误后： await csdnSync.sync(0)  // 0=不限制
+ * 4. 如提示不能粘贴，先输入 allow pasting 回车
+ * 5. 粘贴本文件全部内容，回车
+ * 6. 先预览： await csdnSync.dryRun(5)
+ * 7. 再小批量写入草稿： await csdnSync.sync(5)
+ * 8. 确认无误后分批继续，或 await csdnSync.sync(0)
  *
  * 说明：
  * - 只会存草稿，不会公开发布
- * - 按标题去重：CSDN 已有同标题则跳过
+ * - 按标题去重：已发布标题 + 本地 markDone 记录
  * - 文章内容从 GitHub 仓库读取，不需要你下载仓库
+ * - 遇「频繁发布」会自动等待重试；仍失败则停 15~30 分钟再继续
  */
 (() => {
   const REPO = "freejbgo/SpeedCE-Helps";

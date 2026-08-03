@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """将仓库 articles/ 中尚未出现在 CSDN 的中文文章，同步为 CSDN 草稿。
 
-设计要点（按当前约定）：
+完整操作文档：
+  scripts/CSDN同步到草稿使用说明.md
+
+设计要点：
 - 只读取 articles/，不改动仓库正文结构
-- 按标题去重：CSDN 已发布或草稿里已有同标题则跳过
+- 按标题去重：优先用已发布列表；创作中心草稿列表签名不稳定时会降级
 - 未发布文章先复制到 /tmp/csdn-pending/，同步完可删除
 - 默认只做预览（dry-run），加 --sync 才会真正写入草稿
 - Cookie 读取顺序：
-  1) 环境变量 CSDN_COOKIE（适合 GitHub Actions 浏览器一键运行）
+  1) 环境变量 CSDN_COOKIE（适合 GitHub Actions）
   2) 本机文件（默认 ~/csdn_cookie.txt）
-- 不要把 Cookie 提交到 Git
+- 注意：GitHub Actions 云端访问 CSDN 常被重置，日常请优先用浏览器控制台脚本
+  scripts/csdn_sync_browser_console.js
 
 仅使用 Python 标准库。
 """

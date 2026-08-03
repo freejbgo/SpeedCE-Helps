@@ -6,6 +6,11 @@
 
 点击下方标题即可跳转到对应文章正文。
 
+## 工具脚本
+
+- [同步中文文章到 CSDN 草稿（操作说明）](scripts/CSDN同步到草稿使用说明.md)  
+- [浏览器控制台同步脚本](scripts/csdn_sync_browser_console.js)
+
 ## 统计
 
 | 项目 | 数量 |
