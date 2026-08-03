@@ -20,6 +20,7 @@
  * - 按标题去重：已发布标题 + 本地 markDone 记录
  * - 文章内容从 GitHub 仓库读取，不需要你下载仓库
  * - 遇「频繁发布」会自动等待重试；仍失败则停 15~30 分钟再继续
+ * - 已移除 GitHub Actions / Python 同步方案，日常只用本脚本
  */
 (() => {
   const REPO = "freejbgo/SpeedCE-Helps";
